@@ -23,7 +23,7 @@ $GilroyItalic-200:"GilroyItalic-200";
 
 
 @function rem($px) {
-  @return calc($px / 16px) + 0rem;
+  @return calc($px / 16px)+0rem;
 }
 
 @function scale2500($rem) {
@@ -86,14 +86,22 @@ footer {
 }
 
 
-h1, h2, h3, h4,
-.h1, .h2, .h3, .h4 {
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
   margin: 0;
   padding: 0;
 }
 
 
-ul, li {
+
+ul,
+li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -104,10 +112,13 @@ ul, li {
   box-sizing: border-box;
 }
 
-button, a, input {
+button,
+a,
+input {
   outline: none;
-  
-  &:focus, &:visited {
+
+  &:focus,
+  &:visited {
     text-decoration: none;
     outline: none;
   }
@@ -123,39 +134,44 @@ label {
   margin: 0;
 }
 
-.price {
-  white-space: nowrap;
-}
 
-html{
+html {
   height: 100%;
-  @include desktop4K{
+
+  @include desktop4K {
     font-size: 22px;
   }
-  @include desktop2K{
+
+  @include desktop2K {
     font-size: 20px;
   }
-  @include desktop1920{
+
+  @include desktop1920 {
     font-size: 16px;
   }
-  @include desktop1400{
+
+  @include desktop1400 {
     font-size: 15px;
   }
-  @include desktop1300{
+
+  @include desktop1300 {
     font-size: 14px;
   }
-  @include desktop1200{
+
+  @include desktop1200 {
     font-size: 13px;
   }
-  @include desktop1100{
+
+  @include desktop1100 {
     font-size: 12px;
   }
-  @include desktop1000{
+
+  @include desktop1000 {
     font-size: 11px;
   }
-  @include tablet_991{
+
+  @include tablet_991 {
     font-size: 16px;
 
   }
 }
-

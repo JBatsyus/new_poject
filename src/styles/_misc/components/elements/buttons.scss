@@ -1,0 +1,33 @@
+
+/* кнопки start */
+.btn {
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid $color-white;
+  border-radius: 4px;
+  padding: 10px 40px;
+  background: $color-blue;
+  font-family: $GilroyRegular;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-white
+}
+
+.buttons__more {
+  margin: 0 auto;
+}
+
+.btn-more {
+  border: 1px solid $color-blue;
+  border-radius: 4px;
+  padding: 16px 60px;
+  font-family: $GilroyRegular;
+  font-weight: 600;
+  font-size: 16px;
+  background: $color-blue;
+  color: $color-white;
+
+}

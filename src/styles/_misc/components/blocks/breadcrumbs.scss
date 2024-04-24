@@ -1,0 +1,16 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(40px);
+}
+
+.breadcrumbs li a {
+  font-family: "Gilroy", sans-serif;
+  font-size: rem(14px);
+  color: $color-black;
+}
+
+.breadcrumbs li:not(:last-child):after {
+  content: "/";
+  margin: 0 5px 0 5px;
+}

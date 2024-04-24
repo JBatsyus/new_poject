@@ -1,7 +1,7 @@
 @media (min-width: 991px) {
-  .container {
-    max-width: rem(1384px)
-  }
+  // .container {
+  //   max-width: rem(1384px)
+  // }
   .row {
     margin-right: rem(-12px);
     margin-left: rem(-12px);
@@ -13,63 +13,44 @@
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
+  // .container {
+  //   max-width: 100%;
+  // }
 }
 
 @media (min-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
+  // .container {
+  //   max-width: 100%;
+  // }
 }
 
 
 .h1 {
-  font-size: rem(80px);
-  font-family: $GilroyRegular;
-  line-height: rem(80px);
-  @include tablet_991 {
-    font-size: rem(40px);
-    line-height: rem(40px);
-  }
+  font-family: $Gilroy-600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $color-black;
+  margin-bottom: 40px;
 }
 
-.h2 {
-  font-size: rem(40px);
-  line-height: rem(40px);
-  margin-bottom: rem(15px);
-  @include tablet_991 {
-    font-size: rem(24px);
-  }
+h2 {
+  font-family: $Gilroy-600;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $color-black;
+}
+.wrapper {
+  padding: 60px 0;
 }
 
+.container {
+  width: 100%;
+  max-width: 1490px;
+  margin: 0 auto;
+}
 .h3 {
   font-size: rem(24px);
 }
-
-.title {
-  font-size: rem(64px);
-  line-height: rem(64px);
-}
-.title-middle {
-  font-size: rem(48px);
-  line-height: rem(48px);
-}
-
-.subtitle {
-  font-size: rem(16px);
-  margin-bottom: rem(16px);
-}
-
-.large-text {
-  font-size: rem(20px);
-  line-height: rem(24px);
-  @include tablet_991{
-    font-size: rem(16px);
-  }
-}
-
 
 p {
   line-height: rem(24px);
