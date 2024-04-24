@@ -23,14 +23,7 @@ header.header
         img.header-logo(src='../img/sitrak-logo.png' alt='Ситрак')
       nav.header-nav
         ul.header-nav__list
-          li.header-nav__item
-            a(href='') Каталог
-          li.header-nav__item
-            a(href='') Сервис
-          li.header-nav__item
-            a(href='') Дилеры
-          li.header-nav__item
-            a(href='') Новости
-          li.header-nav__item
-            a(href='') О нас
+          each name in ['Каталог', 'Сервис', 'Дилеры', 'Новости','О нас']
+            li.header-nav__item
+              a(href="#")= name
       a.btn заказать звонок

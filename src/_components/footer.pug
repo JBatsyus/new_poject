@@ -11,20 +11,9 @@ footer.footer-wrap
           a.privacy(href="javascript:void(0);") Политика конфиденциальности
       .footer-menu
         ul.footer-menu 
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Каталог
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Сервис
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link О компании
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Дилерская сеть
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Руководства
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Новости
-          li.footer-menu__item 
-            a(href="javascript:void(0);").footer-menu__link Контакты
+          each name in ['Главная', 'Сервис', 'О компании','Дилерская сеть', 'Руководства', 'Новости', 'Контакты']
+            li.footer-menu__item
+                a.footer-menu__link(href="#")= name
     .footer__right
       .footer__right-top
         a(href="tel: javascript:void(0);") +7 (000) 000-00-00
