@@ -1,25 +1,55 @@
-mixin icon(name, mod)
-  - mod = mod || ''
-  if mod
-    svg(class=`icon icon-${name} ${mod}`)
-      use(xlink:href=`img/sprite.svg#${name}`)
-  else
-    svg(class=`icon icon-${name}`)
-      use(xlink:href=`img/sprite.svg#${name}`)
+
+mixin section-item(title)
+  a(href="javascript:void(0);").catalog_section__item(style="background-image:url('./img/bg.png')")
+    .section-item__title !{title}
+
+mixin catalog-preview-item
+  a.catalog-preview__item(href="javascript:void(0);")
+    .catalog-preview__images(style="background-image:url('./img/tyaga.png')")
+    .catalog-preview__desc
+      .catalog-preview__title Тягач Sitrak C7H
+      .catalog-preview__text
+        p
+          span.bold Тип:
+          span.thin Седельный тягач
+        p
+          span.bold Высота ССУ:
+          span.thin 1 150 мм
+        p
+          span.bold Колесная формула:
+          span.thin 4х2
+        p
+          span.bold КПП:
+          span.thin МКПП
+        p
+          span.bold Ретардер:
+          span.thin нет
+        p
+          span.bold Подвеска:
+          span.thin Спередняя ресорная, задняя пневматическая
+        p
+          span.bold Кабина:
+          span.thin 2 спальных места
+        p
+          span.bold Экологический класс:
+          span.thin Евро-5
+      .catalog-preview__price 8 620 000 ₽
+      button.btn Подробнее
+
 
 
 
 mixin button(data)
   - mod = data.mod || ''
   a(href="javascript:void(0);" class=`button ${mod}`) !{data.text}
-  
+
 
 mixin checkbox(text)
   label.checkbox-label
     input(type='checkbox').checkbox-input
     .checkbox-text
       span !{text}
-      
+
 mixin radio(data)
   - checked = data.checked || ''
   label.radio-label
@@ -28,7 +58,7 @@ mixin radio(data)
     else
       input(type='radio' name=`${data.name}`).checkbox-input
     span !{data.text} 
-      
+
 mixin news-item(data)
   - mod = data.mod || ''
   a(href="javascript:void(0);" class=`${mod}`).news-item
@@ -39,10 +69,7 @@ mixin news-item(data)
       .news-title !{data.title}
       .news-text !{data.text}
 
-mixin shops-list__item
-  .shops-list__item
-    .shops-list__item-title Название магазина
-    a(href="javascript:void(0);").shops-list__item-link storelink.ru
+
 
 mixin search-block
   form.search-block
@@ -60,650 +87,4 @@ mixin structure-item(data)
     .structure-title !{data.title}
     .structure-percent !{data.percent}
 
-      
-mixin understand__items
-  ul.understand__items
-    each val in ['Глюкозамин, хондроитин для эластичности хрящей Натуральные антиоксиданты:','Натуральные антиоксиданты: яблоки, черника, розмарин','Глюкозамин, хондроитин для эластичности хрящей Натуральные антиоксиданты:','Натуральные антиоксиданты: яблоки, черника, розмарин','Глюкозамин, хондроитин для эластичности хрящей Натуральные антиоксиданты:','В составе до 50% животного белка','Глюкозамин, хондроитин для эластичности хрящей Натуральные антиоксиданты:','В составе до 50% животного белка',]
-      li.understand__item
-        img(src=`./img/advantages-brand-icon.svg` alt='', title='').understand__img
-        .understand__text.text-white !{val}
 
-      
-mixin i-accordion__tabs
-  .i-accordion__tabs.i-tabs
-    .i-accordion__tab.i-tab.js-feeding-tab(data-tab='puppy' data-options='{\
-    "1": {\
-    "1": {\
-    "value": "40",\
-    "shadow": true\
-    },\
-    "2": {\
-    "value": "47",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "84",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "93",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "141",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "150",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "280",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "293",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "358",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "371",\
-    "shadow": true\
-    }\
-    },\
-    "2": {\
-    "1": {\
-    "value": "53",\
-    "shadow": true\
-    },\
-    "2": {\
-    "value": "60",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "102",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "112",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "160",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "170",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "307",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "320",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "384",\
-    "shadow": false\
-    }\
-    },\
-    "3": {\
-    "1": {\
-    "value": "40",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "47",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "70",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "79",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "105",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "112",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "148",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "155",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "190",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "197",\
-    "shadow": false\
-    },\
-    "12": {\
-    "value": "398",\
-    "shadow": false\
-    },\
-    "13": {\
-    "value": "398",\
-    "shadow": false\
-    },\
-    "14": {\
-    "value": "398",\
-    "shadow": false\
-    }\
-    },\
-    "4": {\
-    "1": {\
-    "value": "53",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "60",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "79",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "84",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "119",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "126",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "162",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "169",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "204",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "211",\
-    "shadow": false\
-    }\
-    },\
-    "5": {\
-    "1": {\
-    "value": "35",\
-    "shadow": true\
-    },\
-    "2": {\
-    "value": "46",\
-    "shadow": true\
-    },\
-    "3": {\
-    "value": "105",\
-    "shadow": true\
-    },\
-    "4": {\
-    "value": "62",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "94",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "100",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "131",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "137",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "169",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "175",\
-    "shadow": false\
-    }\
-    },\
-    "6": {\
-    "1": {\
-    "value": "58",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "70",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "68",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "75",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "106",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "112",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "130",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "141",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "181",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "187",\
-    "shadow": false\
-    }\
-    },\
-    "7": {\
-    "1": {\
-    "value": "35",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "40",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "55",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "63",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "94",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "100",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    }\
-    },\
-    "8": {\
-    "1": {\
-    "value": "45",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "50",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "72",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "80",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "106",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "112",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "Рекомендуем использовать корм для юниоров",\
-    "shadow": true\
-    }\
-    },\
-    "9": {\
-    "1": {\
-    "value": "30",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "35",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "50",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "58",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "80",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "88",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "Junior",\
-    "shadow": true\
-    }\
-    },\
-    "10": {\
-    "1": {\
-    "value": "40",\
-    "shadow": false\
-    },\
-    "2": {\
-    "value": "45",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "67",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "75",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "97",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "105",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Junior",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "Junior",\
-    "shadow": true\
-    }\
-    },\
-    "11": {\
-    "1": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "2": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "3": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "4": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "5": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "6": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "7": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "",\
-    "shadow": true\
-    }\
-    },\
-    "12": {\
-    "1": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "2": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "3": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "4": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "5": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "6": {\
-    "value": "Рекомендуется перейти на корм для взрослых",\
-    "shadow": true\
-    },\
-    "7": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "8": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "9": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "10": {\
-    "value": "Рекомендуется перейти на корм для юниоров",\
-    "shadow": true\
-    },\
-    "15": {\
-    "value": "210",\
-    "shadow": false\
-    },\
-    "20": {\
-    "value": "225",\
-    "shadow": false\
-    },\
-    "30": {\
-    "value": "495",\
-    "shadow": false\
-    },\
-    "40": {\
-    "value": "530",\
-    "shadow": false\
-    },\
-    "50": {\
-    "value": "703",\
-    "shadow": false\
-    },\
-    "60": {\
-    "value": "738",\
-    "shadow": false\
-    }\
-    }\
-    }')
-      label.i-check.i-check--light
-        input(type='radio' value='1' name='un10' checked='')
-        span Сухой
-    .i-accordion__tab.i-tab.js-feeding-tab(data-tab='pregnant' data-options='{\
-    "1": {\
-    "2": {\
-    "value": "45",\
-    "shadow": false\
-    },\
-    "1": {\
-    "value": "30",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "50",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "75",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "80",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "105",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "100",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "130",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "120",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "150",\
-    "shadow": false\
-    }\
-    }\
-    }')
-      label.i-check.i-check--light
-        input(type='radio' value='2' name='un10')
-        span Влажный
-    .i-accordion__tab.i-tab.js-feeding-tab(data-tab='pregnant' data-options='{\
-    "1": {\
-    "2": {\
-    "value": "45",\
-    "shadow": false\
-    },\
-    "1": {\
-    "value": "30",\
-    "shadow": false\
-    },\
-    "3": {\
-    "value": "50",\
-    "shadow": false\
-    },\
-    "4": {\
-    "value": "75",\
-    "shadow": false\
-    },\
-    "5": {\
-    "value": "80",\
-    "shadow": false\
-    },\
-    "6": {\
-    "value": "105",\
-    "shadow": false\
-    },\
-    "7": {\
-    "value": "100",\
-    "shadow": false\
-    },\
-    "8": {\
-    "value": "130",\
-    "shadow": false\
-    },\
-    "9": {\
-    "value": "120",\
-    "shadow": false\
-    },\
-    "10": {\
-    "value": "150",\
-    "shadow": false\
-    }\
-    }\
-    }')
-      label.i-check.i-check--light
-        input(type='radio' value='2' name='un10')
-        span Комбо
-  

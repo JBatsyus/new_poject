@@ -1,0 +1,24 @@
+extends ../templates/template-catalog.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        li
+          a(href='#') Главная
+        li
+          a(href='#') Каталог
+      .catalog_section__wrap
+        +section-item("Седельные тягачи")
+        +section-item("Самосвалы")
+        +section-item("Автобетоносмесители")
+        +section-item("Фургоны рефрижераторы")
+      h1.h1 Вся техника
+      .catalog-preview__wrap
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item

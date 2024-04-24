@@ -1,9 +1,112 @@
-// .footer-wrap {
-//   padding: rem(16px) 0 0 0;
-//   background: #161616;
-//   min-height: rem(704px);
-//   position: relative;
-// }
+.footer-wrap {
+  padding: 60px 0;
+  background: $color-blue;
+  min-height: rem(305px);
+  color: $color-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__left {
+  display: flex;
+  margin-right: 20px;
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 240px;
+
+    .footer-logo {
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-family: $Gilroy-600;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .notice {
+      margin-top: auto;
+
+      .copy {
+        font-family: $Gilroy-300;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      .privacy {
+        font-family: $GilroyRegular;
+        font-weight: 400;
+        font-size: 12px;
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .footer-menu {
+    .footer-menu__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .footer-menu__link {
+      color: $color-white;
+      font-family: $Gilroy-600;
+      font-weight: 600;
+    }
+  }
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+
+  .footer__right-top {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-family: $Gilroy-600;
+      font-weight: 600;
+      font-size: 14px;
+      color: $color-white;
+      margin-bottom: 15px;
+      align-self: flex-end;
+    }
+
+    span {
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+
+  .footer__right-bottom {
+    margin-top: auto;
+    align-self: flex-end;
+
+    p {
+      font-family: $Gilroy-600;
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .footer-social{
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+
+    }
+  }
+}
+
 // .footer-block__info{
 //   padding-top: rem(150px);
 //   display: flex;
@@ -22,7 +125,7 @@
 //   &:hover{
 //     color: $W-500;
 //   }
-  
+
 // }
 // .copy{
 //   @include tablet_991{
@@ -61,4 +164,3 @@
 //     padding-bottom: rem(18px);
 //   }
 // }
-

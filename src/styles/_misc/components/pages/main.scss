@@ -1,3 +1,4 @@
 .banner__item {
-  @include background-cover-top('main/main_banner.jpg')
+  aspect-ratio: 3 / 1.2;
+  @include background-cover-top('main_banner.jpg')
 }

@@ -40,7 +40,7 @@ body {
   margin: 0;
   padding: 0;
   color: $color-black;
-  font-size: rem(16px);
+  font-size: 16px;
   text-rendering: auto;
   line-height: normal;
   line-height: 24px;
@@ -61,12 +61,6 @@ body {
   --app-height: 100%;
 }
 
-.swiper-main,
-.swiper-main .swiper-slide {
-  height: 100vh;
-  height: var(--app-height) !important;
-}
-
 
 
 
@@ -75,10 +69,10 @@ header {
   flex: 0 0 auto;
 }
 
-.wrapper {
-  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-  flex: 1 0 auto;
-}
+// .wrapper {
+//   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+//   flex: 1 0 auto;
+// }
 
 footer {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
@@ -90,6 +84,7 @@ h1,
 h2,
 h3,
 h4,
+p,
 .h1,
 .h2,
 .h3,
@@ -125,6 +120,7 @@ input {
 }
 
 a {
+  text-decoration: none;
   &:hover {
     text-decoration: none;
   }
