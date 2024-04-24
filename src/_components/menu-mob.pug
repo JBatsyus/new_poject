@@ -1,0 +1,20 @@
+.menu-mob-wrap
+  .menu-mob__head
+    .menu-mob__logo
+    .menu-mob__close
+      +icon('close', 'icon-23')
+    
+  ul.nav-menu-mob
+    each val in ['О бренде','Каталог','События','Уход за питомцем','Контакты','Вопрос специалисту']
+      li.nav-menu-mob__item
+        a(href="javascript:void(0);").nav-menu-mob__item-link !{val}
+  +button({
+    text: 'Где купить?',
+    mod: "button-blue"
+  })
+    
+    
+
+
+
+

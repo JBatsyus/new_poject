@@ -1,0 +1,18 @@
+extends ../templates/template-error.pug
+block variables
+  - const pageClass = 'page-error'
+
+block content
+  main.main
+    .error-top
+      .container
+        .error-wrap
+          .error-subtitle ошибка 404, страница не найдена
+          .error-title упс, кажись тут нет вкусняшек :(
+          .error-text Но на других страничках они точно есть!
+        #Cat404.cat-404
+    .footer-error
+      .container
+        .footer-error__inner
+          a(href="javascript:void(0);").footer-error-text Политика конфиденциальности
+          .footer-error-text.text-right Создание дизайна — nopreset

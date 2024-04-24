@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Cat's white</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/plugins/slick.css">
+    <link rel="stylesheet" href="css/plugins/slick-theme.css">
+    <link rel="stylesheet" href="css/plugins/lightgallery.min.css">
+    <link rel="stylesheet" href="css/plugins/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <div class="modal-backdrop-custom"></div>
+    <div class="header-fade"></div>
+    <div class="modal fade modal-open" id="modal-quest" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button class="close-modal" type="button" data-dismiss="modal" aria-label="Закрыть"></button>
+          <div class="modal-body">
+            <div class="h3 modal-title text-center">Вопрос специалисту</div>
+            <div class="upload-wrap">
+              <form>
+                <div class="form-input-wrap input-error">
+                  <input class="form__input" id="name" type="text" autocomplete="off" placeholder=" ">
+                  <label class="form__label" for="name">Ваше имя<span>*</span></label>
+                  <div class="error-message">Заполните поле</div>
+                </div>
+                <div class="form-input-wrap input-error">
+                  <input class="form__input input-phone" id="phone" type="text" autocomplete="off" placeholder=" ">
+                  <label class="form__label" for="phone">Телефон<span>*</span></label>
+                  <div class="error-message">Заполните поле</div>
+                </div>
+                <div class="form-input-wrap form-input-wrap_select input-error">
+                  <select class="select-theme" name="theme">
+                    <option value="">Тема обращения</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                    <option value="">Тема 1</option>
+                  </select>
+                  <div class="error-message">Заполните поле</div>
+                </div>
+                <div class="form-input-wrap form-input-wrap_textarea input-error">
+                  <textarea class="form__input" id="text" autocomplete="off" placeholder=" "></textarea>
+                  <label class="form__label" for="text">Вопрос / комментарий<span>*</span></label>
+                  <div class="error-message">Заполните поле</div>
+                </div>
+                <div class="dropzone-wrap">
+                  <div class="dropzone" id="dropzone" action="/file-upload">
+                    <div class="fallback">
+                      <input class="drop-file" name="file" type="file" multiple="">
+                    </div>
+                    <div class="dz-message" data-dz-message="">Прикрепить файл</div>
+                  </div>
+                </div>
+              </form>
+              <div class="text-requred">* поля для обязательного заполнения</div><img class="captcha" src="./img/captcha.png" alt="" title="">
+            </div>
+            <div class="button-wrap d-flex justify-content-center"><a class="button button-transparent button-transparent_black button-arrow mt-3" href="javascript:void(0);">Отправить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="container py-50">
+        <div class="row page-list mt-4">
+          <div class="col-md-7 mx-auto">
+            <h2 class="mb-4 pb-10 border-bottom">Список страниц</h2>
+            <ul class="pl-0 mb-4">
+              <li class="mb-2"><a href="main.html">Главная</a></li>
+              <li class="mb-2"><a href="404.html">404</a></li>
+              <li class="mb-2"><a href="500.html">500</a></li>
+              <li class="mb-2"><a href="politics.html">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="js/plugins/bootstrap.min.js"></script>
+    <script src="js/plugins/swiper-bundle.min.js"></script>
+    <script src="js/plugins/jquery.maskedinput.js"></script>
+    <script src="js/plugins/dropzone.min.js"></script>
+    <script src="js/plugins/jquery.formstyler.min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/slick.js"></script>
+    <script src="js/plugins/lightgallery.min.js"></script>
+    <script src="js/plugins/lottie.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/index-native.js"></script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+/* Миксин замены цвета placeholder у input.
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+@mixin placeholder($color, $font) {
+  
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $font;
+  }
+  
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $font;
+    
+  }
+  
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $font;
+    
+  }
+}
+
+
+@mixin background($url) {
+  background-image: url('../img/' + $url);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin background-contain($url) {
+  background-image: url('../img/' + $url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin background-cover($url) {
+  background-image: url('../img/' + $url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin background-cover-top($url) {
+  background-image: url('../img/' + $url);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin background-cover-right($url) {
+  background-image: url('../img/' + $url);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@mixin last-mb-0 {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin last-mr-0 {
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin width-flex($width) {
+  width: $width;
+  min-width: $width;
+}
+
+
+@mixin scroll-style {
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar-button {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: #E7EBF1;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $R-400;
+    cursor: pointer;
+  }
+  &::-webkit-resizer {
+    background-image: url('');
+    background-repeat: no-repeat;
+    width:4px;
+    height: 0;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    left: -100px;
+  }
+  
+}
+
+@mixin scroll-style-thin {
+  scrollbar-width: thin;
+  scrollbar-color: $gray transparent;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar-button {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $gray;
+    
+    border: 5px solid #fff;
+    cursor: pointer;
+  }
+  
+  &::-webkit-resizer {
+    background-image: none;
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 0;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 12px;
+    left: -100px;
+  }
+  
+}
+
+//@mixin tablet_small {
+//    @media (max-width: 768px) {
+//        @content
+//    }
+//}
+
+
+
+
+
+@mixin desktop4K {
+  @media (min-width: 2500px) and (max-width: 4000px){
+    @content
+  }
+}
+@mixin desktop2K {
+  @media (min-width: 1921px) and (max-width: 2500px){
+    @content
+  }
+}
+@mixin desktop1920 {
+  @media (max-width: 1920px) {
+    @content
+  }
+}
+@mixin desktop1650 {
+  @media (max-width: 1650px) {
+    @content
+  }
+}
+
+
+@mixin desktop1500 {
+  @media (max-width: 1500px) {
+    @content
+  }
+}
+
+@mixin desktop1400 {
+  @media (max-width: 1400px) {
+    @content
+  }
+}
+@mixin desktop1300 {
+  @media (max-width: 1300px) {
+    @content
+  }
+}
+@mixin desktop1200 {
+  @media (max-width: 1200px) {
+    @content
+  }
+}
+@mixin desktop1100 {
+  @media (max-width: 1100px) {
+    @content
+  }
+}
+@mixin desktop1000 {
+  @media (max-width: 1000px) {
+    @content
+  }
+}
+
+@mixin only_tablet {
+  @media (min-width: 768px) and (max-width: 991px)   {
+    @content
+  }
+}
+@mixin desktop_1200-1550 {
+  @media (min-width: 1200px) and (max-width: 1550px)   {
+    @content
+  }
+}
+
+
+@mixin only_desktop {
+  @media (min-width: 991px) {
+    @content
+  }
+}
+
+
+@mixin desktop_small {
+  @media (max-width: 1310px) {
+    @content
+  }
+}
+
+
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content
+  }
+}
+
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content
+  }
+}
+@mixin tablet_991 {
+  @media (max-width: 991px) {
+    @content
+  }
+}
+@mixin tablet_850 {
+  @media (max-width: 850px) {
+    @content
+  }
+}
+
+@mixin mobile_768 {
+  @media (max-width: 768px) {
+    @content
+  }
+}
+@mixin mobile_576 {
+  @media (max-width: 576px) {
+    @content
+  }
+}
+
+@mixin mobile_450 {
+  @media (max-width: 450px) {
+    @content
+  }
+}
+@mixin mobile_390 {
+  @media (max-width: 390px) {
+    @content
+  }
+}
+@mixin mobile_375 {
+  @media (max-width: 374px) {
+    @content
+  }
+}
+@mixin mobile_360 {
+  @media (max-width: 360px) {
+    @content
+  }
+}
+@mixin mobile_340 {
+  @media (max-width: 340px) {
+    @content
+  }
+}
+
+
+@mixin scroll {
+  -webkit-overflow-scrolling: auto;
+  overflow-x: auto;
+}
+
+
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content
+  }
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+}

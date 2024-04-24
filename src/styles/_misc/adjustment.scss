@@ -1,0 +1,161 @@
+@import 'mixins';
+@import 'global-fonts';
+
+
+
+$color-white: #FFFFFF;
+$color-black: #262626;
+$color-blue:#15508b;
+$color-gray: #595959;
+
+
+$Gilroy-100:"Gilroy-100";
+$Gilroy-200:"Gilroy-200";
+$Gilroy-300:"Gilroy-300";
+$GilroyRegular:"GilroyRegular";
+$Gilroy-500:"Gilroy-500";
+$Gilroy-600:"Gilroy-600";
+$Gilroy-900:"Gilroy-900";
+$GilroyItalic-200:"GilroyItalic-200";
+
+
+
+
+
+@function rem($px) {
+  @return calc($px / 16px) + 0rem;
+}
+
+@function scale2500($rem) {
+  @return calc($rem * 0.9);
+}
+
+
+@function size-w($size, $vw) {
+  @return (calc(100 / (calc($vw / $size)))) * 1vw;
+}
+
+body {
+  font-family: $GilroyRegular, Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $color-black;
+  font-size: rem(16px);
+  text-rendering: auto;
+  line-height: normal;
+  line-height: 24px;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  outline: none !important;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+
+:root {
+  --app-height: 100%;
+}
+
+.swiper-main,
+.swiper-main .swiper-slide {
+  height: 100vh;
+  height: var(--app-height) !important;
+}
+
+
+
+
+header {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+.wrapper {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+}
+
+footer {
+  /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 0 0 auto;
+}
+
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+button, a, input {
+  outline: none;
+  
+  &:focus, &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+label {
+  margin: 0;
+}
+
+.price {
+  white-space: nowrap;
+}
+
+html{
+  height: 100%;
+  @include desktop4K{
+    font-size: 22px;
+  }
+  @include desktop2K{
+    font-size: 20px;
+  }
+  @include desktop1920{
+    font-size: 16px;
+  }
+  @include desktop1400{
+    font-size: 15px;
+  }
+  @include desktop1300{
+    font-size: 14px;
+  }
+  @include desktop1200{
+    font-size: 13px;
+  }
+  @include desktop1100{
+    font-size: 12px;
+  }
+  @include desktop1000{
+    font-size: 11px;
+  }
+  @include tablet_991{
+    font-size: 16px;
+
+  }
+}
+

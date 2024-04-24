@@ -1,0 +1,80 @@
+// .menu-header {
+//   width: rem(555px);
+//   min-height: rem(480px);
+//   background: $color-white;
+//   position: absolute;
+//   left: 0;
+//   top: rem(64px);
+//   z-index: 30;
+//   border-radius: rem(16px);
+//   padding: rem(40px);
+//   transition: 0.7s;
+//   opacity: 0;
+//   pointer-events: none;
+//   box-shadow: 0px 4px 23px 0px rgba(0, 0, 0, 0.10);
+//   @include tablet_991 {
+//     width: rem(360px);
+//     min-height: rem(350px);
+//     padding: rem(24px);
+//     right: 0;
+//     left: auto;
+//   }
+  
+// }
+
+// .menu-inner {
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+// }
+
+// .open-menu {
+//   .icon-header_close {
+//     display: none;
+//   }
+  
+//   .icon-header_open {
+//     display: block;
+//   }
+  
+//   .icon-header.icon-header_open {
+//     fill: $B-500;
+    
+//   }
+  
+//   .menu-header {
+//     transition: 0.7s;
+//     opacity: 1;
+//     //display: block;
+//     pointer-events: visible;
+//   }
+  
+//   .icon-header__wrap.humb {
+//     background: $W-500;
+//   }
+//   .header-wrapper_fixed {
+//       .icon-header__wrap.humb {
+//         background: $Gr-400;
+//       }
+//   }
+  
+  
+// }
+
+
+// .menu-link {
+//   font-size: rem(24px);
+//   padding: rem(16px) 0;
+//   display: block;
+//   color: $B-500;
+  
+//   &:hover {
+//     color: $B-500;
+//   }
+  
+//   @include tablet_991 {
+//     padding: rem(12px) 0;
+//   }
+// }
+
+

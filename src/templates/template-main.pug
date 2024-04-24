@@ -1,0 +1,20 @@
+doctype html
+block variables
+
+html(lang='ru')
+  include ../_components/mixins
+  include ../templates/head
+
+  body.body(class=pageClass)
+    img(src=`img/up-button.svg` alt='', title='').upbutton-main#upbutton-main
+    include ../_components/header
+
+
+
+    block content
+
+
+
+
+    include ../templates/scripts.pug
+

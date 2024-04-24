@@ -1,0 +1,64 @@
+// .footer-wrap {
+//   padding: rem(16px) 0 0 0;
+//   background: #161616;
+//   min-height: rem(704px);
+//   position: relative;
+// }
+// .footer-block__info{
+//   padding-top: rem(150px);
+//   display: flex;
+//   align-items: center;
+//   color: $W-500;
+//   justify-content: space-between;
+//   margin-top: auto;
+//   position: relative;
+//   z-index: 10;
+// }
+// .politic,
+// .copy{
+//   font-size: rem(14px);
+//   line-height: rem(16px);
+//   color:$B-400;
+//   &:hover{
+//     color: $W-500;
+//   }
+  
+// }
+// .copy{
+//   @include tablet_991{
+//     text-align: right;
+//   }
+// }
+
+// .footer-list__link {
+//   display: inline-block;
+//   font-size: rem(24px);
+//   padding: rem(16px) 0;
+//   color: $W-500;
+//   &:hover{
+//     color: $B-400;
+//   }
+// }
+
+// .footer-img{
+//   width: rem(577px);
+//   height: rem(480px);
+//   position: absolute;
+//   right: rem(-4px);
+//   top: rem(16px);
+//   @include background-contain('footer-img.svg');
+//   @include tablet_991{
+//     display: none;
+//   }
+// }
+// .footer{
+//   position: relative;
+//   padding-bottom: rem(43px);
+//   display: flex;
+//   flex-direction: column;
+//   min-height: rem(704px);
+//   @include tablet_991{
+//     padding-bottom: rem(18px);
+//   }
+// }
+
