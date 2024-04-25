@@ -5,8 +5,23 @@ block content
   main.wrapper
     .container
       ul.breadcrumbs
-          each name in ['Главная', 'Каталог', 'Седельные тягачи']
-            li
-              a(href="javascript:void(0);")= name
+        each name in ['Главная', 'Каталог', 'Седельные тягачи']
+          li
+            a(href="javascript:void(0);")= name
+      .btn_block__wrapper
+        a.btn_white(href="javascript:void(0);") Все
+        a.btn_white.btn_active(href="javascript:void(0);") 4х2
+        a.btn_white(href="javascript:void(0);") 6х4
+        a.btn_white(href="javascript:void(0);") 6х2
+        a.btn_white(href="javascript:void(0);") 6х6
+
+      h1.h1 Седельные тягачи
+      .catalog-preview__wrap
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
+        +catalog-preview-item
 
 

@@ -209,7 +209,6 @@ body {
   font-size: 16px;
   text-rendering: auto;
   line-height: normal;
-  line-height: 24px;
   -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -359,7 +358,7 @@ p {
   border-radius: 4px;
   padding: 10px 40px;
   background: #15508b;
-  font-family: "GilroyRegular";
+  font-family: "Gilroy-600";
   font-weight: 600;
   font-size: 14px;
   color: #FFFFFF;
@@ -381,6 +380,41 @@ p {
   font-weight: 600;
   font-size: 16px;
   background: #15508b;
+  color: #FFFFFF;
+}
+
+.btn_white {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #262626;
+  border-radius: 4px;
+  padding: 10px 40px;
+  background: #FFFFFF;
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 14px;
+  color: #262626;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.btn_white:hover {
+  background: #15508b;
+  border: 1px solid #15508b;
+  color: #FFFFFF;
+}
+
+.btn_white.btn_active {
+  background: #15508b;
+  border: 1px solid #15508b;
   color: #FFFFFF;
 }
 
@@ -780,6 +814,14 @@ p {
 .catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .btn {
   padding: 15px 60px;
   text-transform: capitalize;
+}
+
+.btn_block__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 991px) {
