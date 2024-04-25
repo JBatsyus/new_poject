@@ -3,6 +3,13 @@ mixin section-item(title)
   a(href="javascript:void(0);").catalog_section__item(style="background-image:url('./img/bg.png')")
     .section-item__title !{title}
 
+mixin service-preview-item(title)
+    a.service-preview__item(href="javascript:void(0);")
+      .service-preview__images(style="background-image:url('./img/fara.jpg')")
+      .service-preview__desc
+        .service-preview__title !{title}
+        .btn Подробнее
+
 mixin catalog-preview-item
   a.catalog-preview__item(href="javascript:void(0);")
     .catalog-preview__images(style="background-image:url('./img/tyaga.png')")

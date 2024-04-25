@@ -1,5 +1,7 @@
 .btn_block__wrapper{
   display: flex;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  overflow-y: hidden;
+  overflow-x: auto;
 }

@@ -704,6 +704,84 @@ p {
   gap: 15px;
 }
 
+.pagination__wrap .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination__wrap .pagination__numbers,
+.pagination__wrap .pagination__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #15508b;
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.pagination__wrap .pagination__numbers:hover,
+.pagination__wrap .pagination__btn:hover {
+  background: #FFFFFF;
+  color: #262626;
+}
+
+.pagination__wrap .pagination__numbers:hover svg path,
+.pagination__wrap .pagination__btn:hover svg path {
+  stroke: #262626;
+  background: #FFFFFF;
+}
+
+.pagination__wrap .pagination__numbers svg path,
+.pagination__wrap .pagination__btn svg path {
+  stroke: #FFFFFF;
+  -webkit-transition: stroke 0.4s ease-in-out;
+  transition: stroke 0.4s ease-in-out;
+}
+
+.pagination__wrap .active {
+  background: #FFFFFF;
+  color: #262626;
+}
+
+.pagination__wrap .active svg path {
+  stroke: #262626;
+  background: #FFFFFF;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
 .banner__item {
   aspect-ratio: 3/1.2;
   background-image: url("../img/main_banner.jpg");
@@ -753,7 +831,7 @@ p {
 
 .catalog-preview__wrap .catalog-preview__item {
   border-radius: 6px;
-  border: 1px solid #1e1e1e;
+  border: 1px solid #262626;
 }
 
 .catalog-preview__wrap .catalog-preview__item .catalog-preview__images {
@@ -821,7 +899,64 @@ p {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.service-preview__wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-bottom: 40px;
+  gap: 25px;
+}
+
+.service-preview__wrap .service-preview__item {
+  border-radius: 6px;
+  border: 1px solid #262626;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service-preview__wrap .service-preview__item .service-preview__images {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 91%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.service-preview__wrap .service-preview__item .service-preview__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 25px;
+  height: 100%;
+}
+
+.service-preview__wrap .service-preview__item .service-preview__desc .service-preview__title {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  font-size: 16px;
+  color: #262626;
+  text-transform: capitalize;
+  margin-bottom: 45px;
+}
+
+.service-preview__wrap .service-preview__item .service-preview__desc .btn {
+  padding: 15px 60px;
+  text-transform: capitalize;
+  margin-top: auto;
 }
 
 @media (min-width: 991px) {

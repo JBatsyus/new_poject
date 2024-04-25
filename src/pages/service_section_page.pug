@@ -1,0 +1,26 @@
+extends ../templates/template-service_section_page
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Сервис', 'Запчасти']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Запчасти
+      .btn_block__wrapper
+        a.btn_white.btn_active(href="javascript:void(0);") Все
+        a.btn_white(href="javascript:void(0);") Шасси
+        a.btn_white(href="javascript:void(0);") Коробка передач
+        a.btn_white(href="javascript:void(0);") Двигатель
+        a.btn_white(href="javascript:void(0);") Кабина
+
+      .service-preview__wrap
+        +service-preview-item("Фара левая SITRUK C7H")
+        +service-preview-item("Насос топливный ТНВД SITRUK")
+        +service-preview-item("Турбокомпрессор (турбина) SITRUK")
+        +service-preview-item("Диск сцепления SITRUK")
+        +service-preview-item("Стартер SITRUK")
+      include ../_components/pagination
+
