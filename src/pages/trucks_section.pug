@@ -1,0 +1,12 @@
+extends ../templates/template-trucks_section.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+          each name in ['Главная', 'Каталог', 'Седельные тягачи']
+            li
+              a(href="javascript:void(0);")= name
+
+

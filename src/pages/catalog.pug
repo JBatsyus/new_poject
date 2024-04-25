@@ -5,10 +5,9 @@ block content
   main.wrapper
     .container
       ul.breadcrumbs
-        li
-          a(href='#') Главная
-        li
-          a(href='#') Каталог
+          each name in ['Главная', 'Каталог']
+            li
+              a(href="javascript:void(0);")= name
       .catalog_section__wrap
         +section-item("Седельные тягачи")
         +section-item("Самосвалы")
