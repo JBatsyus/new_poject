@@ -4,11 +4,11 @@ mixin section-item(title)
     .section-item__title !{title}
 
 mixin service-preview-item(title)
-    a.service-preview__item(href="javascript:void(0);")
-      .service-preview__images(style="background-image:url('./img/fara.jpg')")
-      .service-preview__desc
-        .service-preview__title !{title}
-        .btn Подробнее
+  a.service-preview__item(href="javascript:void(0);")
+    .service-preview__images(style="background-image:url('./img/fara.jpg')")
+    .service-preview__desc
+      .service-preview__title !{title}
+      .btn Подробнее
 
 mixin catalog-preview-item
   a.catalog-preview__item(href="javascript:void(0);")
@@ -42,7 +42,7 @@ mixin catalog-preview-item
           span.catalog-property__value Евро-5
       button.btn Подробнее
 
-mixin manuals-preview-item
+mixin manuals-item
   .manuals__item
     .manuals__images
       img(src="./img/tyaga.png", alt="")
@@ -51,7 +51,15 @@ mixin manuals-preview-item
       .manuals__txt В этом руководстве представлена информация об эксплуатации, плановом техническом обслуживании и техническом обслуживании автомобилей серии SITRAK -C7H, а также представлены соответствующие правила безопасности, которые необходимо соблюдать при использовании автомобиля.
       a.btn(href="javascript:void(0);" download) Скачать
 
-
+mixin news-preview-item 
+  .news-preview__item
+    .news-preview__images
+      img(src="./img/tyaga.png", alt="")
+    .news-preview__desc
+      .news-preview__date 01.03.2024
+      .news-preview__title Руководство по эксплуатации автомобиля SITRAK C7H
+      .news-preview__txt В этом руководстве представлена информация об эксплуатации, плановом техническом обслуживании и техническом обслуживании автомобилей серии SITRAK -C7H, а также представлены соответствующие правила безопасности, которые необходимо соблюдать при использовании автомобиля.
+      a.btn(href="javascript:void(0);") Читать далее
 
 
 mixin button(data)

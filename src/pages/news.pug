@@ -1,0 +1,17 @@
+extends ../templates/template-news.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Новости']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Новости
+      .news-preview__wrap
+        +news-preview-item
+        +news-preview-item
+        +news-preview-item
+
+
