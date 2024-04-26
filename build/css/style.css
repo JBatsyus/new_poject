@@ -977,6 +977,8 @@ p {
   width: 100%;
   border-radius: 6px;
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product__wrap .product__feature {
@@ -1046,6 +1048,76 @@ p {
 
 .product__wrap .product__feature .product-order .btn {
   margin-right: 4.375rem;
+  text-transform: capitalize;
+}
+
+.manuals__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.manuals__wrap .manuals__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.manuals__wrap .manuals__item:last-child {
+  margin-bottom: 0;
+}
+
+.manuals__wrap .manuals__item .manuals__images {
+  margin-right: 25px;
+}
+
+.manuals__wrap .manuals__item .manuals__images img {
+  max-width: 182px;
+  aspect-ratio: 1/1;
+  border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.manuals__wrap .manuals__item .manuals__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.manuals__wrap .manuals__item .manuals__desc .manuals__title {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.manuals__wrap .manuals__item .manuals__desc .manuals__txt {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  max-width: 820px;
+  margin-bottom: 30px;
+}
+
+.manuals__wrap .manuals__item .manuals__desc .btn {
   text-transform: capitalize;
 }
 

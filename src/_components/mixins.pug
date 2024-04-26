@@ -19,28 +19,37 @@ mixin catalog-preview-item
         p.catalog-property__item 
           span.catalog-property__name Тип:
           span.catalog-property__value Седельный тягач
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Высота ССУ:
           span.catalog-property__value 1 150 мм
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Колесная формула:
           span.catalog-property__value 4х2
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name КПП:
           span.catalog-property__value МКПП
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Ретардер:
           span.catalog-property__value нет
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Подвеска:
           span.catalog-property__value Спередняя ресорная, задняя пневматическая
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Кабина:
           span.catalog-property__value 2 спальных места
-        .catalog-property__item
+        p.catalog-property__item
           span.catalog-property__name Экологический класс:
           span.catalog-property__value Евро-5
       button.btn Подробнее
+
+mixin manuals-preview-item
+  .manuals__item
+    .manuals__images
+      img(src="./img/tyaga.png", alt="")
+    .manuals__desc
+      .manuals__title Руководство по эксплуатации автомобиля SITRAK C7H
+      .manuals__txt В этом руководстве представлена информация об эксплуатации, плановом техническом обслуживании и техническом обслуживании автомобилей серии SITRAK -C7H, а также представлены соответствующие правила безопасности, которые необходимо соблюдать при использовании автомобиля.
+      a.btn(href="javascript:void(0);" download) Скачать
 
 
 

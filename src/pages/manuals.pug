@@ -1,0 +1,18 @@
+extends ../templates/template-manuals.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Руководства']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Руководства
+      .manuals__wrap
+        +manuals-preview-item
+        +manuals-preview-item
+        +manuals-preview-item
+        +manuals-preview-item
+        +manuals-preview-item
+
