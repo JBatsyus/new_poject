@@ -1,0 +1,31 @@
+.about__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  .about__desc {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    p {
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      font-size: 20px;
+      color: $color-deep-black;
+      margin-bottom: 17px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .about__image{
+    width: 45%;
+    overflow: hidden;
+    border-radius: 6px;
+    img{
+      aspect-ratio: 1/1;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  }
+}
