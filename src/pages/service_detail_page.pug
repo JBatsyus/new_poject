@@ -1,0 +1,38 @@
+extends ../templates/template-service_detail_page
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Сервис', 'Запчасти',' Фара левая SITRUK C7H']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1  Фара левая SITRUK C7H
+      .product__wrap
+        .product__image 
+          img(src="./img/fara_detail_page.jpg", alt="")
+        .product__feature
+          h2.h2 Характеристики
+          .product-property__list
+            .product-property__item 
+              .product-property__name Артикул
+              .product-property__value 48578177
+            .product-property__item 
+              .product-property__name Тип товара
+              .product-property__value Фара в сборе
+            .product-property__item 
+              .product-property__name Происхождение
+              .product-property__value Китай
+            .product-property__item 
+              .product-property__name Номер запчасти
+              .product-property__value 811W251016001
+            .product-property__item 
+              .product-property__name Производитель
+              .product-property__value Sinotruk
+          .product-order
+            a.btn(href="javascript:void(0);") Заказать
+            p Есть в наличии: 12
+
+
+
