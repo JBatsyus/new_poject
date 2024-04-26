@@ -320,14 +320,6 @@ h2 {
   padding-top: var(--js-header-height);
 }
 
-.bold {
-  font-family: "Gilroy-600";
-  font-weight: 600;
-  font-size: 16px;
-  color: #262626;
-  margin-right: 5px;
-}
-
 .container {
   max-width: 90.625rem;
   margin: 0 auto;
@@ -863,7 +855,7 @@ p {
   margin-bottom: 25px;
 }
 
-.catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .catalog-preview__text {
+.catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .catalog-preview__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -874,7 +866,15 @@ p {
   margin-bottom: 25px;
 }
 
-.catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .catalog-preview__text p .thin {
+.catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .catalog-preview__list .catalog-property__item .catalog-property__name {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  font-size: 16px;
+  color: #262626;
+  margin-right: 5px;
+}
+
+.catalog-preview__wrap .catalog-preview__item .catalog-preview__desc .catalog-preview__list .catalog-property__item .catalog-property__value {
   font-family: "GilroyRegular";
   font-weight: 400;
   color: #262626;

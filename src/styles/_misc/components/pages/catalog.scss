@@ -60,13 +60,20 @@
         margin-bottom: 25px;
       }
 
-      .catalog-preview__text {
+      .catalog-preview__list {
         display: flex;
         flex-direction: column;
         margin-bottom: 25px;
 
-        p {
-          .thin {
+        .catalog-property__item {
+          .catalog-property__name{
+            font-family: $Gilroy-600;
+            font-weight: 600;
+            font-size: 16px;
+            color: $color-black;
+            margin-right: 5px;
+          }
+          .catalog-property__value{
             font-family: $GilroyRegular;
             font-weight: 400;
             color: $color-black;
