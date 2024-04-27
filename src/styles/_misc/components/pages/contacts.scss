@@ -1,0 +1,48 @@
+.contacts__wrap {
+  display: flex;
+  flex-direction: column;
+
+  .contacts__list {
+    margin-bottom: 60px;
+
+    .contact-item {
+      display: flex;
+      margin-bottom: 20px;
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      font-size: 20px;
+      color: $color-deep-black;
+      gap: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact-item__val {
+        a {
+          color: $color-deep-black;
+        }
+      }
+    }
+  }
+
+  .contacts__map {
+    margin-bottom: 60px;
+  }
+
+  .contacts__form {
+    .contacts-form__wrap {
+      .contacts-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 888px;
+
+        .btn {
+          padding: 16px 60px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

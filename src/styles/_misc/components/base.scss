@@ -136,7 +136,36 @@ p {
   margin-bottom: 0;
 }
 
+.input__wrap {
+  margin-bottom: 25px;
 
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 14px;
+    font-family: $Gilroy-500;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-black;
+    background-color: $color-white;
+    background-clip: padding-box;
+    border: 1px solid $color-input;
+    border-radius: 6px;
+
+    &::placeholder {
+      font-family: $Gilroy-500;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $color-input;
+    }
+  }
+
+  textarea {
+    min-height: rem(120px);
+    resize: vertical;
+  }
+}
 
 
 

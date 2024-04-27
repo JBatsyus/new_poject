@@ -1,0 +1,42 @@
+extends ../templates/template-contacts.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Контакты']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Контакты
+      .contacts__wrap 
+        .contacts__list
+          .contact-item
+            .contact-item__title Наш адрес: 
+            .contact-item__val Россия, Московская область, г. Москва, Китай-город 
+          .contact-item
+            .contact-item__title Телефон: 
+            .contact-item__val 
+              a(href="tel:javascript:void(0);") + 7 (000) 000-00-00
+          .contact-item
+            .contact-item__title E-mail: 
+            .contact-item__val 
+              a(href="mailto:javascript:void(0);") info@sitrak.ru
+        .contacts__map 
+          .h1 Как добраться?
+          .map  
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A94e154c578502362bcd39485357ec5c1ca6828a4321296acf2a0e2e223bbef11&amp;source=constructor" width="100%" height="580" frameborder="0"></iframe>
+        .contacts__form 
+          .h1 Остались вопросы?
+          .contacts-form__wrap
+            form.contacts-form 
+              .input__wrap
+                input#usernameContent(type='text' name='username' placeholder='Ваше имя')
+              .input__wrap
+                input#phoneContent(type='tel' name='phone' placeholder='Телефон')
+              .input__wrap
+                input#emailContent(type='email' name='email' placeholder='Ваш email')
+              .input__wrap
+                textarea#msgContent(name='msg' placeholder='Текст сообщения')
+              button.btn(type='submit' name='callback-btn') Отправить
+
