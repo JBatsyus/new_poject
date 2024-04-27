@@ -1,0 +1,62 @@
+.dealer__wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 888px;
+  width: 100%;
+
+  .dealer__desc {
+    margin-bottom: 40px;
+    p {
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      font-size: 20px;
+      color: $color-deep-black;
+      margin-bottom: 17px;
+    }
+  }
+
+  .dealer__form {
+    display: flex;
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .input__wrap {
+        margin-bottom: 25px;
+
+        input,
+        textarea {
+          display: block;
+          width: 100%;
+          padding: 10px 14px;
+          font-family: $Gilroy-500;
+          font-size: 1rem;
+          font-weight: 500;
+          color: $color-black;
+          background-color: $color-white;
+          background-clip: padding-box;
+          border: 1px solid $color-input;
+          border-radius: 6px;
+
+          &::placeholder {
+            font-family: $Gilroy-500;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $color-input;
+          }
+        }
+
+        textarea {
+          min-height: rem(120px);
+          resize: vertical;
+        }
+      }
+
+      .btn {
+        padding: 16px 60px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

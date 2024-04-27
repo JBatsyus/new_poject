@@ -236,6 +236,13 @@ header {
           flex: 0 0 auto;
 }
 
+.wrapper {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 footer {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   -webkit-box-flex: 0;
@@ -282,6 +289,17 @@ input:focus,
 input:visited {
   text-decoration: none;
   outline: none;
+}
+
+input[type=text] {
+  font-family: inherit;
+  /* 1 */
+  font-size: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 a {
@@ -352,7 +370,7 @@ p {
   background: #15508b;
   font-family: "Gilroy-600";
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   color: #FFFFFF;
   text-transform: uppercase;
   max-width: -webkit-max-content;
@@ -1242,6 +1260,112 @@ p {
 
 .news-preview__wrap .news-preview__item .news-preview__desc .btn {
   text-transform: none;
+}
+
+.dealer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 888px;
+  width: 100%;
+}
+
+.dealer__wrap .dealer__desc {
+  margin-bottom: 40px;
+}
+
+.dealer__wrap .dealer__desc p {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 17px;
+}
+
+.dealer__wrap .dealer__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dealer__wrap .dealer__form .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap {
+  margin-bottom: 25px;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input,
+.dealer__wrap .dealer__form .contact-form .input__wrap textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #262626;
+  background-color: #FFFFFF;
+  background-clip: padding-box;
+  border: 1px solid #a3a3a3;
+  border-radius: 6px;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input::-webkit-input-placeholder, .dealer__wrap .dealer__form .contact-form .input__wrap textarea::-webkit-input-placeholder {
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input::-moz-placeholder, .dealer__wrap .dealer__form .contact-form .input__wrap textarea::-moz-placeholder {
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input:-ms-input-placeholder, .dealer__wrap .dealer__form .contact-form .input__wrap textarea:-ms-input-placeholder {
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input::-ms-input-placeholder, .dealer__wrap .dealer__form .contact-form .input__wrap textarea::-ms-input-placeholder {
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap input::placeholder,
+.dealer__wrap .dealer__form .contact-form .input__wrap textarea::placeholder {
+  font-family: "Gilroy-500";
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a3a3a3;
+}
+
+.dealer__wrap .dealer__form .contact-form .input__wrap textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.dealer__wrap .dealer__form .contact-form .btn {
+  padding: 16px 60px;
+  text-transform: capitalize;
 }
 
 @media (min-width: 991px) {

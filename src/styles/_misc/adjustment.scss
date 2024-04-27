@@ -8,6 +8,7 @@ $color-black: #262626;
 $color-blue:#15508b;
 $color-gray: #595959;
 $color-deep-black:#000;
+$color-input: #a3a3a3;
 
 
 $Gilroy-100:"Gilroy-100";
@@ -54,6 +55,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  
 }
 
 
@@ -70,10 +72,10 @@ header {
   flex: 0 0 auto;
 }
 
-// .wrapper {
-//   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
-//   flex: 1 0 auto;
-// }
+.wrapper {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 1 auto;
+}
 
 footer {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
@@ -118,6 +120,13 @@ input {
     text-decoration: none;
     outline: none;
   }
+}
+
+input[type="text"] {
+  font-family: inherit; /* 1 */
+  font-size: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
 }
 
 a {

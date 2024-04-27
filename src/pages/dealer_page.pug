@@ -1,0 +1,30 @@
+extends ../templates/template-dealer_page.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Дилерская сеть', 'Стать дилером']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Стать дилером
+      .dealer__wrap 
+        .dealer__desc 
+          p ООО «Ситрак» является эксклюзивным дистрибьютором C&C Trucks Co. LTD (КНР) на территории Российской Федерации по продаже грузовых автомобилей марки C&C, работающих на природном газе (метан). Основными приоритетами деятельности C&C Trucks и «Ситрак» являются обеспечение своих клиентов качественным послепродажным сервисом, развитие широкой дилерской сети, применение единых подходов к реализации сервисной и гарантийной политики. На карте представлены регионы развития дилерской сети. 
+          p Если вы желаете стать представителем нашей компании в своем регионе, запросите анкету дилера и мы сможем рассмотреть вариант сотрудничества.
+        .dealer__form
+          form.contact-form 
+            .input__wrap
+              input#usernameContent(type='text' name='username' placeholder='Ваше имя')
+            .input__wrap
+              input#cityContent(type='text' name='city' placeholder='Ваш город')
+            .input__wrap
+              input#phoneContent(type='tel' name='phone' placeholder='Телефон')
+            .input__wrap
+              input#emailContent(type='email' name='email' placeholder='Ваш email')
+            .input__wrap
+              textarea#msgContent(name='msg' placeholder='Текст сообщения')
+            button.btn(type='submit' name='callback-btn') Отправить
+
+
