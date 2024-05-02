@@ -1,6 +1,5 @@
 .manuals__wrap {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 
   .manuals__item {
     display: flex;

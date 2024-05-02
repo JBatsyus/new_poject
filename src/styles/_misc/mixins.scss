@@ -19,7 +19,10 @@
 
   }
 }
-
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
 
 @mixin background($url) {
   background-image: url('../img/'+ $url);

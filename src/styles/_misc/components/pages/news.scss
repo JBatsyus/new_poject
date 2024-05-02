@@ -1,6 +1,5 @@
 .news-preview__wrap {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 
   .news-preview__item {
     display: flex;
