@@ -1323,6 +1323,47 @@ p {
   text-transform: none;
 }
 
+.news-item__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1192px;
+}
+
+.news-item__wrap h2 {
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.news-item__wrap .news-item__date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 40px;
+}
+
+.news-item__wrap .news-item__title {
+  margin-bottom: 35px;
+}
+
+.news-item__wrap p {
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.news-item__wrap .news-item__desc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.news-item__wrap .news-item__desc .news-item__img {
+  width: 100%;
+}
+
 .dealer__wrap {
   display: -webkit-box;
   display: -ms-flexbox;

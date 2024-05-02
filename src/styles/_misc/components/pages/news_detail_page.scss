@@ -1,0 +1,33 @@
+.news-item__wrap {
+  @include flex-column;
+  max-width: 1192px;
+  h2{
+    color: $color-deep-black;
+    margin-bottom: 30px;
+  }
+
+  .news-item__date {
+    font-size: 14px;
+    color: $color-thin-black;
+    margin-bottom: 40px;
+  }
+
+  .news-item__title {
+    margin-bottom: 35px;
+  }
+
+  p {
+    color: $color-deep-black;
+    margin-bottom: 25px;
+  }
+
+  .news-item__desc {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    .news-item__img {
+      width: 100%;
+    }
+  }
+}
