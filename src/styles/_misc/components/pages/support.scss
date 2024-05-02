@@ -1,0 +1,23 @@
+.support__wrap {
+  h2 {
+    margin-bottom: 40px;
+    color: $color-deep-black;
+  }
+
+  .support__list {
+    .support__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      a {
+        line-height: 0;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: $color-blue;
+        margin-right: 25px;
+
+      }
+    }
+  }
+}
