@@ -1,0 +1,61 @@
+.maintenance__wrap {
+  @include flex-column;
+
+  .maintenance__desc {
+    margin-bottom: 15px;
+
+    p {
+      margin-bottom: 25px;
+    }
+
+  }
+
+  a {
+    // line-height: 0;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $color-blue;
+    margin-right: 15px;
+  }
+
+  h2 {
+    font-family: $Gilroy-600;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: $color-deep-black;
+  }
+
+  .maintenance__list {
+    .maintenance__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  .materials__wrap {
+    @include flex-column;
+    margin-bottom: 30px;
+  }
+
+  .technical-description__wrap {
+    .technical-description__blocks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+
+      .maintenance__title {
+        font-family: $Gilroy-600;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-deep-black;
+        margin-bottom: 20px;
+        
+      }
+
+    }
+  }
+}

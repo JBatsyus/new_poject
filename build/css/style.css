@@ -1511,6 +1511,7 @@ p {
   text-transform: uppercase;
   color: #15508b;
   margin-bottom: 26px;
+  line-height: 0.7;
 }
 
 .support__wrap h2 {
@@ -1535,6 +1536,77 @@ p {
           text-decoration-skip-ink: none;
   color: #15508b;
   margin-right: 25px;
+}
+
+.maintenance__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maintenance__wrap .maintenance__desc {
+  margin-bottom: 15px;
+}
+
+.maintenance__wrap .maintenance__desc p {
+  margin-bottom: 25px;
+}
+
+.maintenance__wrap a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #15508b;
+  margin-right: 15px;
+}
+
+.maintenance__wrap h2 {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.maintenance__wrap .maintenance__list .maintenance__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.maintenance__wrap .materials__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.maintenance__wrap .technical-description__wrap .technical-description__blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.maintenance__wrap .technical-description__wrap .technical-description__blocks .maintenance__title {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 991px) {
