@@ -4,15 +4,12 @@
   .maintenance__desc {
     margin-bottom: 15px;
 
-    p {
-      margin-bottom: 25px;
-    }
-
   }
 
   a {
     // line-height: 0;
     text-decoration: underline;
+    text-underline-offset: 4px;
     text-decoration-skip-ink: none;
     color: $color-blue;
     margin-right: 15px;

@@ -8,6 +8,10 @@
     padding: 20px;
     margin-bottom: 20px;
 
+    // @include tablet_991 {
+    //   border: 10px solid $color-black;
+    // }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -57,5 +61,6 @@
         text-transform: none;
       }
     }
+
   }
 }

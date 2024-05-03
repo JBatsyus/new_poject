@@ -19,7 +19,8 @@
 
   }
 }
-@mixin flex-column{
+
+@mixin flex-column {
   display: flex;
   flex-direction: column;
 }
@@ -45,7 +46,7 @@
 }
 
 @mixin background-cover-top($url) {
-  background-image: url('../img/' + $url);
+  background-image: url('../img/'+ $url);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -157,11 +158,11 @@
 
 }
 
-//@mixin tablet_small {
-//    @media (max-width: 768px) {
-//        @content
-//    }
-//}
+@mixin tablet_small {
+  @media (max-width: 768px) {
+    @content
+  }
+}
 
 
 

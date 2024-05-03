@@ -102,19 +102,26 @@
   text-transform: uppercase;
   color: $color-black;
   margin-bottom: 40px;
+
+
 }
 
-h2 {
+h2,
+.h2 {
   font-family: $Gilroy-600;
   font-size: 24px;
   text-transform: uppercase;
   color: $color-black;
+
+  @include tablet_991 {
+    font-size: 20px;
   }
+}
 
 .wrapper {
   padding-bottom: 60px;
   padding-top: var(--js-header-height);
-  
+
 }
 
 
@@ -127,13 +134,19 @@ h2 {
 
 }
 
-.h3 {
-  font-size: rem(24px);
-}
+
 
 p {
   line-height: rem(24px);
-  margin-bottom: 0;
+  margin-bottom: 20px;
+
+  @include tablet_991 {
+    margin-bottom: 15px;
+  }
+
+  @include mobile_768 {
+    margin-bottom: 10px;
+  }
 }
 
 .input__wrap {

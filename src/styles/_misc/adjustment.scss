@@ -10,6 +10,7 @@ $color-gray: #595959;
 $color-deep-black:#000;
 $color-input: #a3a3a3;
 $color-thin-black:rgba(0, 0, 0, 0.55);
+$color-active:#2171C1;
 
 
 $Gilroy-100:"Gilroy-100";
@@ -144,15 +145,6 @@ label {
 
 html {
   height: 100%;
-
-  @include desktop4K {
-    font-size: 22px;
-  }
-
-  @include desktop2K {
-    font-size: 20px;
-  }
-
   @include desktop1920 {
     font-size: 16px;
   }

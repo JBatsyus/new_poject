@@ -64,8 +64,11 @@
     .product-order {
       display: flex;
       align-items: center;
+      p{
+        margin-bottom: 0;
+      }
 
-      .btn {
+      .btn-big {
         margin-right: rem(70px);
         text-transform: capitalize;
       }
