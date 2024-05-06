@@ -10,13 +10,32 @@
       align-items: center;
       margin-bottom: 20px;
 
+      @include mobile_768 {
+        justify-content: space-between;
+        align-items: center;
+      }
+
       a {
-        line-height: 0;
+        text-underline-offset: 4px;
         text-decoration: underline;
         text-decoration-skip-ink: none;
         color: $color-blue;
+
         margin-right: 25px;
 
+        @include mobile_576 {
+          max-width: 375px;
+          margin-right: 10px;
+        }
+
+        @include mobile_450 {
+          max-width: 270px;
+
+        }
+
+        @include mobile_340 {
+          max-width: 230px;
+        }
       }
     }
   }
