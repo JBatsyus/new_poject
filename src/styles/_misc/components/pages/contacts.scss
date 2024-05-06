@@ -4,8 +4,12 @@
   .contacts__list {
     margin-bottom: 60px;
 
+    @include mobile_768 {
+      margin-bottom: 40px;
+    }
+
     .contact-item {
-      display: flex;
+      // display: flex;
       margin-bottom: 20px;
       font-family: $GilroyRegular;
       font-weight: 400;
@@ -13,8 +17,14 @@
       color: $color-deep-black;
       gap: 10px;
 
+
+
       &:last-child {
         margin-bottom: 0;
+      }
+
+      .contact-item__title {
+        white-space: nowrap;
       }
 
       .contact-item__val {
@@ -27,6 +37,25 @@
 
   .contacts__map {
     margin-bottom: 60px;
+
+    @include mobile_768 {
+      margin-bottom: 40px;
+
+    }
+  }
+
+  .map {
+    height: 580px;
+
+    @include mobile_768 {
+
+      height: 530px;
+    }
+  }
+
+  @include mobile_768 {
+
+    height: 580px;
   }
 
   .contacts__form {

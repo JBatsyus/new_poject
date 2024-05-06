@@ -155,9 +155,10 @@ p {
 
 .input__wrap {
   margin-bottom: 25px;
-  @include mobile_768 {
-    margin-bottom: 40px;
-  }
+  // убрала,тк слишком воздушно
+  // @include mobile_768 {
+  //   margin-bottom: 40px;
+  // }
  
 
   input,
