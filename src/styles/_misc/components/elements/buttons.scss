@@ -95,6 +95,9 @@
   color: $color-black;
   max-width: max-content;
   transition: .4s ease-in-out;
+  @include mobile_768 {
+    padding: 10px 15px;
+  }
 
   &:hover {
     background: $color-blue;

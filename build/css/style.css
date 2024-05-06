@@ -1920,6 +1920,10 @@ p {
     max-width: 100%;
   }
 
+  .btn_white {
+    padding: 10px 15px;
+  }
+
   .breadcrumbs {
     margin-top: 0.9375rem;
     margin-bottom: 1.875rem;
