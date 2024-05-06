@@ -1,12 +1,27 @@
 .history__wrap {
   @include flex-column;
+  width: 100%;
+  max-width: 1200px;
 
   .history__list {
     .history-item {
+      @include mobile_768 {
+        margin-bottom: 40px
+      }
+
       @include flex-column;
       padding: 0 20px 30px;
       border-left: 2px solid $color-blue;
       position: relative;
+
+      @include mobile_768 {
+        border-left: none;
+        padding: 0;
+
+        &::before {
+          display: none;
+        }
+      }
 
       &::before {
         content: "";
@@ -18,7 +33,8 @@
         left: -7px;
         top: 0;
       }
-      &:last-child{
+
+      &:last-child {
         border-left: 2px solid transparent;
         padding-bottom: 0;
       }
@@ -31,6 +47,10 @@
         color: $color-blue;
         margin-bottom: 26px;
         line-height: 0.7;
+
+        @include mobile_768 {
+          margin-bottom: 40px
+        }
 
       }
     }

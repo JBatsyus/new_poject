@@ -1627,6 +1627,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .history__wrap .history__list .history-item {
@@ -2089,6 +2091,23 @@ p {
   .about__wrap .about__image {
     height: 31vh;
     background-position: center;
+  }
+
+  .history__wrap .history__list .history-item {
+    margin-bottom: 40px;
+  }
+
+  .history__wrap .history__list .history-item {
+    border-left: none;
+    padding: 0;
+  }
+
+  .history__wrap .history__list .history-item::before {
+    display: none;
+  }
+
+  .history__wrap .history__list .history-item .history-item__title {
+    margin-bottom: 40px;
   }
 }
 
