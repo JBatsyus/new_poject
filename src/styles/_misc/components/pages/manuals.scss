@@ -33,6 +33,10 @@
         aspect-ratio: 1/1;
         border-radius: 6px;
         object-fit: cover;
+        @include tablet_991{
+          max-width: 230px;
+        }
+
         @include mobile_768{
           width: 100%;
           max-width:100%;
