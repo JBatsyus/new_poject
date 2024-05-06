@@ -1,5 +1,8 @@
 .manuals__wrap {
   @include flex-column;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  width: 100%;
 
   .manuals__item {
     display: flex;
@@ -10,15 +13,32 @@
     &:last-child{
       margin-bottom: 0;
     }
+    @include mobile_768{
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
 
     .manuals__images {
       margin-right: 25px;
+      @include mobile_768{
+        display: flex;
+        justify-content: center;
+
+        margin-right: 0px;
+        margin-bottom: 25px;
+      }
 
       img {
         max-width: 182px;
         aspect-ratio: 1/1;
         border-radius: 6px;
         object-fit: cover;
+        @include mobile_768{
+          width: 100%;
+          max-width:100%;
+          max-height: 182px;
+          aspect-ratio: 4/3;
+        }
       }
     }
 
@@ -33,6 +53,9 @@
         font-size: 20px;
         color: $color-deep-black;
         margin-bottom: 30px;
+        @include mobile_768{
+          margin-bottom: 10px;
+        }
       }
 
       .manuals__txt {
@@ -42,6 +65,9 @@
         color: $color-deep-black;
         max-width: 820px;
         margin-bottom: 30px;
+        @include mobile_768{
+          margin-bottom: 10px;
+        }
       }
 
       .btn {

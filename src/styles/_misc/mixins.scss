@@ -262,13 +262,14 @@
   }
 }
 
-
+// @include desktop
 @mixin desktop {
   @media (max-width: 1200px) {
     @content
   }
 }
 
+// @include tablet_991
 @mixin tablet_991 {
   @media (max-width: 991px) {
     @content
@@ -281,6 +282,7 @@
   }
 }
 
+// @include mobile_768
 @mixin mobile_768 {
   @media (max-width: 768px) {
     @content
