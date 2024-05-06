@@ -3,18 +3,36 @@
   gap: 25px;
   margin-bottom: 60px;
 
+  @include tablet_991 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30px);
+  }
+
+  @include mobile_768 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .catalog_section__item {
     display: flex;
     justify-content: center;
     border-radius: 6px;
     width: 100%;
-    max-width: 280px;
-    height: 280px;
+    max-width: 350px;
+    height: 250px;
     padding: 20px 5px;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet_991 {
+      max-width: 100%;
+    }
+    @include mobile_768{
+      height: 330px;
+    }
+
 
 
     .section-item__title {
@@ -22,7 +40,16 @@
       margin-top: auto;
       font-family: $Gilroy-500;
       font-weight: 500;
-      color: $color-black;
+      font-size: 24px;
+      color: $color-white;
+
+      @include desktop {
+        font-size: 20px;
+      }
+      @include mobile_768 {
+        font-size: 24px;
+      }
+
 
     }
   }
@@ -32,6 +59,18 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: rem(100px);
+
+  @include desktop {
+    gap: rem(30px);
+  }
+
+  @include tablet_991 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobile_768{
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(15px);
+  }
 
   .catalog-preview__item {
     border-radius: 6px;
@@ -66,14 +105,15 @@
         margin-bottom: 25px;
 
         .catalog-property__item {
-          .catalog-property__name{
+          .catalog-property__name {
             font-family: $Gilroy-600;
             font-weight: 600;
             font-size: 16px;
             color: $color-black;
             margin-right: 5px;
           }
-          .catalog-property__value{
+
+          .catalog-property__value {
             font-family: $GilroyRegular;
             font-weight: 400;
             color: $color-black;

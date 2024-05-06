@@ -23,7 +23,75 @@ header.header
         img.header-logo(src='../img/sitrak-logo.png' alt='Ситрак')
       nav.header-nav
         ul.header-nav__list
-          each name in ['Каталог', 'Сервис', 'Дилеры', 'Новости','О нас']
-            li.header-nav__item
-              a(href="javascript:void(0);")= name
+          li.header-nav__item
+            a(href="javascript:void(0);") Каталог
+            ul.header-nav__submenu
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Седельные тягачи
+                ul.submenu-item__sub
+                  li
+                    a(href='javascript:void(0);') Тягачи 4х2
+                  li
+                    a(href='javascript:void(0);') Тягачи 6х4
+                  li
+                    a(href='javascript:void(0);') Тягачи 6х2
+                  li
+                    a(href='javascript:void(0);') Тягачи 6х6
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Самосвалы
+                ul.submenu-item__sub
+                  li
+                    a(href='javascript:void(0);') Самосвалы 8х4
+                  li
+                    a(href='javascript:void(0);') Самосвалы 6х4
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Автобетоносмесители
+                ul.submenu-item__sub
+                  li
+                    a(href='javascript:void(0);') Автобетоносмесители 8х4
+                  li
+                    a(href='javascript:void(0);') Автобетоносмесители 6х4
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Фургоны рефрижераторы
+          li.header-nav__item
+            a(href="javascript:void(0);") Сервис
+            ul.header-nav__submenu
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Гарантийная политика
+                ul.submenu-item__sub-right
+                  li
+                    a(href='javascript:void(0);') Целые машины и запасные части
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Техническая поддержка
+                ul.submenu-item__sub-right
+                  li
+                    a(href='javascript:void(0);') Стандарты требований к сервисному обслуживанию
+                  li
+                    a(href='javascript:void(0);') Пробег
+                  li
+                    a(href='javascript:void(0);') Сертификация поддержаных автомобилей
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Обслуживание
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Техническое обслуживание и сертификация
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Запчасти
+                ul.submenu-item__sub-right
+                  li
+                    a(href='javascript:void(0);') Каталог запчастей
+                  li
+                    a(href='javascript:void(0);') Сравнение реальных и поддельных деталей
+                  li
+                    a(href='javascript:void(0);') Канал закупок              
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Новости о политике по сервису
+          li.header-nav__item
+            a(href="javascript:void(0);") Дилеры
+            ul.header-nav__submenu
+              li.header-nav__submenu-item
+                a(href='javascript:void(0);') Целые машины и запасные части
+          li.header-nav__item
+            a(href="javascript:void(0);") Новости
+          li.header-nav__item
+            a(href="javascript:void(0);") О нас
       a(href="javascript:void(0);").btn-hdr заказать звонок

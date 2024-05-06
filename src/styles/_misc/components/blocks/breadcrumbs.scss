@@ -3,11 +3,16 @@
   align-items: center;
   margin-top: rem(60px);
   margin-bottom: rem(40px);
+
+  @include mobile_768 {
+    margin-top: rem(15px);
+    margin-bottom: rem(30px);
+  }
 }
 
 .breadcrumbs li a {
   font-family: "Gilroy", sans-serif;
-  font-size:14px;
+  font-size: 14px;
   color: $color-black;
 }
 

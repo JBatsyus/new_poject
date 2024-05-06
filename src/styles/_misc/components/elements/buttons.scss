@@ -17,6 +17,11 @@
   max-width: max-content;
   transition: .4s ease-in-out;
 
+  @include mobile_768 {
+    justify-content: center;
+    max-width: 100%;
+  }
+
   &:hover {
     background: $color-active;
   }
@@ -26,6 +31,9 @@
     color: #606060;
 
   }
+
+
+
 }
 
 .btn-big {
