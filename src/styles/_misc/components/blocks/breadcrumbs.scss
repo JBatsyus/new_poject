@@ -7,6 +7,7 @@
   @include mobile_768 {
     margin-top: rem(15px);
     margin-bottom: rem(30px);
+    flex-wrap: wrap;
   }
 }
 
