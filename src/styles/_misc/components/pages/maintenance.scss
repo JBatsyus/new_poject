@@ -13,6 +13,14 @@
     text-decoration-skip-ink: none;
     color: $color-blue;
     margin-right: 15px;
+
+    @include mobile_576 {
+      max-width: 278px;
+      margin-right: 10px;
+    }
+    @include mobile_340{
+      max-width: 230px;
+    }
   }
 
   h2 {
@@ -30,6 +38,14 @@
       align-items: center;
       margin-bottom: 20px;
       white-space: nowrap;
+
+      @include desktop {
+        white-space: normal;
+      }
+
+      @include mobile_768 {
+        justify-content: space-between
+      }
     }
   }
 
@@ -44,13 +60,23 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 35px;
 
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      @include mobile_768 {
+        grid-template-columns: 1fr;
+      }
+
+
       .maintenance__title {
         font-family: $Gilroy-600;
         font-weight: 600;
         text-transform: uppercase;
         color: $color-deep-black;
         margin-bottom: 20px;
-        
+
       }
 
     }

@@ -1909,6 +1909,14 @@ p {
   .catalog-preview__wrap {
     gap: 1.875rem;
   }
+
+  .maintenance__wrap .maintenance__list .maintenance__item {
+    white-space: normal;
+  }
+
+  .maintenance__wrap .technical-description__wrap .technical-description__blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 1100px) {
@@ -2215,6 +2223,23 @@ p {
   .history__wrap .history__list .history-item .history-item__title {
     margin-bottom: 40px;
   }
+
+  .maintenance__wrap .maintenance__list .maintenance__item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .maintenance__wrap .technical-description__wrap .technical-description__blocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .maintenance__wrap a {
+    max-width: 278px;
+    margin-right: 10px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -2224,5 +2249,11 @@ p {
 
   .service-preview__wrap {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 340px) {
+  .maintenance__wrap a {
+    max-width: 230px;
   }
 }
