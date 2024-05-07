@@ -1,4 +1,241 @@
 .banner__item {
   aspect-ratio: 3 / 1.2;
-  @include background-cover-top('main_banner.jpg')
+  @include background-cover-top('main_banner.jpg');
+  margin-bottom: 60px;
+
+}
+
+.about-main__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(60px);
+  margin-bottom: 60px;
+
+  .about-main__text {
+    width: 100%;
+    max-width: 648px;
+
+    .h1 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .about-main__img {
+    border-radius: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 57%;
+  }
+}
+
+.categories-main__wrap {
+  margin-bottom: 60px;
+
+  .h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.service-main__wrap {
+  margin-bottom: 60px;
+
+  .h2 {
+    margin-bottom: 60px;
+  }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40px);
+    margin-bottom: 60px;
+
+    .service-item {
+      @include flex-column;
+      align-items: center;
+
+      .service-item__img {
+        max-height: 84px;
+        height: 100%;
+        margin-bottom: 25px;
+      }
+
+      .service-item__title {
+        font-family: $Gilroy-600;
+        font-weight: 600;
+        font-size: 20px;
+        color: $color-deep-black;
+        text-align: center;
+      }
+    }
+  }
+
+  .service-desc__wrap {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: rem(20px);
+    margin-bottom: 50px;
+
+    .service-desc {
+      p {
+        color: $color-deep-black;
+        margin-bottom: 40px;
+      }
+
+      .service-desc__list {
+        @include flex-column;
+
+        .service-desc__item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 25px;
+
+
+          .desc-item__img {
+            max-height: 44px;
+            height: 100%;
+            margin-right: 15px;
+          }
+
+          .desc-item__text {
+            color: $color-deep-black;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .service-desc__image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 48%;
+      border-radius: 6px;
+    }
+  }
+
+
+}
+
+.advantage-main__wrap {
+  .h2 {
+    margin-bottom: 60px;
+  }
+
+  .advantage-main__list {
+    .advantage-main__item-top {
+      display: grid;
+      grid-template-columns: 1.3fr 2fr;
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .advantage-main__img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 100%;
+      border-radius: 6px;
+    }
+
+    .advantage-main__text {
+      font-size: 24px;
+      margin: auto;
+      color: $color-deep-black;
+    }
+
+    .advantage-main__item-bottom {
+      display: grid;
+      grid-template-columns: 2fr 1.3fr;
+      gap: 25px;
+
+      .advantage-main__text {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.warranty_periods__wrap {
+
+  .warranty_periods__list {
+    display: grid;
+    grid-template-columns: repeat(3, 430px);
+    gap: 100px;
+
+    .warranty_periods__item {
+      @include flex-column;
+
+      .periods-item__title {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        align-self: center;
+        color: $color-deep-black;
+        margin-bottom: 40px;
+        max-width: 325px;
+      }
+
+      .periods-item__image {
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-bottom: 100%;
+        display: flex;
+      }
+
+      .number-top {
+        position: absolute;
+        top: 42%;
+        left: 31.2%;
+        z-index: 1;
+        color: $color-white;
+        display: flex;
+
+        span {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          color: $color-white;
+          margin-right: 19px;
+        }
+      }
+
+      .number-bottom {
+        position: absolute;
+        bottom: 21%;
+        left: 17%;
+        z-index: 1;
+        display: flex;
+
+        .txt-bottom {
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          color: $color-white;
+          display: flex;
+          align-items: self-end;
+          line-height: 0.8;
+
+          span:first-child {
+            display: block;
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 64px;
+            color: $color-white;
+            margin-right: 23px;
+          }
+
+          span:nth-child(2) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
 }

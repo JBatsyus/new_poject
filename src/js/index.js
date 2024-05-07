@@ -23,10 +23,17 @@ $(document).ready(function() {
     // Разворачиваем или сворачиваем текущее подменю
     if ($(this).find('.header-nav__submenu').css('transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
       // Если подменю развернуто, то сворачиваем
-      $(this).find('.header-nav__submenu').css('transform', 'scaleY(0)');
+      $(this).find('.header-nav__submenu').css('transform', 'scaleY(1)');
     } else {
       // Если подменю свернуто, то разворачиваем
       $(this).find('.header-nav__submenu').css('transform', 'scaleY(1)');
     }
+  });
+  
+
+  $('.header-nav__submenu-item').on('click', function () {
+    $(this).find('.submenu-item__sub-right').addClass('click');
+    $(this).siblings('.header-nav__submenu-item').find('.click').removeClass('click')
+
   });
 });

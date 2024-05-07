@@ -8,6 +8,10 @@
 
 .header-top {
   background: $color-white;
+
+  @include tablet_991 {
+    display: none;
+  }
 }
 
 .header-bottom {
@@ -71,6 +75,12 @@
 .header-bottom .container {
   justify-content: space-between;
   align-items: center;
+}
+
+.header-nav {
+  @include tablet_991 {
+    display: none;
+  }
 }
 
 .header-nav__list {
@@ -145,6 +155,11 @@
 
 .header-nav__submenu-item {
   position: relative;
+
+  @include tablet_991 {
+    display: none;
+  }
+
 }
 
 .submenu-item__sub-right {
@@ -152,11 +167,20 @@
   background: $color-black;
   top: 0;
   left: 105%;
-  width: 100%;
+  // width: 100%;
   z-index: 10;
   transition: .4s ease-in-out;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
 
+  &.click {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+  }
 }
+
 .header-nav__submenu {
   position: absolute;
   left: 0;
@@ -186,4 +210,3 @@
 //   color: #000;
 //   font-size: 14px;
 // }
-
