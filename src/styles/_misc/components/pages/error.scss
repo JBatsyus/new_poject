@@ -1,0 +1,42 @@
+.error-wrap {
+  @include flex-column;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(200px);
+
+  @include mobile_768 {
+    margin-top: rem(100px);
+  }
+
+  .error-title {
+    font-family: $Gilroy-600;
+    font-weight: 600;
+    font-size: 48px;
+    color: $color-deep-black;
+    margin-bottom: 40px;
+
+    @include mobile_768 {
+      font-size: 35px;
+    }
+  }
+
+  .error-text {
+    font-size: 24px;
+    text-align: center;
+    color: $color-deep-black;
+    margin-bottom: 40px;
+
+    @include mobile_768 {
+      font-size: 18px;
+    }
+  }
+
+  .error-btn {
+    a {
+      text-transform: initial;
+    }
+  }
+}
