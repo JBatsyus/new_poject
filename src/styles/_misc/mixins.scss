@@ -241,7 +241,16 @@
   }
 }
 
-
+@mixin desktop_1051-1350 {
+  @media (min-width: 1051px) and (max-width: 1350px) {
+    @content
+  }
+}
+@mixin desktop_991-1050{
+  @media (min-width: 991px) and (max-width: 1050px) {
+    @content
+  }
+}
 @mixin only_desktop {
   @media (min-width: 991px) {
     @content

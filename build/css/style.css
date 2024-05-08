@@ -1189,10 +1189,18 @@ p {
   text-align: right;
 }
 
+.warranty_periods__wrap {
+  margin-bottom: 40px;
+}
+
 .warranty_periods__wrap .warranty_periods__list {
   display: grid;
-  grid-template-columns: repeat(3, 430px);
-  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(430px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(430px, max-content));
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px 10px;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item {
@@ -1203,54 +1211,62 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: auto;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  -ms-flex-item-align: center;
-      align-self: center;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 2rem;
   color: #000;
   margin-bottom: 40px;
-  max-width: 325px;
+  text-align: center;
+  text-transform: uppercase;
+  min-height: 4.875rem;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__image {
   position: relative;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
-  padding-bottom: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 430px;
+  aspect-ratio: 5/4;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top {
   position: absolute;
-  top: 42%;
-  left: 31.2%;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
   color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 15.3px;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top span {
   display: block;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   font-weight: 700;
   font-size: 20px;
   color: #FFFFFF;
-  margin-right: 19px;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom {
   position: absolute;
-  bottom: 21%;
-  left: 17%;
+  bottom: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1258,9 +1274,9 @@ p {
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom .txt-bottom {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1273,15 +1289,15 @@ p {
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom .txt-bottom span:first-child {
   display: block;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   font-weight: 700;
-  font-size: 64px;
+  font-size: 4rem;
   color: #FFFFFF;
-  margin-right: 23px;
+  margin-right: 5px;
 }
 
 .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom .txt-bottom span:nth-child(2) {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .catalog_section__wrap {
@@ -2351,6 +2367,20 @@ p {
     display: none;
   }
 
+  .warranty_periods__wrap .warranty_periods__list {
+    grid-template-columns: repeat(auto-fit, minmax(430px, -webkit-max-content));
+    grid-template-columns: repeat(auto-fit, minmax(430px, max-content));
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__image {
+    width: 430px;
+  }
+
   .catalog_section__wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2443,6 +2473,12 @@ p {
   }
 }
 
+@media (max-width: 991px) and (max-width: 768px) {
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item:nth-child(3) {
+    grid-column: span 1;
+  }
+}
+
 @media (max-width: 768px) {
   p {
     margin-bottom: 10px;
@@ -2464,6 +2500,11 @@ p {
     margin-bottom: 1.875rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .catalog_section__wrap {
@@ -2730,5 +2771,52 @@ p {
 
   .maintenance__wrap a {
     max-width: 230px;
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1350px) {
+  .warranty_periods__wrap .warranty_periods__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__image {
+    width: 330px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top {
+    top: 40%;
+    gap: 12px;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top span {
+    font-size: 16px;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom .txt-bottom span:first-child {
+    font-size: 2.5rem;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-bottom .txt-bottom span:nth-child(2) {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1050px) {
+  .warranty_periods__wrap .warranty_periods__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__image {
+    width: 300px;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top {
+    gap: 10px;
+  }
+
+  .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .number-top span {
+    font-size: 14px;
   }
 }
