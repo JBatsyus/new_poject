@@ -3,7 +3,7 @@ extends ../templates/template-main.pug
 
 block content
   main.wrapper
-    .banner__item
+    .banner__item(style="background-image:url('./img/main_banner.jpg')")
     .container
       .about-main__wrap
         .about-main__text
@@ -51,6 +51,7 @@ block content
         .service-desc__wrap
           .service-desc
             p Чтобы обеспечить эффективную и бесперебойную работу транспортных средств, компания Ситрак предоставляет клиентам необходимую подготовку к техническому обслуживанию и ремонту транспортных средств, а также сводит к минимуму время простоя, вызванное неисправностями транспортных средств. Мы стремимся создать для вас большую ценность и лучший опыт. Наша цель — удовлетворение потребностей клиентов.
+            .service-desc__image(style="background-image:url('./img/company.jpg')").mobil
             .service-desc__list
               .service-desc__item
                 .desc-item__img
@@ -64,7 +65,7 @@ block content
                 .desc-item__img
                   img(src="./img/sitrak_lg.svg", alt="")
                 .desc-item__text Компания Ситрак создала в России учебную академию для постоянного повышения уровня технического обслуживания обслуживающего персонала и предоставления вам услуг самого высокого качества.
-          .service-desc__image(style="background-image:url('./img/company.jpg')")
+          .service-desc__image(style="background-image:url('./img/company.jpg')").desc
       .warranty_periods__wrap
         .warranty_periods__list
           .warranty_periods__item
@@ -102,7 +103,7 @@ block content
                   span 0
                   span 0
               .number-bottom 
-                .txt-bottom до <span>18</span> <span>месяцев</span>                                 
+                .txt-bottom до <span>18</span><span>месяцев<span>                                 
 
 
       .advantage-main__wrap

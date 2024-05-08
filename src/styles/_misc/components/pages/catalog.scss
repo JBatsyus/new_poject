@@ -25,6 +25,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    aspect-ratio: auto 1 / 1;
 
     @include tablet_991 {
       max-width: 100%;

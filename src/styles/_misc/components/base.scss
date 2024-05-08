@@ -115,12 +115,16 @@ h2,
 
   @include tablet_991 {
     font-size: 20px;
+    margin-bottom: 30px !important;
   }
 }
 
 .wrapper {
   padding-bottom: 60px;
   padding-top: var(--js-header-height);
+  @include tablet_991 {
+    padding-top:78px
+  }
 
 }
 
