@@ -31,9 +31,14 @@ $(document).ready(function() {
   });
   
 
-  $('.header-nav__submenu-item').on('click', function () {
-    $(this).find('.submenu-item__sub-right').addClass('click');
-    $(this).siblings('.header-nav__submenu-item').find('.click').removeClass('click')
 
+  $('.header-nav__submenu-item').on('click', function () {
+    var $subRight = $(this).find('.submenu-item__sub-right');
+    if ($subRight.hasClass('click')) {
+      $subRight.removeClass('click');
+    } else {
+      $('.submenu-item__sub-right').removeClass('click');
+      $subRight.addClass('click');
+    }
   });
 });

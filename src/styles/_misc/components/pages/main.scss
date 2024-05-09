@@ -317,7 +317,7 @@
     @include mobile_768 {
       grid-template-columns: 1fr;
       justify-items: center;
-      gap: 25px ;
+      gap: 25px;
     }
 
 
@@ -345,6 +345,7 @@
         text-align: center;
         text-transform: uppercase;
         min-height: rem(78px);
+
         @include tablet_991 {
           font-size: 24px;
           margin-bottom: 25px;
@@ -376,6 +377,7 @@
         @include tablet_991 {
           width: 360px;
         }
+
         @include mobile_390 {
           width: 300px;
         }
@@ -407,7 +409,8 @@
           top: 39%;
           gap: 11px;
         }
-        @include mobile_390{
+
+        @include mobile_390 {
           gap: 8px;
         }
 
@@ -425,7 +428,8 @@
           @include desktop_991-1050 {
             font-size: 14px;
           }
-          @include mobile_390{
+
+          @include mobile_390 {
             font-size: 17px;
           }
 
@@ -472,6 +476,7 @@
             @include desktop_1051-1350 {
               font-size: rem(30px);
             }
+
             @include tablet_991 {
               font-size: 25px;
             }

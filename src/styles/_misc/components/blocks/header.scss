@@ -159,27 +159,35 @@
   @include tablet_991 {
     display: none;
   }
-
-}
-
-.submenu-item__sub-right {
-  position: absolute;
-  background: $color-black;
-  top: 0;
-  left: 105%;
-  // width: 100%;
-  z-index: 10;
-  transition: .4s ease-in-out;
-  width: 0;
-  opacity: 0;
-  visibility: hidden;
-
-  &.click {
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
+  .submenu-item__sub-right {
+    position: absolute;
+    background: $color-blue;
+    top: 0;
+    left: 105%;
+    // width: 100%;
+    z-index: 10;
+    transition: .4s ease-in-out;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 20px 10px;
+  
+    &.click {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+      opacity: 1;
+      visibility: visible;
+    }
+    li{
+      max-width: max-content;
+    }
   }
+
 }
+
+
 
 .header-nav__submenu {
   position: absolute;
@@ -194,19 +202,3 @@
   transition: transform 0.3s ease-in-out;
 }
 
-// .header-nav__submenu-item {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   width: 100%;
-//   padding: 5px 10px;
-//   cursor: pointer;
-// }
-
-// .header-nav__submenu-item a {
-//   width: 100%;
-//   display: block;
-//   text-decoration: none;
-//   color: #000;
-//   font-size: 14px;
-// }
