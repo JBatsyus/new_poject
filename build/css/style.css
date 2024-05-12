@@ -644,8 +644,15 @@ p {
   margin-left: 24px;
 }
 
-.header-top .header-top_right svg:first-of-type {
-  margin-right: 15px;
+.header-top_right .header-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.header-top_right .header-social a {
+  margin: 0;
 }
 
 .header-bottom .container {
