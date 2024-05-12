@@ -6,6 +6,14 @@ document.documentElement.style.setProperty('--js-header-height', headerHeight + 
 
 
 $(document).ready(function() {
+
+      // мобильное меню
+      $('.menu-humb').on('click', function () {
+        $(this).toggleClass('active');
+        $('.menu-mob').toggleClass('active');
+        $('.header-bottom .container').toggleClass('menu_active');
+
+    });
   // Слушатель события нажатия на документ
   $(document).click(function(e) {
     // Проверяем, не является ли целевой элемент дочерним элементом элемента .header-nav ul li

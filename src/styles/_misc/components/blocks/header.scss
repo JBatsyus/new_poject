@@ -65,23 +65,27 @@
     margin-right: 24px;
     margin-left: 24px;
   }
-  .header-social{
+
+  .header-social {
     display: flex;
     gap: 15px;
-    a{
+
+    a {
       margin: 0;
-    } 
+    }
   }
 }
-
-
-
-
-
 
 .header-bottom .container {
   justify-content: space-between;
   align-items: center;
+
+  .btn-hdr {
+    @include tablet_991 {
+      display: none;
+    }
+  }
+
 }
 
 .header-nav {
@@ -172,7 +176,6 @@
     background: $color-blue;
     top: 0;
     left: 105%;
-    // width: 100%;
     z-index: 10;
     transition: .4s ease-in-out;
     width: 0;
@@ -196,8 +199,6 @@
 
 }
 
-
-
 .header-nav__submenu {
   position: absolute;
   left: 0;
@@ -209,4 +210,163 @@
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.3s ease-in-out;
+}
+
+.menu-mob {
+  display: none;
+  @include tablet_991 {
+    display: none;
+  }
+}
+
+// мобильное меню
+.menu-humb {
+  display: none;
+
+  @include tablet_991 {
+    display: block;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+
+    .icon-humb {
+      width: 30px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .icon-humb__line {
+        background: $color-white;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        -webkit-transition: -webkit-transform 0.2s ease-in-out;
+        transition: -webkit-transform 0.2s ease-in-out;
+        -o-transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+
+        &:first-child {
+          transform-origin: 25% 0%;
+          transition: -webkit-transform 0.4s ease-in-out;
+          -o-transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+        }
+
+        &:last-child {
+          transform-origin: 0% 0%;
+          transition: -webkit-transform 0.4s ease-in-out;
+          -o-transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out;
+          transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+        }
+      }
+
+    }
+
+    &.active .icon-humb__line {
+      transform: scale(0);
+    }
+
+    &.active .icon-humb__line:first-child {
+      transform: rotate(45deg);
+      width: 30px;
+    }
+
+    &.active .icon-humb__line:last-child {
+      transform: rotate(-45deg);
+      width: 30px;
+    }
+
+  }
+}
+
+@include tablet_991 {
+  .menu-mob.active {
+    z-index: 80;
+    right: 0;
+  }
+
+  .menu-mob {
+    display: block;
+    background: $color-blue;
+    position: fixed;
+    top: 78px;
+    right: -1000px;
+    overflow-y: auto;
+    width: 100%;
+    transition: .4s;
+    height: 100vh;
+  }
+
+  .menu-mob.active {
+    z-index: 80;
+    right: 0;
+  }
+
+  .menu-mob__inner {
+    padding: 20px;
+
+    .menu-mob__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .menu-mob__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .menu-mob__item a {
+          color: $color-white;
+
+          font-family: $Gilroy-600;
+          font-weight: 600;
+          font-size: 16px;
+
+        }
+      }
+
+      .btn-hdr {
+        display: block;
+      }
+    }
+
+    .menu-mob__contacts-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 250px;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-white;
+      opacity: 0.55;
+    }
+
+    .menu-mob__contacts-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      color: $color-white;
+
+      a {
+        font-family: $Gilroy-600;
+        font-weight: 600;
+        font-size: 16px;
+        color: inherit;
+      }
+    }
+    .menu-mob__social{
+      display: flex;
+      gap: 15px;
+    }
+  }
 }
