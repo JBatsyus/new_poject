@@ -16,7 +16,7 @@
     margin-right: 15px;
 
     @include mobile_576 {
-      max-width: 278px;
+      // max-width: 278px;
       margin-right: 10px;
     }
     @include mobile_340{
@@ -45,6 +45,8 @@
       }
 
       @include mobile_768 {
+        display: grid;
+        grid-template-columns: 1fr 35px;
         justify-content: space-between
       }
     }

@@ -12,6 +12,8 @@
       margin-bottom: 20px;
 
       @include mobile_768 {
+        display: grid;
+        grid-template-columns: 1fr 25px;
         justify-content: space-between;
         align-items: center;
       }
@@ -25,20 +27,11 @@
         margin-right: 25px;
 
         @include mobile_576 {
-          max-width: 375px;
           margin-right: 10px;
-        }
-
-        @include mobile_450 {
-          max-width: 270px;
-
-        }
-
-        @include mobile_340 {
-          max-width: 230px;
         }
       }
     }
   }
 }
+
 /*--------------Техподдержка end-------------*/

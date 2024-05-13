@@ -3201,6 +3201,8 @@ p {
   }
 
   .support__wrap .support__list .support__item {
+    display: grid;
+    grid-template-columns: 1fr 25px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -3210,6 +3212,8 @@ p {
   }
 
   .maintenance__wrap .maintenance__list .maintenance__item {
+    display: grid;
+    grid-template-columns: 1fr 35px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -3262,12 +3266,10 @@ p {
   }
 
   .support__wrap .support__list .support__item a {
-    max-width: 375px;
     margin-right: 10px;
   }
 
   .maintenance__wrap a {
-    max-width: 278px;
     margin-right: 10px;
   }
 }
@@ -3283,10 +3285,6 @@ p {
 
   .service-main__wrap .service-desc__wrap .service-desc__image {
     aspect-ratio: auto 1/1;
-  }
-
-  .support__wrap .support__list .support__item a {
-    max-width: 270px;
   }
 }
 
@@ -3313,10 +3311,6 @@ p {
 }
 
 @media (max-width: 340px) {
-  .support__wrap .support__list .support__item a {
-    max-width: 230px;
-  }
-
   .maintenance__wrap a {
     max-width: 230px;
   }
