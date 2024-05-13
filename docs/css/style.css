@@ -929,6 +929,10 @@ p {
   text-decoration: underline;
 }
 
+.footer__left .footer__contacts {
+  display: none;
+}
+
 .footer__left .footer-menu__item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -949,8 +953,7 @@ p {
           flex-direction: column;
 }
 
-.footer__right .footer__right-top,
-.footer__right .footer__contacts {
+.footer__right .footer__right-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -960,8 +963,7 @@ p {
           flex-direction: column;
 }
 
-.footer__right .footer__right-top a,
-.footer__right .footer__contacts a {
+.footer__right .footer__right-top a {
   font-family: "Gilroy-600";
   font-weight: 600;
   font-size: 14px;
@@ -971,8 +973,7 @@ p {
       align-self: flex-end;
 }
 
-.footer__right .footer__right-top span,
-.footer__right .footer__contacts span {
+.footer__right .footer__right-top span {
   font-family: "GilroyRegular";
   font-weight: 400;
   font-size: 14px;
@@ -984,14 +985,14 @@ p {
       align-self: flex-end;
 }
 
-.footer__right .footer__right-bottom.footer-desk p {
+.footer__right .footer__right-bottom p {
   font-family: "Gilroy-600";
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 15px;
 }
 
-.footer__right .footer__right-bottom.footer-desk .footer-social {
+.footer__right .footer__right-bottom .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2992,31 +2993,53 @@ p {
     display: none;
   }
 
+  .footer__left .footer-info .notice {
+    margin-top: 30px;
+  }
+
   .footer__left .footer-menu {
     margin-bottom: 60px;
   }
 
-  .footer__right .footer__right-top.footer-desk,
-  .footer__right .footer__contacts.footer-desk {
+  .footer__left .footer__contacts {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .footer__left .footer__contacts a {
+    font-family: "Gilroy-600";
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+
+  .footer__left .footer__contacts span {
+    font-family: "GilroyRegular";
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .footer__right .footer__right-top.footer-desk {
     display: none;
   }
 
-  .footer__right .footer__right-top a,
-  .footer__right .footer__contacts a {
+  .footer__right .footer__right-bottom {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    margin-top: 30px;
   }
 
-  .footer__right .footer__right-bottom.footer-desk {
-    display: none;
-  }
-
-  .footer__right .footer__right-bottom.footer-desk {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-
-  .footer__right .footer__right-bottom.footer-desk .footer-social {
+  .footer__right .footer__right-bottom .footer-social {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -3262,6 +3285,13 @@ p {
 
   .error-wrap .error-text {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .footer__left .footer__contacts a {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 
