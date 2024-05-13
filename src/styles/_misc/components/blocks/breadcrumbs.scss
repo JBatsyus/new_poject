@@ -1,3 +1,4 @@
+/*--------------breadcrumbs start-------------*/
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -12,7 +13,7 @@
 }
 
 .breadcrumbs li a {
-  font-family: "Gilroy", sans-serif;
+  font-family: $GilroyRegular;
   font-size: 14px;
   color: $color-black;
 }
@@ -21,3 +22,4 @@
   content: "/";
   margin: 0 5px 0 5px;
 }
+/*--------------breadcrumbs end-------------*/

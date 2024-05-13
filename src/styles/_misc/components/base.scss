@@ -1,8 +1,5 @@
 @media (min-width: 991px) {
 
-  // .container {
-  //   max-width: rem(1384px)
-  // }
   .row {
     margin-right: rem(-12px);
     margin-left: rem(-12px);
@@ -83,17 +80,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  // .container {
-  //   max-width: 100%;
-  // }
-}
 
-@media (min-width: 576px) {
-  // .container {
-  //   max-width: 100%;
-  // }
-}
 
 
 .h1 {
@@ -122,8 +109,9 @@ h2,
 .wrapper {
   padding-bottom: 60px;
   padding-top: var(--js-header-height);
+
   @include tablet_991 {
-    padding-top:78px
+    padding-top: 78px
   }
 
 }
@@ -131,10 +119,6 @@ h2,
 
 
 .container {
-  // max-width: rem(1450px);
-  // margin: 0 auto;
-  // padding-right: 20px;
-  // padding-left: 20px;
   max-width: rem(1490px);
   margin: 0 auto;
   padding-right: 20px;
@@ -163,7 +147,7 @@ p {
   // @include mobile_768 {
   //   margin-bottom: 40px;
   // }
- 
+
 
   input,
   textarea {

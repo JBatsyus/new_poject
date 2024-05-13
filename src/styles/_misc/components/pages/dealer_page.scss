@@ -1,3 +1,4 @@
+/*--------------Дилеры start-------------*/
 .dealer__wrap {
   display: flex;
   flex-direction: column;
@@ -6,17 +7,18 @@
 
   .dealer__desc {
     margin-bottom: 40px;
+
     p {
       font-family: $GilroyRegular;
       font-weight: 400;
       font-size: 20px;
       color: $color-deep-black;
-      // margin-bottom: 17px;
     }
   }
 
   .dealer__form {
     display: flex;
+
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -30,3 +32,4 @@
     }
   }
 }
+/*--------------Дилеры end-------------*/

@@ -1,3 +1,4 @@
+/*--------------Контакты start-------------*/
 .contacts__wrap {
   @include flex-column;
 
@@ -9,7 +10,6 @@
     }
 
     .contact-item {
-      // display: flex;
       margin-bottom: 20px;
       font-family: $GilroyRegular;
       font-weight: 400;
@@ -73,3 +73,4 @@
     }
   }
 }
+/*--------------Контакты end-------------*/

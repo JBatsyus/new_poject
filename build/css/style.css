@@ -429,7 +429,7 @@ p {
   resize: vertical;
 }
 
-/* кнопки start */
+/*--------------buttons start-------------*/
 
 .btn {
   display: -webkit-inline-box;
@@ -576,6 +576,10 @@ p {
   color: #15508b;
   border: 1px solid #FFFFFF;
 }
+
+/*--------------buttons end-------------*/
+
+/*--------------header start-------------*/
 
 .header {
   position: fixed;
@@ -819,9 +823,17 @@ p {
   display: none;
 }
 
+/*--------------мобильное меню start-------------*/
+
 .menu-humb {
   display: none;
 }
+
+/*--------------мобильное меню end-------------*/
+
+/*--------------header end-------------*/
+
+/*--------------breadcrumbs start-------------*/
 
 .breadcrumbs {
   display: -webkit-box;
@@ -835,7 +847,7 @@ p {
 }
 
 .breadcrumbs li a {
-  font-family: "Gilroy", sans-serif;
+  font-family: "GilroyRegular";
   font-size: 14px;
   color: #262626;
 }
@@ -844,6 +856,10 @@ p {
   content: "/";
   margin: 0 5px 0 5px;
 }
+
+/*--------------breadcrumbs end-------------*/
+
+/*--------------footer start-------------*/
 
 .footer-wrap {
   padding: 60px 0;
@@ -982,6 +998,10 @@ p {
   gap: 15px;
 }
 
+/*--------------footer end-------------*/
+
+/*--------------pagination start-------------*/
+
 .pagination__wrap .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1044,21 +1064,9 @@ p {
   background: #FFFFFF;
 }
 
-.material-icons {
-  font-family: "Material Icons";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: "liga";
-  -webkit-font-smoothing: antialiased;
-}
+/*--------------pagination end-------------*/
+
+/*--------------Главная страница start-------------*/
 
 .banner__item {
   aspect-ratio: 3/1.2;
@@ -1357,6 +1365,10 @@ p {
   font-size: 2.5rem;
 }
 
+/*--------------Главная страница end-------------*/
+
+/*--------------Каталог start-------------*/
+
 .catalog_section__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1471,6 +1483,8 @@ p {
   text-transform: capitalize;
 }
 
+/*--------------Каталог end-------------*/
+
 .btn_block__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1480,6 +1494,8 @@ p {
   overflow-y: hidden;
   overflow-x: auto;
 }
+
+/*--------------Сервис (секция) start-------------*/
 
 .service-preview__wrap {
   display: grid;
@@ -1538,6 +1554,10 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+/*--------------Сервис (секция) end-------------*/
+
+/*--------------Сервис (детальная страница) start-------------*/
 
 .product__wrap {
   display: -webkit-box;
@@ -1638,6 +1658,10 @@ p {
   text-transform: capitalize;
 }
 
+/*--------------Сервис (детальная страница) end-------------*/
+
+/*--------------Руководства start-------------*/
+
 .manuals__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1711,6 +1735,10 @@ p {
   text-transform: capitalize;
 }
 
+/*--------------Руководства end-------------*/
+
+/*--------------О компании start-------------*/
+
 .about__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1750,6 +1778,10 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/*--------------О компании end-------------*/
+
+/*--------------Новости start-------------*/
 
 .news-preview__wrap {
   margin-bottom: 40px;
@@ -1832,6 +1864,10 @@ p {
   text-transform: none;
 }
 
+/*--------------Новости end-------------*/
+
+/*--------------Новости (детальная страница) start-------------*/
+
 .news-item__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1887,6 +1923,10 @@ p {
   height: auto;
 }
 
+/*--------------Новости (детальная страница) end-------------*/
+
+/*--------------Дилеры start-------------*/
+
 .dealer__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1931,6 +1971,10 @@ p {
   padding: 16px 60px;
   text-transform: capitalize;
 }
+
+/*--------------Дилеры end-------------*/
+
+/*--------------Контакты start-------------*/
 
 .contacts__wrap {
   display: -webkit-box;
@@ -1992,6 +2036,10 @@ p {
   text-transform: capitalize;
 }
 
+/*--------------Контакты end-------------*/
+
+/*--------------История start-------------*/
+
 .history__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2043,6 +2091,10 @@ p {
   line-height: 0.7;
 }
 
+/*--------------История end-------------*/
+
+/*--------------Техподдержка start-------------*/
+
 .support__wrap h2 {
   margin-bottom: 40px;
   color: #000;
@@ -2066,6 +2118,10 @@ p {
   color: #15508b;
   margin-right: 25px;
 }
+
+/*--------------Техподдержка end-------------*/
+
+/*--------------Техническое обслуживание start-------------*/
 
 .maintenance__wrap {
   display: -webkit-box;
@@ -2134,6 +2190,10 @@ p {
   color: #000;
   margin-bottom: 20px;
 }
+
+/*--------------Техническое обслуживание start-------------*/
+
+/*--------------Гарантия start-------------*/
 
 .guarantee__wrap {
   display: -webkit-box;
@@ -2214,6 +2274,10 @@ p {
   width: 100%;
 }
 
+/*--------------Гарантия end-------------*/
+
+/*--------------404 start-------------*/
+
 .error-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2252,6 +2316,8 @@ p {
 .error-wrap .error-btn a {
   text-transform: initial;
 }
+
+/*--------------404 end-------------*/
 
 @media (min-width: 991px) {
   .row {
