@@ -214,6 +214,7 @@
 
 .menu-mob {
   display: none;
+
   @include tablet_991 {
     display: none;
   }
@@ -324,12 +325,42 @@
         flex-direction: column;
         gap: 40px;
 
-        .menu-mob__item a {
-          color: $color-white;
+        .menu-mob__item {
+          a {
+            color: $color-white;
+            font-family: $Gilroy-600;
+            font-weight: 600;
+            font-size: 16px;
 
-          font-family: $Gilroy-600;
-          font-weight: 600;
-          font-size: 16px;
+          }
+
+          .menu-mob__submenu {
+            margin-top: 20px;
+            display: none;
+
+            //             &.show {
+            //               display: block;
+            //               margin-top: 20px;
+            // }
+
+            .menu-mob__submenu-item {
+              margin-bottom: 10px;
+
+              a {
+                font-family: $Gilroy-500;
+                font-weight: 500;
+                font-size: 16px;
+              }
+
+              .submenu-item__sub {
+                a {
+                  font-family: $GilroyRegular;
+                  font-weight: 400;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
 
         }
       }
@@ -364,7 +395,8 @@
         color: inherit;
       }
     }
-    .menu-mob__social{
+
+    .menu-mob__social {
       display: flex;
       gap: 15px;
     }
