@@ -210,6 +210,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Inter-400";
+  src: url("../fonts/Inter-Regular.eot");
+  src: url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: "GilroyRegular", Arial, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   margin: 0;
@@ -604,7 +613,7 @@ p {
 }
 
 .header-top_left span {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter-400";
   font-weight: 400;
   font-size: 14px;
   color: #262626;
@@ -2605,7 +2614,7 @@ p {
             align-items: center;
     gap: 10px;
     max-width: 250px;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter-400";
     font-weight: 400;
     font-size: 14px;
     color: #FFFFFF;
