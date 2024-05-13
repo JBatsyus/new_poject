@@ -15,22 +15,11 @@ $(document).ready(function () {
 
   });
 
-  // $('.menu-mob__item').on('click', function () {
-  //   $showMenu = $(this).find('.menu-mob__submenu');
-  //   if ($showMenu.slideDown(700)) {
-  //     $showMenu.slideUp(700);
-  //   } else {
-  //     $('.menu-mob__submenu').slideUp(700);
-  //     // $showMenu.addClass('show');
-  //     $showMenu.slideDown(700);
-  //   }
-
-  // });
   $('.menu-mob__item').on('click', function () {
     $showMenu = $(this).find('.menu-mob__submenu');
-    if($showMenu.is(':visible')){
+    if ($showMenu.is(':visible')) {
       $showMenu.slideUp(700);
-    }else{
+    } else {
       $('.menu-mob__submenu').slideUp(700);
       $showMenu.slideDown(700);
     }
