@@ -19,37 +19,44 @@ svgSprite = require('gulp-svg-sprite'),
 
 var paths = {
   dirs: {
-    build: './build'
+    // build: './build'
+     build: './docs'
   },
   html: {
     src: './src/pages/*.pug',
-    dest: './build',
+    // dest: './build',
+    dest: './docs',
     watch: ['./src/pages/*.pug', './src/templates/*.pug', './src/_components/**/*.pug']
   },
   css: {
     src: ['./src/styles/*.scss','./src/libs/**/*.css'],
-    dest: './build/css',
+    // dest: './build/css',
+    dest: './docs/css',
     watch: ['./src/libs/**/*.scss', './src/styles/**/*.scss', './src/styles/*.scss', './src/libs/**/*.css']
   },
   js: {
     src: ['./src/js/*.js', './src/libs/**/*.js'],
-    dest: './build/js',
+    // dest: './build/js',
+    dest: './docs/js',
     watch: './src/js/*.js',
     watchPlugins: './src/libs/**/*.js'
   },
   images: {
     src: './src/img/**/*',
-    dest: './build/img',
+    // dest: './build/img',
+    dest: './docs/img',
     watch: './src/img/**/*'
   },
   sprites: {
     src: './src/sprites/*.svg',
-    dest: './build/img',
+    // dest: './build/img',
+    dest: './docs/img',
     watch: './src/sprites/*.svg'
   },
   fonts: {
     src: './src/fonts/*',
-    dest: './build/fonts',
+    // dest: './build/fonts',
+    dest: './docs/fonts',
     watch: './src/fonts/*'
   }
 };
