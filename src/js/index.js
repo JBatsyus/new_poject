@@ -6,6 +6,22 @@ document.documentElement.style.setProperty('--js-header-height', headerHeight + 
 
 
 $(document).ready(function () {
+  
+  $('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: function (item) {}
+    }
+});
 
   // мобильное меню
   $('.menu-humb').on('click', function () {
@@ -60,4 +76,43 @@ $(document).ready(function () {
       $subRight.addClass('click');
     }
   });
+});
+//слайдер
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 8,
+  slidesPerView: 4,
+  loop: true,
+  freeMode: true,
+  loopedSlides: 5, //looped slides should be the same
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+      // when window width is >= 640px
+      991: {
+          slidesPerView: 10,
+          spaceBetween: 24,
+      }
+  }
+});
+var galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 24,
+  slidesPerView: 1,
+  loop: true,
+  loopedSlides: 5, //looped slides should be the same
+
+  navigation: {
+      nextEl: '.gallery-thumbs-next',
+      prevEl: '.gallery-thumbs-prev',
+  },
+  thumbs: {
+      swiper: galleryThumbs,
+  },
+  breakpoints: {
+      // when window width is >= 640px
+      991: {
+          slidesPerView: 2,
+      }
+  }
+
+
 });

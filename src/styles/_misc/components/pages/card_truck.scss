@@ -1,0 +1,253 @@
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+  
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+
+}
+
+.gallery-top {
+  height: 432px;
+  width: 100%;
+}
+
+.gallery-thumbs__wrap  {
+  position: relative;
+}
+
+.gallery-thumbs {
+  height: 100px;
+  box-sizing: border-box;
+  margin: 36px 0 60px;
+  @include tablet_991 {
+    width: 80%;
+    margin: 36px auto 60px;
+  }
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  //opacity: 1;
+}
+
+.gallery-thumbs__wrap .swiper-button-next {
+  @include tablet_991 {
+    right: 0;
+  }
+  right: -49px;
+}
+
+.gallery-thumbs__wrap .swiper-button-prev {
+  @include tablet_991 {
+    left: 0;
+  }
+  left: -49px;
+}
+
+.gallery-thumbs__wrap .swiper-button-next:after {
+  content: '';
+  background-image:url("/img/arrow-round.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+  width: 28px;
+  height: 28px;
+
+}
+
+.gallery-thumbs__wrap .swiper-button-prev:after {
+  content: '';
+  background-image:url("/img/arrow-round.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+  width: 28px;
+  height: 28px;
+  transform: rotate(180deg);
+
+}
+
+
+.card_truck-preview__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 60px;
+
+  @include tablet_991 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+  
+
+  .card-truck__block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card-truck__name {
+    font-family: $Gilroy-600;
+    font-size: 20px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .card-truck__text {
+    color: $color-black;
+    font-family: $GilroyRegular;
+    font-size: 16px;
+  }
+
+  .card-truck__photo {
+    height: 60px;
+    width: auto;
+  }
+}
+
+.card_truck-wrap {
+  .card_truck-block {
+    display: flex;
+
+  }
+
+  .card_truck-block__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card_truck-wrap__text {
+    font-family: $Gilroy-600;
+    color: $color-black;
+    font-size: 32px;
+  }
+}
+
+.card-truck__wrap {
+  .card-truck__wrap-block {
+    display: flex;
+    gap: rem(110px);
+    margin-bottom: 40px;
+
+    @include mobile_768 {
+      flex-direction: column;
+      gap: rem(32px);
+    }
+  }
+  .card-truck__wrap-block-title {
+    font-family: $Gilroy-600;
+    color: $color-black;
+    font-size: 36px;
+    padding-top: 6px;
+  }
+
+  .card-truck__wrap-link {
+    font-family: $GilroyRegular;
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: $color-black;
+  }
+
+  .card-truck__wrap-block__download {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-truck__wrap-block__pdf {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-truck__wrap-block__pdf svg {
+    margin-right: 16px;
+  }
+
+  .card-truck__wrap-characteristics__wrap {
+    display: flex;
+    gap: 25px;
+
+    @include mobile_768 {
+      flex-direction: column;
+    }
+  }
+
+  .card-truck__wrap-characteristics {
+    font-family: $Gilroy-600;
+    color: $color-black;
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .card-truck__wrap-characteristics__block-text {
+    font-family: $Gilroy-600;
+    font-size: 16px;
+    color: $color-black;
+    text-transform: uppercase;
+    margin-bottom: -9px;
+    white-space: nowrap;
+  }
+
+  .card-truck__wrap-characteristics__block-text  span {
+    background-color: $color-white;
+  }
+
+  .card-truck__wrap-characteristics__block-text-second {
+    font-family: $GilroyRegular;
+    font-size: 16px;
+    color: $color-black;
+    text-align: right;
+    margin-bottom: -9px;
+    padding-left: 1px;
+    
+  }
+
+  .card-truck__wrap-characteristics__block-text-second span {
+    background-color: $color-white;
+  }
+
+  .card-truck__wrap-characteristics__block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 735px;
+    gap: 27px;
+  }
+
+  .card-truck__wrap-characteristics__block-third {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 736px;
+    gap: 27px;
+  }
+
+  .card-truck__wrap-characteristics__block-second {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted $color-black;
+    align-items: end;
+    gap: 20px;
+  }
+  .card-truck__wrap-characteristics__block-four {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted $color-black;
+    align-items: end;
+    gap: 20px;
+  }
+}

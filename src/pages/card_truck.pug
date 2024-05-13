@@ -1,0 +1,144 @@
+extends ../templates/template-card_truck.pug
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        li
+          a(href='#') Главная
+        li
+          a(href='#') Каталог
+        li
+          a(href="#") Седельные тягачи
+        li
+          a(href="#") Седельные тягачи 4x2  
+      h1.h1 Седельные тягачи       
+      .swiper-container.gallery-top
+        .swiper-wrapper
+          .swiper-slide(style='background-image:url(./img/car1.png); width ="300px";')
+          .swiper-slide(style='background-image:url(./img/car2.png)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-6.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-7.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-8.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-9.jpg)')
+          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-10.jpg)')
+      .gallery-thumbs__wrap    
+        .swiper-container.gallery-thumbs
+          .swiper-wrapper
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+            .swiper-slide(style='background-image:url(./img/bg.png)')
+        .swiper-button-next.swiper-button-white.gallery-thumbs-next
+        .swiper-button-prev.swiper-button-white.gallery-thumbs-prev
+
+      .card_truck-preview__wrap
+        .card-truck__block
+          img(src='./img/icon1.png').card-truck__photo
+          p.card-truck__name кпп 
+          p.card-truck__text ZF16S2530TO 16 ступ, механическая
+        .card-truck__block
+          img(src='./img/icon2.png').card-truck__photo
+          p.card-truck__name двигатель
+          p.card-truck__text MC13.48-50, ~480 л.с.
+        .card-truck__block
+          img(src='./img/icon3.png').card-truck__photo
+          p.card-truck__name кабина
+          p.card-truck__text высокая, с двумя спальными местами
+        .card-truck__block
+          img(src='./img/icon4.png').card-truck__photo
+          p.card-truck__name колесная формула
+          p.card-truck__text 4х2  
+      .card-truck__wrap
+        .card-truck__wrap-block
+          h2.card-truck__wrap-block-title SITRAK C7H 
+          .card-truck__wrap-block__download
+            .card-truck__wrap-block__pdf
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-truck__wrap-block-photo">
+              <path d="M20.5 14.625C20.5 14.8571 20.4078 15.0796 20.2437 15.2437C20.0796 15.4078 19.8571 15.5 19.625 15.5H17V17.25H18.75C18.9821 17.25 19.2046 17.3422 19.3687 17.5063C19.5328 17.6704 19.625 17.8929 19.625 18.125C19.625 18.3571 19.5328 18.5796 19.3687 18.7437C19.2046 18.9078 18.9821 19 18.75 19H17V20.75C17 20.9821 16.9078 21.2046 16.7437 21.3687C16.5796 21.5328 16.3571 21.625 16.125 21.625C15.8929 21.625 15.6704 21.5328 15.5063 21.3687C15.3422 21.2046 15.25 20.9821 15.25 20.75V14.625C15.25 14.3929 15.3422 14.1704 15.5063 14.0063C15.6704 13.8422 15.8929 13.75 16.125 13.75H19.625C19.8571 13.75 20.0796 13.8422 20.2437 14.0063C20.4078 14.1704 20.5 14.3929 20.5 14.625ZM6.0625 16.8125C6.0625 17.6247 5.73984 18.4037 5.16551 18.978C4.59118 19.5523 3.81223 19.875 3 19.875H2.125V20.75C2.125 20.9821 2.03281 21.2046 1.86872 21.3687C1.70462 21.5328 1.48206 21.625 1.25 21.625C1.01794 21.625 0.795376 21.5328 0.631282 21.3687C0.467187 21.2046 0.375 20.9821 0.375 20.75V14.625C0.375 14.3929 0.467187 14.1704 0.631282 14.0063C0.795376 13.8422 1.01794 13.75 1.25 13.75H3C3.81223 13.75 4.59118 14.0727 5.16551 14.647C5.73984 15.2213 6.0625 16.0003 6.0625 16.8125ZM4.3125 16.8125C4.3125 16.4644 4.17422 16.1306 3.92808 15.8844C3.68194 15.6383 3.3481 15.5 3 15.5H2.125V18.125H3C3.3481 18.125 3.68194 17.9867 3.92808 17.7406C4.17422 17.4944 4.3125 17.1606 4.3125 16.8125ZM13.9375 17.6875C13.9375 18.7318 13.5227 19.7333 12.7842 20.4717C12.0458 21.2102 11.0443 21.625 10 21.625H8.25C8.01794 21.625 7.79538 21.5328 7.63128 21.3687C7.46719 21.2046 7.375 20.9821 7.375 20.75V14.625C7.375 14.3929 7.46719 14.1704 7.63128 14.0063C7.79538 13.8422 8.01794 13.75 8.25 13.75H10C11.0443 13.75 12.0458 14.1648 12.7842 14.9033C13.5227 15.6417 13.9375 16.6432 13.9375 17.6875ZM12.1875 17.6875C12.1875 17.1073 11.957 16.5509 11.5468 16.1407C11.1366 15.7305 10.5802 15.5 10 15.5H9.125V19.875H10C10.5802 19.875 11.1366 19.6445 11.5468 19.2343C11.957 18.8241 12.1875 18.2677 12.1875 17.6875ZM0.375 10.25V2.375C0.375 1.91087 0.559374 1.46575 0.887563 1.13756C1.21575 0.809375 1.66087 0.625 2.125 0.625H12.625C12.7399 0.62491 12.8538 0.647466 12.96 0.691381C13.0662 0.735295 13.1627 0.799708 13.2441 0.880938L19.3691 7.00594C19.4503 7.08726 19.5147 7.18379 19.5586 7.29001C19.6025 7.39623 19.6251 7.51006 19.625 7.625V10.25C19.625 10.4821 19.5328 10.7046 19.3687 10.8687C19.2046 11.0328 18.9821 11.125 18.75 11.125C18.5179 11.125 18.2954 11.0328 18.1313 10.8687C17.9672 10.7046 17.875 10.4821 17.875 10.25V8.5H12.625C12.3929 8.5 12.1704 8.40781 12.0063 8.24372C11.8422 8.07962 11.75 7.85706 11.75 7.625V2.375H2.125V10.25C2.125 10.4821 2.03281 10.7046 1.86872 10.8687C1.70462 11.0328 1.48206 11.125 1.25 11.125C1.01794 11.125 0.795376 11.0328 0.631282 10.8687C0.467187 10.7046 0.375 10.4821 0.375 10.25ZM13.5 6.75H16.638L13.5 3.61203V6.75Z" fill="#262626"/>
+              </svg>  
+              a(href="./img/pdf.png" download).card-truck__wrap-link Скачать руководство
+            .card-truck__wrap-block__pdf  
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="card-truck__wrap-block-photo">
+              <path d="M20.5 14.625C20.5 14.8571 20.4078 15.0796 20.2437 15.2437C20.0796 15.4078 19.8571 15.5 19.625 15.5H17V17.25H18.75C18.9821 17.25 19.2046 17.3422 19.3687 17.5063C19.5328 17.6704 19.625 17.8929 19.625 18.125C19.625 18.3571 19.5328 18.5796 19.3687 18.7437C19.2046 18.9078 18.9821 19 18.75 19H17V20.75C17 20.9821 16.9078 21.2046 16.7437 21.3687C16.5796 21.5328 16.3571 21.625 16.125 21.625C15.8929 21.625 15.6704 21.5328 15.5063 21.3687C15.3422 21.2046 15.25 20.9821 15.25 20.75V14.625C15.25 14.3929 15.3422 14.1704 15.5063 14.0063C15.6704 13.8422 15.8929 13.75 16.125 13.75H19.625C19.8571 13.75 20.0796 13.8422 20.2437 14.0063C20.4078 14.1704 20.5 14.3929 20.5 14.625ZM6.0625 16.8125C6.0625 17.6247 5.73984 18.4037 5.16551 18.978C4.59118 19.5523 3.81223 19.875 3 19.875H2.125V20.75C2.125 20.9821 2.03281 21.2046 1.86872 21.3687C1.70462 21.5328 1.48206 21.625 1.25 21.625C1.01794 21.625 0.795376 21.5328 0.631282 21.3687C0.467187 21.2046 0.375 20.9821 0.375 20.75V14.625C0.375 14.3929 0.467187 14.1704 0.631282 14.0063C0.795376 13.8422 1.01794 13.75 1.25 13.75H3C3.81223 13.75 4.59118 14.0727 5.16551 14.647C5.73984 15.2213 6.0625 16.0003 6.0625 16.8125ZM4.3125 16.8125C4.3125 16.4644 4.17422 16.1306 3.92808 15.8844C3.68194 15.6383 3.3481 15.5 3 15.5H2.125V18.125H3C3.3481 18.125 3.68194 17.9867 3.92808 17.7406C4.17422 17.4944 4.3125 17.1606 4.3125 16.8125ZM13.9375 17.6875C13.9375 18.7318 13.5227 19.7333 12.7842 20.4717C12.0458 21.2102 11.0443 21.625 10 21.625H8.25C8.01794 21.625 7.79538 21.5328 7.63128 21.3687C7.46719 21.2046 7.375 20.9821 7.375 20.75V14.625C7.375 14.3929 7.46719 14.1704 7.63128 14.0063C7.79538 13.8422 8.01794 13.75 8.25 13.75H10C11.0443 13.75 12.0458 14.1648 12.7842 14.9033C13.5227 15.6417 13.9375 16.6432 13.9375 17.6875ZM12.1875 17.6875C12.1875 17.1073 11.957 16.5509 11.5468 16.1407C11.1366 15.7305 10.5802 15.5 10 15.5H9.125V19.875H10C10.5802 19.875 11.1366 19.6445 11.5468 19.2343C11.957 18.8241 12.1875 18.2677 12.1875 17.6875ZM0.375 10.25V2.375C0.375 1.91087 0.559374 1.46575 0.887563 1.13756C1.21575 0.809375 1.66087 0.625 2.125 0.625H12.625C12.7399 0.62491 12.8538 0.647466 12.96 0.691381C13.0662 0.735295 13.1627 0.799708 13.2441 0.880938L19.3691 7.00594C19.4503 7.08726 19.5147 7.18379 19.5586 7.29001C19.6025 7.39623 19.6251 7.51006 19.625 7.625V10.25C19.625 10.4821 19.5328 10.7046 19.3687 10.8687C19.2046 11.0328 18.9821 11.125 18.75 11.125C18.5179 11.125 18.2954 11.0328 18.1313 10.8687C17.9672 10.7046 17.875 10.4821 17.875 10.25V8.5H12.625C12.3929 8.5 12.1704 8.40781 12.0063 8.24372C11.8422 8.07962 11.75 7.85706 11.75 7.625V2.375H2.125V10.25C2.125 10.4821 2.03281 10.7046 1.86872 10.8687C1.70462 11.0328 1.48206 11.125 1.25 11.125C1.01794 11.125 0.795376 11.0328 0.631282 10.8687C0.467187 10.7046 0.375 10.4821 0.375 10.25ZM13.5 6.75H16.638L13.5 3.61203V6.75Z" fill="#262626"/>
+              </svg>
+              a(href="./img/pdf.png" download).card-truck__wrap-link Чертежи
+        p.card-truck__wrap-characteristics Характеристики  
+        .card-truck__wrap-characteristics__wrap
+          .card-truck__wrap-characteristics__block
+            .card-truck__wrap-characteristics__block-second
+              .card-truck__wrap-characteristics__block-text 
+                span Высота ССУ
+              .card-truck__wrap-characteristics__block-text-second 
+                span 1 150 мм
+            .card-truck__wrap-characteristics__block-second  
+              .card-truck__wrap-characteristics__block-text 
+                span Двигатель
+              .card-truck__wrap-characteristics__block-text-second 
+                span MC13.48-50, ~480 л.с.
+            .card-truck__wrap-characteristics__block-second  
+              .card-truck__wrap-characteristics__block-text 
+                span Кпп
+              .card-truck__wrap-characteristics__block-text-second 
+                span ZF16S2530TO 16 ступ, механическая
+            .card-truck__wrap-characteristics__block-second  
+              .card-truck__wrap-characteristics__block-text 
+                span Ретардер
+              .card-truck__wrap-characteristics__block-text-second 
+                span Отсутствует
+            .card-truck__wrap-characteristics__block-second  
+              .card-truck__wrap-characteristics__block-text 
+                span Раздатка
+              .card-truck__wrap-characteristics__block-text-second 
+                span Отсутствует
+            .card-truck__wrap-characteristics__block-second  
+              .card-truck__wrap-characteristics__block-text 
+                span Кабина
+              .card-truck__wrap-characteristics__block-text-second 
+                span C7H-G - высокая, с двумя спальными местами
+          .card-truck__wrap-characteristics__block-third
+            .card-truck__wrap-characteristics__block-four 
+              .card-truck__wrap-characteristics__block-text 
+                span Передняя подвеска
+              .card-truck__wrap-characteristics__block-text-second 
+                span рессорная
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Задняя подвеска
+              .card-truck__wrap-characteristics__block-text-second 
+                span пневматическая
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Передняя балка
+              .card-truck__wrap-characteristics__block-text-second 
+                span VPD71 (дисковые тормоза)
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Ведущий мост
+              .card-truck__wrap-characteristics__block-text-second  
+                span MCY13 (дисковые тормоза)
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Шины
+              .card-truck__wrap-characteristics__block-text-second 
+                span 315/70R22.5
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Топливный бак
+              .card-truck__wrap-characteristics__block-text-second 
+                span 600+300L
+            .card-truck__wrap-characteristics__block-four   
+              .card-truck__wrap-characteristics__block-text 
+                span Экологический класс
+              .card-truck__wrap-characteristics__block-text-second 
+                span Евро 5

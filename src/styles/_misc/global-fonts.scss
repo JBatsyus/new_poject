@@ -284,3 +284,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Inter-SemiBold-600';
+  src: url('../fonts/Inter-SemiBold.eot');
+  src: url('../fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+      url('../fonts/Inter-SemiBold.woff') format('woff'),
+      url('../fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
