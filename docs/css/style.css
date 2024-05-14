@@ -133,7 +133,7 @@
   font-family: "GilroyRegular";
   src: url("../fonts/Gilroy-Regular.eot");
   src: url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -2384,7 +2384,6 @@ p {
 
 .swiper-container {
   width: 100%;
-  height: 300px;
   overflow: hidden;
 }
 
@@ -2412,7 +2411,6 @@ p {
 
 .gallery-thumbs .swiper-slide {
   height: 100%;
-  opacity: 0.4;
 }
 
 .gallery-thumbs__wrap .swiper-button-next {
@@ -2631,8 +2629,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .training-block .training-block__text {
@@ -2708,6 +2705,7 @@ p {
   font-size: 16px;
   color: #000;
   font-family: "GilroyRegular";
+  font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 40px;
   text-align: left;
@@ -2792,6 +2790,7 @@ p {
   font-family: "GilroyRegular";
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .training-materials__block {
@@ -3541,10 +3540,6 @@ p {
     gap: 24px;
   }
 
-  .training-pic__wrap {
-    grid-template-columns: 1fr;
-  }
-
   .training-table__title {
     display: none;
   }
@@ -3984,6 +3979,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .training-pic__wrap {
+    grid-template-columns: 1fr;
+  }
+
   .training-table__title-link {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -4003,8 +4002,15 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .training-education__wrap .training-education__block-contacts__info__address {
-    margin-bottom: 40px;
+  .training-education__wrap .training-education__block-contacts__info__address-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
   }
 }
 
