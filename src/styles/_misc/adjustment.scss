@@ -62,8 +62,18 @@ body {
   flex-direction: column;
   height: 100vh;
   
-}
 
+}
+main{
+  background-image: url(../img/bgi.svg);
+  background-position: 100% 200px;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  @include tablet_991{
+    background-image:none;
+  }
+
+}
 
 
 :root {
@@ -129,14 +139,19 @@ input {
 }
 
 input[type="text"] {
-  font-family: inherit; /* 1 */
-  font-size: inherit; /* 1 */
-  line-height: inherit; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 a {
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
   }
@@ -149,6 +164,7 @@ label {
 
 html {
   height: 100%;
+
   @include desktop1920 {
     font-size: 16px;
   }
