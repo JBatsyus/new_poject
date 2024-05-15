@@ -1,20 +1,18 @@
-doctype html
 block variables
 
 html(lang='ru')
   include ../_components/mixins
   include ../templates/head
 
-  body.body(class=pageClass)
-    img(src=`./img/up-button.svg` alt='', title='').upbutton#upbutton
+  body.body
     include ../_components/header
 
 
-    .wrapper
-      block content
+
+
+    block content
+
+
 
     include ../_components/footer
-
-
     include ../templates/scripts.pug
-
