@@ -1,49 +1,20 @@
-#modal-quest.modal.fade.modal-open(tabindex='-1', role='dialog' )
-  .modal-dialog(role='document')
-    .modal-content
-      button.close-modal(type='button', data-dismiss='modal', aria-label='Закрыть')
-      .modal-body
-        .h3.modal-title.text-center Вопрос специалисту
-        .upload-wrap
-          form
-            .form-input-wrap.input-error
-              input#name.form__input(type='text' autocomplete='off' placeholder=' ')
-              label.form__label(for='name') Ваше имя<span>*</span>
-              .error-message Заполните поле
-            .form-input-wrap.input-error
-              input#phone.form__input.input-phone(type='text' autocomplete='off' placeholder=' ')
-              label.form__label(for='phone') Телефон<span>*</span>
-              .error-message Заполните поле
-            .form-input-wrap.form-input-wrap_select.input-error
-              select.select-theme(name='theme')
-                option(value='') Тема обращения
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-                option(value='') Тема 1
-              .error-message Заполните поле
-            .form-input-wrap.form-input-wrap_textarea.input-error
-              textarea#text.form__input(autocomplete='off' placeholder=' ')
-              label.form__label(for='text') Вопрос / комментарий<span>*</span>
-              .error-message Заполните поле
-            .dropzone-wrap
-              #dropzone.dropzone(action='/file-upload')
-                .fallback
-                  input(name='file' type='file' multiple='').drop-file
-                .dz-message(data-dz-message='') Прикрепить файл
-         
-
-
-          .text-requred * поля для обязательного заполнения
-          img(src='./img/captcha.png' alt='', title='').captcha
-             
-        .button-wrap.d-flex.justify-content-center
-          +button({
-            text: 'Отправить',
-            mod: 'button-transparent button-transparent_black button-arrow mt-3'
-          })
+.modal
+  .modal-overlay.modal-toggle
+  .modal-wrapper.modal-transition
+    .modal-header
+      button.modal-close.modal-toggle
+        svg(width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+          path(d='M1.16675 1.16663L12.8334 12.8333M1.16675 12.8333L12.8334 1.16663' stroke='black' stroke-width='2.33333' stroke-linecap='round' stroke-linejoin='round')
+      h2.modal-heading Заказать звонок
+    .modal-body
+      form.modal__form
+        .modal-input__wrap
+          input#name(type='text' name='name' placeholder='Ваше имя')
+        .modal-input__wrap
+          input#email(type='email' name='email' placeholder='Ваш телефон')
+        .modal-input__wrap
+          input#phone(type='tel' name='phone' placeholder='E-mail')
+        .agreement
+          input#policy(type='checkbox' name='policy')
+          label(for='policy') Я согласен с <a href="javascript:void(0);">Политикой конфиденциальности</a> и с условиями <a href="javascript:void(0);">Публичной оферты</a>
+        button(type='submit').btn Заказать звонок

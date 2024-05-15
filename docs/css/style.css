@@ -58,10 +58,10 @@
 }
 
 @font-face {
-  font-family: "GilroyBold";
+  font-family: "Gilroy-700";
   src: url("../fonts/Gilroy-Bold.eot");
   src: url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -1127,6 +1127,166 @@ p {
 }
 
 /*--------------pagination end-------------*/
+
+/*--------------Модальное окно start-------------*/
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.modal.is-visible {
+  visibility: visible;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s;
+  transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.modal.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 42em;
+  border-radius: 6px;
+  padding: 40px;
+  margin-top: -21em;
+  background-color: #FFFFFF;
+  /* половина высоты модального окна */
+  margin-left: -21em;
+  /* половина ширины модального окна */
+}
+
+.modal-transition {
+  -webkit-transition: all 0.3s 0.12s;
+  transition: all 0.3s 0.12s;
+  -webkit-transform: translateY(-10%);
+      -ms-transform: translateY(-10%);
+          transform: translateY(-10%);
+  opacity: 0;
+}
+
+.modal.is-visible .modal-transition {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  background: #FFFFFF;
+  gap: 20px;
+}
+
+.modal-header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.modal-header .modal-heading {
+  font-family: "Gilroy-700";
+  font-weight: 700;
+  font-size: 32px;
+  color: #2a2a2a;
+}
+
+.modal-header .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  color: #2a2a2a;
+  background: none;
+  border: 0;
+}
+
+.modal-body .modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.modal-body .modal__form a {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 14px;
+  color: #2a2a2a;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.modal-body .modal__form .modal-input__wrap input {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 10px;
+  background: transparent;
+  height: 100%;
+  outline: none;
+  width: 100%;
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a2a2a;
+  padding: 8px 18px;
+}
+
+.modal-body .modal__form .agreement label {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 14px;
+  color: #2a2a2a;
+}
+
+.modal-body .modal__form .btn {
+  background-color: #FFFFFF;
+  font-family: "Gilroy-700";
+  font-weight: 700;
+  font-size: 14px;
+  color: #2a2a2a;
+  text-transform: initial;
+  padding: 20px 80px;
+}
+
+/*--------------Модальное окно end-------------*/
 
 /*--------------Главная страница start-------------*/
 
@@ -3896,6 +4056,16 @@ p {
     margin-right: 50px;
   }
 
+  .modal-wrapper {
+    padding: 20px;
+    margin-left: -13em;
+    width: 26em;
+  }
+
+  .modal-header .modal-heading {
+    font-size: 25px;
+  }
+
   .banner__item {
     aspect-ratio: auto 8/5;
   }
@@ -4378,6 +4548,12 @@ p {
 }
 
 @media (max-width: 576px) {
+  .modal-wrapper {
+    padding: 15px;
+    margin-left: -11em;
+    width: 22em;
+  }
+
   .service-main__wrap .service-list {
     grid-template-columns: 1fr;
   }
@@ -4455,6 +4631,16 @@ p {
 }
 
 @media (max-width: 390px) {
+  .modal-wrapper {
+    padding: 10px;
+    margin-left: -9em;
+    width: 18em;
+  }
+
+  .modal-body .modal__form .btn {
+    padding: 20px;
+  }
+
   .warranty_periods__wrap .warranty_periods__list .warranty_periods__item .periods-item__image {
     width: 300px;
   }

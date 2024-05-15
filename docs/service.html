@@ -101,7 +101,7 @@
               <li class="header-nav__item"><a href="javascript:void(0);">Новости</a></li>
               <li class="header-nav__item"><a href="javascript:void(0);">О нас</a></li>
             </ul>
-          </nav><a class="btn-hdr" href="javascript:void(0);">заказать звонок</a>
+          </nav><a class="btn-hdr modal-toggle" href="javascript:void(0);">заказать звонок</a>
           <div class="menu-humb">
             <div class="icon-humb">
               <div class="icon-humb__line"></div>
@@ -171,7 +171,7 @@
                   </li>
                   <li class="menu-mob__item"><a href="javascript:void(0);">Новости</a></li>
                   <li class="menu-mob__item"><a href="javascript:void(0);">О нас</a></li>
-                </ul><a class="btn-hdr" href="javascript:void(0);">заказать звонок</a>
+                </ul><a class="btn-hdr modal-toggle" href="javascript:void(0);">заказать звонок</a>
                 <div class="menu-mob__contacts-top"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.55">
 <path d="M10 11.25C9.38194 11.25 8.77775 11.0667 8.26384 10.7233C7.74994 10.38 7.3494 9.89191 7.11288 9.32089C6.87635 8.74987 6.81447 8.12154 6.93505 7.51534C7.05563 6.90915 7.35325 6.35233 7.79029 5.91529C8.22733 5.47825 8.78415 5.18063 9.39034 5.06005C9.99654 4.93947 10.6249 5.00135 11.1959 5.23788C11.7669 5.4744 12.255 5.87494 12.5983 6.38884C12.9417 6.90275 13.125 7.50694 13.125 8.125C13.124 8.9535 12.7945 9.74778 12.2086 10.3336C11.6228 10.9195 10.8285 11.249 10 11.25ZM10 6.25C9.62916 6.25 9.26665 6.35997 8.95831 6.566C8.64997 6.77202 8.40964 7.06486 8.26773 7.40747C8.12581 7.75008 8.08868 8.12708 8.16103 8.4908C8.23338 8.85451 8.41195 9.1886 8.67418 9.45083C8.9364 9.71305 9.27049 9.89163 9.63421 9.96397C9.99792 10.0363 10.3749 9.99919 10.7175 9.85728C11.0601 9.71536 11.353 9.47504 11.559 9.1667C11.765 8.85835 11.875 8.49584 11.875 8.125C11.8745 7.62787 11.6768 7.15125 11.3253 6.79972C10.9738 6.4482 10.4971 6.2505 10 6.25Z" fill="white" />
@@ -216,7 +216,7 @@
       <div class="container">
         <div class="footer__left">
           <div class="footer-info"><a class="footer-logo logo-desc" href="/"><img src="./img/sitrak-logo.png" alt="Ситрак"/></a>
-            <p>Остались вопросы?</p><a class="btn-hdr" href="javascript:void(0);">заказать звонок</a>
+            <p>Остались вопросы?</p><a class="btn-hdr modal-toggle" href="javascript:void(0);">заказать звонок</a>
             <div class="notice">
               <p class="copy">© All Rights Reserved. 2024</p><a class="privacy" href="javascript:void(0);">Политика конфиденциальности</a>
             </div>
@@ -248,6 +248,37 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal-overlay modal-toggle"></div>
+      <div class="modal-wrapper modal-transition">
+        <div class="modal-header">
+          <button class="modal-close modal-toggle">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.16675 1.16663L12.8334 12.8333M1.16675 12.8333L12.8334 1.16663" stroke="black" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <h2 class="modal-heading">Заказать звонок</h2>
+        </div>
+        <div class="modal-body">
+          <form class="modal__form">
+            <div class="modal-input__wrap">
+              <input id="name" type="text" name="name" placeholder="Ваше имя"/>
+            </div>
+            <div class="modal-input__wrap">
+              <input id="email" type="email" name="email" placeholder="Ваш телефон"/>
+            </div>
+            <div class="modal-input__wrap">
+              <input id="phone" type="tel" name="phone" placeholder="E-mail"/>
+            </div>
+            <div class="agreement">
+              <input id="policy" type="checkbox" name="policy"/>
+              <label for="policy">Я согласен с <a href="javascript:void(0);">Политикой конфиденциальности</a> и с условиями <a href="javascript:void(0);">Публичной оферты</a></label>
+            </div>
+            <button class="btn" type="submit">Заказать звонок</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/plugins/jquery-3.4.1.min.js"></script>
     <script src="js/plugins/jquery.maskedinput.js"></script>
     <script src="js/plugins/jquery.magnific-popup.min.js"></script>

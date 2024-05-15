@@ -6,6 +6,15 @@ document.documentElement.style.setProperty('--js-header-height', headerHeight + 
 
 
 $(document).ready(function () {
+  // модалка 
+
+
+$('.modal-toggle').on('click', function (e) {
+  e.preventDefault();
+  $('body').toggleClass('modal-open');
+  $('.modal').toggleClass('is-visible');
+});
+
 
   $('.popup-gallery').magnificPopup({
     delegate: 'a',

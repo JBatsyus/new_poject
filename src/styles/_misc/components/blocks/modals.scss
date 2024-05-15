@@ -1,0 +1,173 @@
+/*--------------Модальное окно start-------------*/
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.modal.is-visible {
+  visibility: visible;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.modal.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 42em;
+  border-radius: 6px;
+  padding: 40px;
+  margin-top: -21em;
+  background-color: $color-white;
+  /* половина высоты модального окна */
+  margin-left: -21em;
+
+  /* половина ширины модального окна */
+  @include tablet_850 {
+    padding: 20px;
+    margin-left: -13em;
+    width: 26em;
+  }
+
+  @include mobile_576 {
+    padding: 15px;
+    margin-left: -11em;
+    width: 22em;
+  }
+
+  @include mobile_390 {
+    padding: 10px;
+    margin-left: -9em;
+    width: 18em;
+  }
+}
+
+.modal-transition {
+  transition: all 0.3s 0.12s;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+
+.modal.is-visible .modal-transition {
+  transform: translateY(0);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  background: $color-white;
+  gap: 20px;
+}
+
+.modal-header {
+  position: relative;
+  margin-bottom: 40px;
+
+  .modal-heading {
+    font-family: $Gilroy-700;
+    font-weight: 700;
+    font-size: 32px;
+    color: #2a2a2a;
+
+    @include tablet_850 {
+      font-size: 25px;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #2a2a2a;
+    background: none;
+    border: 0;
+  }
+}
+
+.modal-body {
+  .modal__form {
+    @include flex-column;
+    gap: 30px;
+
+    a {
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      font-size: 14px;
+      color: #2a2a2a;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+
+    }
+
+    .modal-input__wrap {
+      input {
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #979797;
+        margin-bottom: 10px;
+        background: transparent;
+
+        height: 100%;
+
+        outline: none;
+        width: 100%;
+        font-family: $GilroyRegular;
+        font-weight: 400;
+        font-size: 16px;
+        color: #2a2a2a;
+        padding: 8px 18px;
+      }
+    }
+
+    .agreement {
+      label {
+        font-family: $GilroyRegular;
+        font-weight: 400;
+        font-size: 14px;
+        color: #2a2a2a;
+
+      }
+    }
+
+    .btn {
+      background-color: $color-white;
+      font-family: $Gilroy-700;
+      font-weight: 700;
+      font-size: 14px;
+      color: #2a2a2a;
+      text-transform: initial;
+      padding: 20px 80px;
+
+      @include mobile_390 {
+        padding: 20px;
+      }
+    }
+  }
+}
+/*--------------Модальное окно end-------------*/
