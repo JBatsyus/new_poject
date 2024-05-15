@@ -1509,6 +1509,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6.25rem;
+  margin-bottom: 40px;
 }
 
 .catalog-preview__wrap .catalog-preview__item {
