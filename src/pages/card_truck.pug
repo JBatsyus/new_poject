@@ -13,34 +13,55 @@ block content
           a(href="#") Седельные тягачи
         li
           a(href="#") Седельные тягачи 4x2  
-      h1.h1 Седельные тягачи       
-      .swiper-container.gallery-top
-        .swiper-wrapper
-          .swiper-slide(style='background-image:url(./img/car1.png); width ="300px";')
-          .swiper-slide(style='background-image:url(./img/car2.png)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-6.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-7.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-8.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-9.jpg)')
-          .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-10.jpg)')
-      .gallery-thumbs__wrap    
-        .swiper-container.gallery-thumbs
-          .swiper-wrapper
-            .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-            .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-            .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-            .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-            .swiper-slide(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
-            .swiper-slide(style='background-image:url(./img/bg.png)')
-            .swiper-slide(style='background-image:url(./img/bg.png)')
-            .swiper-slide(style='background-image:url(./img/bg.png)')
-            .swiper-slide(style='background-image:url(./img/bg.png)')
-            .swiper-slide(style='background-image:url(./img/bg.png)')
-        .swiper-button-next.swiper-button-white.gallery-thumbs-next
-        .swiper-button-prev.swiper-button-white.gallery-thumbs-prev
+      h1.h1 Седельные тягачи      
+      .my-swiper__wrap 
+        .swiper.my-swiper__container.gallery-top
+          .swiper-wrapper.my-swiper-wrapper
+            .swiper-slide 
+              .swiper-slide__image(style='background-image:url(./img/car1.png)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(./img/car2.png)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-6.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-7.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-8.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-9.jpg)')
+            .swiper-slide
+              .swiper-slide__image(style='background-image:url(https://swiperjs.com/demos/images/nature-10.jpg)')
+        .gallery-thumbs__wrap    
+          .swiper.my-swiper__container.gallery-thumbs
+            .swiper-wrapper.my-swiper-wrapper
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(https://swiperjs.com/demos/images/nature-3.jpg)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(https://swiperjs.com/demos/images/nature-4.jpg)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(https://swiperjs.com/demos/images/nature-5.jpg)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+              .swiper-slide
+                .swiper-slide__image-small(style='background-image:url(./img/bg.png)')
+          .swiper-button-next.swiper-button-white.gallery-thumbs-next
+          .swiper-button-prev.swiper-button-white.gallery-thumbs-prev
 
       .card_truck-preview__wrap
         .card-truck__block
@@ -79,67 +100,80 @@ block content
             .card-truck__wrap-characteristics__block-second
               .card-truck__wrap-characteristics__block-text 
                 span Высота ССУ
+              .card-truck__wrap-characteristics__block-text__line
               .card-truck__wrap-characteristics__block-text-second 
                 span 1 150 мм
             .card-truck__wrap-characteristics__block-second  
               .card-truck__wrap-characteristics__block-text 
                 span Двигатель
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span MC13.48-50, ~480 л.с.
             .card-truck__wrap-characteristics__block-second  
               .card-truck__wrap-characteristics__block-text 
                 span Кпп
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span ZF16S2530TO 16 ступ, механическая
             .card-truck__wrap-characteristics__block-second  
               .card-truck__wrap-characteristics__block-text 
                 span Ретардер
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span Отсутствует
             .card-truck__wrap-characteristics__block-second  
               .card-truck__wrap-characteristics__block-text 
                 span Раздатка
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span Отсутствует
             .card-truck__wrap-characteristics__block-second  
               .card-truck__wrap-characteristics__block-text 
                 span Кабина
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span C7H-G - высокая, с двумя спальными местами
           .card-truck__wrap-characteristics__block
             .card-truck__wrap-characteristics__block-second 
               .card-truck__wrap-characteristics__block-text 
                 span Передняя подвеска
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span рессорная
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Задняя подвеска
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span пневматическая
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Передняя балка
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span VPD71 (дисковые тормоза)
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Ведущий мост
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second  
                 span MCY13 (дисковые тормоза)
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Шины
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span 315/70R22.5
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Топливный бак
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span 600+300L
             .card-truck__wrap-characteristics__block-second   
               .card-truck__wrap-characteristics__block-text 
                 span Экологический класс
+              .card-truck__wrap-characteristics__block-text__line  
               .card-truck__wrap-characteristics__block-text-second 
                 span Евро 5
       h2.h2.margin-bottom-40 Похожие модели

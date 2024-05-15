@@ -1,58 +1,67 @@
-.swiper-container {
-  width: 100%;
-  // height: 300px;
-  overflow: hidden;
-
-
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-
-}
-
-.gallery-top {
-  height: 432px;
-  width: 100%;
-}
-
 .gallery-thumbs__wrap {
   position: relative;
 }
 
+.gallery-top {
+  margin-bottom: 36px;
+}
+
+.my-swiper__container .swiper-slide {
+  height: auto;
+
+}
+
+.swiper-slide__image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  aspect-ratio: 21/13;
+  width: 100%;
+}
+
+.swiper-slide__image-small {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  aspect-ratio: 2/2;
+  width: 100%;
+
+  @include mobile_768 {
+    aspect-ratio: 1/1;
+  }
+
+  
+}
+
+.my-swiper-wrapper {
+  height: auto;
+}
+
 .gallery-thumbs {
-  height: 100px;
   box-sizing: border-box;
-  margin: 36px 0 60px;
+  margin-bottom: 60px;
 
   @include desktop_1200-1550 {
     width: 90%;
-    margin: 36px auto 60px;
+    margin-bottom: 60px;
   }
 
   @include desktop1200 {
     width: 90%;
-    margin: 36px auto 60px;
+    margin-bottom: 60px;
   }
 
   @include tablet_991 {
     width: 80%;
-    margin: 36px auto 60px;
+    margin-bottom: 60px;
   }
 }
 
-.gallery-thumbs .swiper-slide {
-  height: 100%;
-  // opacity: 0.4;
-}
-
-.gallery-thumbs .swiper-slide-thumb-active {
-  //opacity: 1;
-}
 
 .gallery-thumbs__wrap .swiper-button-next {
+  right: -49px;
 
   @include desktop_1200-1550 {
     right: 0;
@@ -66,13 +75,15 @@
     right: 0;
   }
 
-  right: -49px;
+  
 }
 
 .gallery-thumbs__wrap .swiper-button-prev {
 
+  left: -49px;
+
   @include desktop_1200-1550 {
-    left: 0;
+    left:   0;
   }
 
   @include desktop1200 {
@@ -83,7 +94,7 @@
     left: 0;
   }
 
-  left: -49px;
+ 
 }
 
 .gallery-thumbs__wrap .swiper-button-next:after {
@@ -94,6 +105,16 @@
   background-repeat: no-repeat;
   width: 28px;
   height: 28px;
+
+  @include mobile_768 {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mobile_576 {
+    width: 20px;
+    height: 20px;
+  }
 
 }
 
@@ -106,6 +127,16 @@
   width: 28px;
   height: 28px;
   transform: rotate(180deg);
+
+  @include mobile_768 {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mobile_576 {
+    width: 20px;
+    height: 20px;
+  }
 
 }
 
@@ -219,7 +250,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 
-    @include mobile_768 {
+    @include tablet_991 {
       grid-template-columns: 1fr;
     }
   }
@@ -232,44 +263,77 @@
     text-transform: uppercase;
   }
 
+  .card-truck__wrap-characteristics__block-text__line {
+    flex-grow: 1;
+    flex-basis: 0;
+    border-top: 2px dotted $color-black;
+
+    @include mobile_768 {
+      border-top: 0;
+      flex-grow: 0;
+    }
+  }
+
   .card-truck__wrap-characteristics__block-text {
+    @include mobile_768 {
+      margin-bottom: -6px;
+    }
     font-family: $Gilroy-600;
     font-size: 16px;
     color: $color-black;
     text-transform: uppercase;
-    margin-bottom: -6px;
+    margin-bottom: -4px;
     white-space: nowrap;
   }
 
   .card-truck__wrap-characteristics__block-text span {
-    background-color: $color-white;
+    @include mobile_768 {
+      background-color: $color-white;
+    }
+    
+    
   }
-
   .card-truck__wrap-characteristics__block-text-second {
+  
     font-family: $GilroyRegular;
     font-size: 16px;
     color: $color-black;
     text-align: right;
-    margin-bottom: -6px;
-    padding-left: 1px;
+    margin-bottom: -4px;
+    max-width: 350px;
 
+    @include mobile_768 {
+      margin-bottom: -6px;
+      max-width: none;
+    }
   }
 
   .card-truck__wrap-characteristics__block-text-second span {
-    background-color: $color-white;
+    @include mobile_768 {
+      background-color: $color-white;
+    }
   }
-
   .card-truck__wrap-characteristics__block {
     display: flex;
     flex-direction: column;
     gap: 27px;
   }
 
+  
   .card-truck__wrap-characteristics__block-second {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px dotted $color-black;
     align-items: end;
-    gap: 20px;
+    
+    @include mobile_768 {
+      
+      border-bottom: 2px dotted $color-black;
+      gap: 5px;
+    }
   }
+
+
+  
+
+
 }
