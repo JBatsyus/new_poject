@@ -126,16 +126,16 @@ li {
   box-sizing: border-box;
 }
 
-button,
-a,
-input {
-  outline: none;
 
-  &:focus,
-  &:visited {
+
+button:focus,
+button:visited,
+a:focus,
+a:visited,
+input:focus,
+input:visited {
     text-decoration: none;
     outline: none;
-  }
 }
 
 input[type="text"] {
@@ -164,6 +164,7 @@ label {
 
 html {
   height: 100%;
+  scrollbar-width: thin;
 
   @include desktop1920 {
     font-size: 16px;

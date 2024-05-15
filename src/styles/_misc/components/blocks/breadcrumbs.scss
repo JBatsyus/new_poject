@@ -5,7 +5,7 @@
   margin-top: rem(60px);
   margin-bottom: rem(40px);
 
-  @include mobile_768 {
+  @include tablet_991 {
     margin-top: rem(15px);
     margin-bottom: rem(30px);
     flex-wrap: wrap;

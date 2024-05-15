@@ -309,12 +309,6 @@ li {
           box-sizing: border-box;
 }
 
-button,
-a,
-input {
-  outline: none;
-}
-
 button:focus,
 button:visited,
 a:focus,
@@ -350,6 +344,7 @@ label {
 
 html {
   height: 100%;
+  scrollbar-width: thin;
 }
 
 .h1 {
@@ -2932,6 +2927,163 @@ p {
   gap: 9px;
 }
 
+.dealers__wrap .map__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.dealers__wrap .map__selection-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #15508b;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+}
+
+.dealers__wrap .map__selection-list select {
+  background: #15508b;
+  font-family: "Gilroy-500";
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 14px;
+  max-width: 312px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  background-image: url("/img/select.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right 18px;
+  padding-right: 30px;
+  background-size: 10px;
+  margin-right: 35px;
+}
+
+.dealers__wrap .map__selection-list select:last-child {
+  margin-right: 0px;
+}
+
+.dealers__wrap .map__selection-list select option {
+  cursor: pointer;
+}
+
+.dealers__wrap .map__selection-list .dealer__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 50%;
+}
+
+.dealers__wrap .map__selection-list .dealer__box .btn_white {
+  text-transform: uppercase;
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  font-size: 14px;
+  color: #15508b;
+}
+
+.dealers__wrap .map__selection-list .dealer__box .btn_white:hover {
+  color: #FFFFFF;
+}
+
+.dealers__wrap .h2 {
+  margin-bottom: 40px;
+}
+
+.dealers__wrap .map__list {
+  display: block;
+  gap: 35px 20px;
+  margin-bottom: 40px;
+}
+
+.dealers__wrap #itemsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.dealers__wrap .map__item {
+  border: 1px solid #15508b;
+  border-radius: 4px;
+  padding: 20px;
+  width: 30%;
+}
+
+.dealers__wrap .map__dealer-item {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.dealers__wrap .map__dealer-item:hover {
+  color: #15508b;
+}
+
+.dealers__wrap .map__dealer-item span {
+  margin: 10px 0;
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.dealers__wrap .map__item_top p:first-of-type {
+  font-family: "Gilroy-600";
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.dealers__wrap .map__item_top p:nth-of-type(2) {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+.dealers__wrap .buttons__more {
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dealers__wrap .buttons__more .btn {
+  text-transform: initial;
+}
+
+.dealers__wrap .map {
+  width: 100%;
+  height: 620px;
+  margin-bottom: 60px;
+  z-index: 0;
+}
+
 @media (min-width: 991px) {
   .row {
     margin-right: -0.75rem;
@@ -3347,6 +3499,13 @@ p {
     gap: 15px;
   }
 
+  .breadcrumbs {
+    margin-top: 0.9375rem;
+    margin-bottom: 1.875rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   .banner__item {
     margin-bottom: 30px;
   }
@@ -3576,6 +3735,41 @@ p {
   .training-materials__block.block-mobile {
     display: grid;
   }
+
+  .dealers__wrap .map__selection-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+
+  .dealers__wrap .map__selection-list select {
+    max-width: 100%;
+    margin-right: 0px;
+  }
+
+  .dealers__wrap .map__selection-list .dealer__box {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .dealers__wrap .map__item {
+    width: 48%;
+  }
+
+  .dealers__wrap .map__item {
+    width: 48%;
+  }
+
+  .dealers__wrap .buttons__more {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media (max-width: 991px) and (max-width: 768px) {
@@ -3638,13 +3832,6 @@ p {
 
   .btn_white {
     padding: 10px 15px;
-  }
-
-  .breadcrumbs {
-    margin-top: 0.9375rem;
-    margin-bottom: 1.875rem;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 
   .footer-wrap {
@@ -4107,6 +4294,10 @@ p {
     width: 20px;
     height: 20px;
   }
+
+  .dealers__wrap .map__item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -4124,6 +4315,20 @@ p {
 
   .training-gallery__block {
     grid-template-columns: 1fr;
+  }
+
+  .dealers__wrap .map__selection-list .dealer__box .btn_white {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .dealers__wrap .buttons__more .btn {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
   }
 }
 
