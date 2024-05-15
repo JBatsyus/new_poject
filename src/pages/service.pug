@@ -1,0 +1,38 @@
+extends ../templates/template-service_section_page
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Сервис']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Сервис
+      .service__wrap
+        .service__list-wrap
+          .structure-items
+            +structure-item({
+              img:'gp.png',
+              title:'Гарантийная политика',
+            })
+            +structure-item({
+              img:'tp.png',
+              title:'Техническая поддержка',
+            })
+            +structure-item({
+              img:'ob.png',
+              title:'Обучение',
+            })
+            +structure-item({
+              img:'to.png',
+              title:'Техническое обслуживание и сертификация',
+            })
+            +structure-item({
+              img:'zp.png',
+              title:'Запчасти',
+            })
+            +structure-item({
+              img:'n.png',
+              title:'Новости о политике по сервису',
+            })

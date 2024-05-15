@@ -3086,6 +3086,65 @@ p {
   z-index: 0;
 }
 
+.service__wrap .service__list-wrap .structure-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.service__wrap .service__list-wrap .structure-items .structure-item {
+  position: relative;
+  padding: 20px;
+  width: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16/9;
+}
+
+.service__wrap .service__list-wrap .structure-items .structure-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.service__wrap .service__list-wrap .structure-items .structure-item .structure-title {
+  position: relative;
+  z-index: 2;
+  font-family: "Gilroy-500";
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 @media (min-width: 991px) {
   .row {
     margin-right: -0.75rem;
@@ -3234,6 +3293,11 @@ p {
 
   .gallery-thumbs__wrap .swiper-button-prev {
     left: 0;
+  }
+
+  .service__wrap .service__list-wrap .structure-items .structure-item {
+    width: 31%;
+    aspect-ratio: 8/5;
   }
 }
 
@@ -3772,6 +3836,14 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
+
+  .service__wrap .service__list-wrap .structure-items .structure-item {
+    width: 48%;
+  }
+
+  .service__wrap .service__list-wrap .structure-items .structure-item .structure-title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 991px) and (max-width: 768px) {
@@ -4251,6 +4323,11 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
+  }
+
+  .service__wrap .service__list-wrap .structure-items .structure-item {
+    width: 100%;
+    aspect-ratio: 8/4;
   }
 }
 

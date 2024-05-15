@@ -61,7 +61,11 @@ mixin news-preview-item
       .news-preview__txt В этом руководстве представлена информация об эксплуатации, плановом техническом обслуживании и техническом обслуживании автомобилей серии SITRAK -C7H, а также представлены соответствующие правила безопасности, которые необходимо соблюдать при использовании автомобиля.
       a(href="javascript:void(0);").btn Читать далее
 
+mixin structure-item(data)
+  a(href="javascript:void(0);" class="structure-item" style=`background-image: url('img/${data.img}')`)
+    .structure-title !{data.title}
 
+    
 mixin button(data)
   - mod = data.mod || ''
   a(href="javascript:void(0);" class=`button ${mod}`) !{data.text}
@@ -104,10 +108,6 @@ mixin search-block
         +icon('search', 'icon-search')
 
 
-mixin structure-item(data)
-  .structure-item
-    img(src=`img/${data.img}` alt='', title='').structure-img
-    .structure-title !{data.title}
-    .structure-percent !{data.percent}
+
 
 
