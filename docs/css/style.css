@@ -3141,6 +3141,8 @@ p {
 
 /*--------------Дилеры start-------------*/
 
+/*--------------Сервис start-------------*/
+
 .service__wrap .service__list-wrap .structure-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3157,6 +3159,8 @@ p {
   gap: 20px;
   width: 100%;
 }
+
+/*--------------Сервис end-------------*/
 
 /*--------------Гарантийная политика start-------------*/
 
