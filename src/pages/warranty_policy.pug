@@ -1,0 +1,19 @@
+extends ../templates/template-guarantee.pug
+
+
+
+block content
+  main.wrapper
+    .container
+      ul.breadcrumbs
+        each name in ['Главная', 'Сервис', 'Гарантийная политика']
+          li
+            a(href="javascript:void(0);")= name
+      h1.h1 Гарантийная политика
+      .warranty_policy__wrap
+        .warranty_policy__list-wrap
+          .structure-items
+            +structure-item({
+              img:'gp_l.png',
+              title:'Целые машины и запасные части',
+            })

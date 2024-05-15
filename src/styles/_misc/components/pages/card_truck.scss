@@ -1,3 +1,4 @@
+/*--------------Детальная страница каталога start-------------*/
 .gallery-thumbs__wrap {
   position: relative;
 }
@@ -32,7 +33,7 @@
     aspect-ratio: 1/1;
   }
 
-  
+
 }
 
 .my-swiper-wrapper {
@@ -75,7 +76,7 @@
     right: 0;
   }
 
-  
+
 }
 
 .gallery-thumbs__wrap .swiper-button-prev {
@@ -83,7 +84,7 @@
   left: -49px;
 
   @include desktop_1200-1550 {
-    left:   0;
+    left: 0;
   }
 
   @include desktop1200 {
@@ -94,7 +95,7 @@
     left: 0;
   }
 
- 
+
 }
 
 .gallery-thumbs__wrap .swiper-button-next:after {
@@ -278,6 +279,7 @@
     @include mobile_768 {
       margin-bottom: -6px;
     }
+
     font-family: $Gilroy-600;
     font-size: 16px;
     color: $color-black;
@@ -290,11 +292,12 @@
     @include mobile_768 {
       background-color: $color-white;
     }
-    
-    
+
+
   }
+
   .card-truck__wrap-characteristics__block-text-second {
-  
+
     font-family: $GilroyRegular;
     font-size: 16px;
     color: $color-black;
@@ -313,27 +316,24 @@
       background-color: $color-white;
     }
   }
+
   .card-truck__wrap-characteristics__block {
     display: flex;
     flex-direction: column;
     gap: 27px;
   }
 
-  
+
   .card-truck__wrap-characteristics__block-second {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    
+
     @include mobile_768 {
-      
+
       border-bottom: 2px dotted $color-black;
       gap: 5px;
     }
   }
-
-
-  
-
-
 }
+/*--------------Детальная страница каталога end-------------*/

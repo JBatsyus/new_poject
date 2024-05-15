@@ -342,6 +342,49 @@ label {
   margin: 0;
 }
 
+.structure-item {
+  position: relative;
+  padding: 20px;
+  width: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16/9;
+}
+
+.structure-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 6px;
+}
+
+.structure-item .structure-title {
+  position: relative;
+  z-index: 2;
+  font-family: "Gilroy-500";
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 200px;
+}
+
 html {
   height: 100%;
   scrollbar-width: thin;
@@ -2377,6 +2420,8 @@ p {
 
 /*--------------404 end-------------*/
 
+/*--------------Детальная страница каталога start-------------*/
+
 .gallery-thumbs__wrap {
   position: relative;
 }
@@ -2623,6 +2668,10 @@ p {
       -ms-flex-align: end;
           align-items: end;
 }
+
+/*--------------Детальная страница каталога end-------------*/
+
+/*--------------Обучение start-------------*/
 
 .training-block {
   display: -webkit-box;
@@ -2927,6 +2976,10 @@ p {
   gap: 9px;
 }
 
+/*--------------Обучение end-------------*/
+
+/*--------------Дилеры start-------------*/
+
 .dealers__wrap .map__wrap {
   display: grid;
   grid-template-columns: 1fr;
@@ -3086,6 +3139,8 @@ p {
   z-index: 0;
 }
 
+/*--------------Дилеры start-------------*/
+
 .service__wrap .service__list-wrap .structure-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3103,47 +3158,26 @@ p {
   width: 100%;
 }
 
-.service__wrap .service__list-wrap .structure-items .structure-item {
-  position: relative;
-  padding: 20px;
-  width: 32%;
+/*--------------Гарантийная политика start-------------*/
+
+.warranty_policy__wrap .service__list-wrap .warranty_policy__list-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 6px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  aspect-ratio: 16/9;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+  width: 100%;
 }
 
-.service__wrap .service__list-wrap .structure-items .structure-item:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  border-radius: 6px;
-}
-
-.service__wrap .service__list-wrap .structure-items .structure-item .structure-title {
-  position: relative;
-  z-index: 2;
-  font-family: "Gilroy-500";
-  font-weight: 500;
-  font-size: 24px;
-  color: #FFFFFF;
-  text-align: center;
-}
+/*--------------Гарантийная политика end-------------*/
 
 @media (min-width: 991px) {
   .row {
@@ -3262,6 +3296,11 @@ p {
 }
 
 @media (max-width: 1200px) {
+  .structure-item {
+    width: 31%;
+    aspect-ratio: 8/5;
+  }
+
   html {
     font-size: 13px;
   }
@@ -3294,11 +3333,6 @@ p {
   .gallery-thumbs__wrap .swiper-button-prev {
     left: 0;
   }
-
-  .service__wrap .service__list-wrap .structure-items .structure-item {
-    width: 31%;
-    aspect-ratio: 8/5;
-  }
 }
 
 @media (max-width: 1100px) {
@@ -3316,6 +3350,14 @@ p {
 @media (max-width: 991px) {
   main {
     background-image: none;
+  }
+
+  .structure-item {
+    width: 48%;
+  }
+
+  .structure-item .structure-title {
+    font-size: 20px;
   }
 
   html {
@@ -3836,14 +3878,6 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
-
-  .service__wrap .service__list-wrap .structure-items .structure-item {
-    width: 48%;
-  }
-
-  .service__wrap .service__list-wrap .structure-items .structure-item .structure-title {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 991px) and (max-width: 768px) {
@@ -3893,6 +3927,11 @@ p {
 }
 
 @media (max-width: 768px) {
+  .structure-item {
+    width: 100%;
+    aspect-ratio: 8/4;
+  }
+
   p {
     margin-bottom: 10px;
   }
@@ -4323,11 +4362,6 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
-  }
-
-  .service__wrap .service__list-wrap .structure-items .structure-item {
-    width: 100%;
-    aspect-ratio: 8/4;
   }
 }
 
