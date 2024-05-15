@@ -47,8 +47,8 @@
       }
 
       option {
-        // max-width: 312px;
-        // width: 100%;
+        max-width: 312px;
+        width: 100%;
         cursor: pointer;
       }
     }
@@ -181,5 +181,8 @@
     height: 620px;
     margin-bottom: 60px;
     z-index: 0;
+    @include mobile_576 {
+      height: 250px;
+    }
   }
 }

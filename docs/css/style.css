@@ -2971,6 +2971,8 @@ p {
 }
 
 .dealers__wrap .map__selection-list select option {
+  max-width: 312px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -4297,6 +4299,10 @@ p {
 
   .dealers__wrap .map__item {
     width: 100%;
+  }
+
+  .dealers__wrap .map {
+    height: 250px;
   }
 }
 
