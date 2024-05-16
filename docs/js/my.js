@@ -27,6 +27,7 @@ let part='';
 // })
 
 
+
 //отрисовывает функция
 const updateList = (towns, maxItemsToShow = 1) => {
   pointsList.innerHTML = '';
@@ -41,7 +42,7 @@ const updateList = (towns, maxItemsToShow = 1) => {
         <a href="#map" style="color:#333;"> 
         <span class="dealer-title">${elem.company}</span> 
         <span class="dealer-adress">${elem.adress}</span><br><br> 
-        <img src="./img/tel.png">
+        <img src="./assets/images/icons/tel.png">
         <span class="dealer-adress">${elem.phone}</span> 
         </a>
         </div>
@@ -75,21 +76,27 @@ const showMore = (linkElement) => {
 }
 
 
+
 /***** Список регионов и городов 18-04-24 usp *****/
 
-let uniqueRegions = [...new Set(regions.map(item => item.region))];
+let uniqueRegions = [...new Set(towns.map(item => item.region))];
 
 let regionCityPairs = uniqueRegions.map(region => {
   return {
     region: region,
-    cities: regions.filter(item => item.region === region).map(item => item.city)
+    cities: towns.filter(item => item.region === region).map(item => item.city)
   };
 });
 
 // выбор региона
 
 const updateRegions = (regionCityPairs) => {
-  regionsList.innerHTML = '<option value="">Выберите регион</option>';
+  regionsList.innerHTML = '';
+  regionsList.innerHTML += '<option value="">Выберите регион</option>';
+
+  // Сортируем все в алфавитном порядке
+  regionCityPairs.sort((a, b) => a.region.localeCompare(b.region));
+
   regionCityPairs.forEach(regionCityPair => {
     let regionHtml = `<option value="${regionCityPair.region}">${regionCityPair.region}</option>`;
     regionsList.innerHTML += regionHtml;
@@ -117,12 +124,27 @@ regionsList.addEventListener('change', (event) => {
 
  // Инициализация списка регионов
 updateRegions(regionCityPairs);
+
+// Выбранный в списке город отображаем на карте
+townsList.addEventListener('change', function() {
+  const chosenCity = this.value;
+  const chosenTown = towns.find(town => town.city === chosenCity);
+
+  if (chosenTown && chosenTown.points.length > 0) {
+    // Получение широты и долготы из первой точки
+    const [latitude, longitude] = chosenTown.points[0].coords;
+
+    // Передача широты и долготы в функцию showFilial
+    showFilial(latitude, longitude);
+  }
+});
+
 /***** END Список регионов и городов *****/
+
 
 //первая отрисовка
 updateList(towns)
 updateCities(cities)
-
 
 //делаем новый массив после поиска
 const makeNewItems=(string)=>{
@@ -161,6 +183,4 @@ const makeNewItems=(string)=>{
 
 
 }
-
-
 
