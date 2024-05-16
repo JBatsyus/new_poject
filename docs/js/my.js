@@ -41,7 +41,7 @@ const updateList = (towns, maxItemsToShow = 1) => {
         <a href="#map" style="color:#333;"> 
         <span class="dealer-title">${elem.company}</span> 
         <span class="dealer-adress">${elem.adress}</span><br><br> 
-        <img src="./assets/images/icons/tel.png">
+        <img src="./img/tel.png">
         <span class="dealer-adress">${elem.phone}</span> 
         </a>
         </div>
