@@ -4494,6 +4494,7 @@ p {
   .card-truck__wrap .card-truck__wrap-characteristics__block-text-second {
     margin-bottom: -6px;
     max-width: none;
+    text-align: right;
   }
 
   .card-truck__wrap .card-truck__wrap-characteristics__block-text-second span {
