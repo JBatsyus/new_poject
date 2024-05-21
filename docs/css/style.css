@@ -3498,6 +3498,10 @@ p {
   .gallery-thumbs__wrap .swiper-button-prev {
     left: 0;
   }
+
+  .card-truck__wrap .card-truck__wrap-characteristics__wrap {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -3978,10 +3982,6 @@ p {
   .card_truck-preview__wrap {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
-  }
-
-  .card-truck__wrap .card-truck__wrap-characteristics__wrap {
-    grid-template-columns: 1fr;
   }
 
   .training-table__title {
@@ -4485,6 +4485,7 @@ p {
 
   .card-truck__wrap .card-truck__wrap-characteristics__block-text {
     margin-bottom: -6px;
+    white-space: normal;
   }
 
   .card-truck__wrap .card-truck__wrap-characteristics__block-text span {
@@ -4499,6 +4500,10 @@ p {
 
   .card-truck__wrap .card-truck__wrap-characteristics__block-text-second span {
     background-color: #FFFFFF;
+  }
+
+  .card-truck__wrap .card-truck__wrap-characteristics__block {
+    gap: 40px;
   }
 
   .card-truck__wrap .card-truck__wrap-characteristics__block-second {
