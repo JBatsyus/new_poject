@@ -2304,54 +2304,94 @@ p {
 /*--------------История start-------------*/
 
 .history__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.history__wrap .history__list .history-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0 20px 30px;
-  border-left: 2px solid #15508b;
   position: relative;
 }
 
-.history__wrap .history__list .history-item::before {
+.history__wrap .history-swiper__container.swiper-slide {
+  height: auto;
+}
+
+.history__wrap .history-swiper-wrapper {
+  height: auto;
+}
+
+.history__wrap .swiper-slide__years-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.history__wrap .swiper-slide__years-img::before {
   content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #15508b;
   position: absolute;
-  left: -7px;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 6px;
 }
 
-.history__wrap .history__list .history-item:last-child {
-  border-left: 2px solid transparent;
-  padding-bottom: 0;
+.history__wrap .swiper-slide__years-img p {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  color: #FFFFFF;
+  padding-left: 30%;
+  padding-top: 100px;
+  font-size: 18px;
+  line-height: 32px;
+  position: relative;
+  z-index: 2;
 }
 
-.history__wrap .history__list .history-item .history-item__title {
+.history__wrap .history-swiper2 {
+  position: relative;
+}
+
+.history__wrap .history-swiper {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+}
+
+.history__wrap .history-swiper .years__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 100px;
+}
+
+.history__wrap .history-swiper .years__text .swiper-slide {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.history__wrap .history-swiper .years__text .swiper-slide .swiper-slide__years-text {
+  font-family: "GilroyRegular";
+  font-weight: 400;
+  color: #FFFFFF;
+  z-index: 10;
+  font-size: 18px;
+  width: 100px;
+}
+
+.history__wrap .history-swiper .years__text .swiper-slide.swiper-slide-thumb-active {
+  left: 20px;
+}
+
+.history__wrap .history-swiper .years__text .swiper-slide.swiper-slide-thumb-active .swiper-slide__years-text {
   font-family: "Gilroy-600";
   font-weight: 600;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #15508b;
-  margin-bottom: 26px;
-  line-height: 0.7;
+  font-size: 26px;
 }
 
 /*--------------История end-------------*/
@@ -4403,23 +4443,6 @@ p {
 
   .contacts__wrap {
     height: 580px;
-  }
-
-  .history__wrap .history__list .history-item {
-    margin-bottom: 40px;
-  }
-
-  .history__wrap .history__list .history-item {
-    border-left: none;
-    padding: 0;
-  }
-
-  .history__wrap .history__list .history-item::before {
-    display: none;
-  }
-
-  .history__wrap .history__list .history-item .history-item__title {
-    margin-bottom: 40px;
   }
 
   .support__wrap .support__list .support__item {

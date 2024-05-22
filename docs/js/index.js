@@ -9,11 +9,11 @@ $(document).ready(function () {
   // модалка 
 
 
-$('.modal-toggle').on('click', function (e) {
-  e.preventDefault();
-  $('body').toggleClass('modal-open');
-  $('.modal').toggleClass('is-visible');
-});
+  $('.modal-toggle').on('click', function (e) {
+    e.preventDefault();
+    $('body').toggleClass('modal-open');
+    $('.modal').toggleClass('is-visible');
+  });
 
 
   $('.popup-gallery').magnificPopup({
@@ -87,6 +87,29 @@ $('.modal-toggle').on('click', function (e) {
   });
 });
 //слайдер
+
+var swiperHistory = new Swiper(".history-swiper", {
+  spaceBetween: 10,
+  slidesPerView: 18,
+  freeMode: true,
+  watchSlidesProgress: true,
+
+
+});
+var swiperHistory2 = new Swiper(".history-swiper2", {
+  effect: "fade",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiperHistory,
+  },
+});
+
+
+
+
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 7,
   slidesPerView: 4,
@@ -128,6 +151,8 @@ var galleryTop = new Swiper('.gallery-top', {
       slidesPerView: 2,
     }
   }
+
+
 
 
 });

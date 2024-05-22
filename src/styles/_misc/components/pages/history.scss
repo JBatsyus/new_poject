@@ -1,61 +1,99 @@
 /*--------------История start-------------*/
 .history__wrap {
-  @include flex-column;
-  width: 100%;
-  max-width: 1200px;
+  position: relative;
 
-  .history__list {
-    .history-item {
-      @include mobile_768 {
-        margin-bottom: 40px
-      }
-
-      @include flex-column;
-      padding: 0 20px 30px;
-      border-left: 2px solid $color-blue;
-      position: relative;
-
-      @include mobile_768 {
-        border-left: none;
-        padding: 0;
-
-        &::before {
-          display: none;
-        }
-      }
-
-      &::before {
-        content: "";
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: $color-blue;
-        position: absolute;
-        left: -7px;
-        top: 0;
-      }
-
-      &:last-child {
-        border-left: 2px solid transparent;
-        padding-bottom: 0;
-      }
-
-      .history-item__title {
-        font-family: $Gilroy-600;
-        font-weight: 600;
-        font-size: 24px;
-        text-transform: uppercase;
-        color: $color-blue;
-        margin-bottom: 26px;
-        line-height: 0.7;
-
-        @include mobile_768 {
-          margin-bottom: 40px
-        }
-
-      }
-    }
+  .history-swiper__container.swiper-slide {
+    height: auto;
 
   }
+
+  .history-swiper-wrapper {
+    height: auto;
+  }
+
+
+
+  .swiper-slide__years-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    aspect-ratio: 16/9;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      border-radius: 6px;
+    }
+
+    p {
+      font-family: $GilroyRegular;
+      font-weight: 400;
+      color: $color-white;
+      padding-left: 30%;
+      padding-top: 100px;
+      font-size: 18px;
+      line-height: 32px;
+
+      position: relative;
+      z-index: 2;
+
+    }
+  }
+
+  .history-swiper2 {
+    position: relative;
+  }
+
+  .history-swiper {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+
+    .years__text {
+      @include flex-column;
+      gap: 10px;
+      width: 100px;
+
+
+
+      .swiper-slide {
+        width: 100px;
+        margin-bottom: 10px;
+
+        .swiper-slide__years-text {
+          font-family: $GilroyRegular;
+          font-weight: 400;
+          color: $color-white;
+          z-index: 10;
+          font-size: 18px;
+          width: 100px;
+        }
+
+        &.swiper-slide-thumb-active {
+          left: 20px;
+
+          .swiper-slide__years-text {
+            font-family: $Gilroy-600;
+            font-weight: 600;
+            font-size: 26px;
+
+          }
+
+        }
+      }
+    }
+  }
+
+
 }
+
+
 /*--------------История end-------------*/
