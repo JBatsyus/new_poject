@@ -3345,6 +3345,24 @@ p {
 
 /*--------------Гарантийная политика end-------------*/
 
+/*--------------Комвекс start-------------*/
+
+.comvex__wrap .popup-gallery .comvex__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.comvex__wrap .popup-gallery .comvex__block a {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 2/3;
+  border-radius: 6px;
+}
+
+/*--------------Комвекс end-------------*/
+
 @media (min-width: 991px) {
   .row {
     margin-right: -0.75rem;
@@ -4044,6 +4062,10 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
   }
+
+  .comvex__wrap .popup-gallery .comvex__block {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 991px) and (max-width: 768px) {
@@ -4544,6 +4566,10 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 10px;
+  }
+
+  .comvex__wrap .popup-gallery .comvex__block {
+    grid-template-columns: 1fr;
   }
 }
 

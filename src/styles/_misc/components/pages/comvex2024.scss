@@ -1,0 +1,27 @@
+/*--------------Комвекс start-------------*/
+.comvex__wrap {
+  .popup-gallery {
+    .comvex__block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+
+      @include tablet_991 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile_768 {
+        grid-template-columns: 1fr;
+      }
+
+      a {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        aspect-ratio: 2/3;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+/*--------------Комвекс end-------------*/
