@@ -97,7 +97,10 @@ var swiperHistory = new Swiper(".history-swiper", {
 
 });
 var swiperHistory2 = new Swiper(".history-swiper2", {
-  effect: "fade",
+  // effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
