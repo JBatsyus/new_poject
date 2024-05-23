@@ -96,7 +96,6 @@ var swiperHistory = new Swiper(".history-swiper", {
     991: {
       slidesPerView: 18,
       spaceBetween: "auto",
-      // slideToClickedSlide: true,
     },
   }
 
@@ -119,12 +118,6 @@ var swiperHistory2 = new Swiper(".history-swiper2", {
     swiper: swiperHistory,
   },
 });
-
-
-
-
-
-
 
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 7,
