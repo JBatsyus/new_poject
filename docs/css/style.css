@@ -2305,10 +2305,13 @@ p {
 
 .history__wrap {
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 }
 
-.history__wrap .history-swiper__container.swiper-slide {
-  height: auto;
+.history__wrap .history-btn-next,
+.history__wrap .history-btn-prev {
+  display: none;
 }
 
 .history__wrap .history-swiper-wrapper {
@@ -2320,7 +2323,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 6px;
-  aspect-ratio: 16/9;
+  aspect-ratio: 20/12;
   width: 100%;
 }
 
@@ -2342,6 +2345,7 @@ p {
   color: #FFFFFF;
   padding-left: 30%;
   padding-top: 100px;
+  padding-right: 10%;
   font-size: 18px;
   line-height: 32px;
   position: relative;
@@ -2349,13 +2353,22 @@ p {
 }
 
 .history__wrap .history-swiper2 {
-  position: relative;
+  z-index: 0;
+}
+
+.history__wrap .history-swiper2 .swiper-wrapper {
+  overflow: visible;
+}
+
+.history__wrap .history-swiper2 .swiper-wrapper .swiper-slide {
+  height: auto;
 }
 
 .history__wrap .history-swiper {
   position: absolute;
   top: 50px;
   left: 200px;
+  z-index: 20;
 }
 
 .history__wrap .history-swiper .years__text {
@@ -2367,7 +2380,6 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  width: 100px;
 }
 
 .history__wrap .history-swiper .years__text .swiper-slide {
@@ -2382,6 +2394,7 @@ p {
   z-index: 10;
   font-size: 18px;
   width: 100px;
+  cursor: pointer;
 }
 
 .history__wrap .history-swiper .years__text .swiper-slide.swiper-slide-thumb-active {
@@ -2392,6 +2405,10 @@ p {
   font-family: "Gilroy-600";
   font-weight: 600;
   font-size: 26px;
+}
+
+.history__wrap .swiper.history-swiper {
+  overflow: visible;
 }
 
 /*--------------История end-------------*/
@@ -3494,6 +3511,10 @@ p {
   html {
     font-size: 15px;
   }
+
+  .history__wrap .swiper-slide__years-img {
+    aspect-ratio: 8/6;
+  }
 }
 
 @media (max-width: 1310px) {
@@ -3535,6 +3556,18 @@ p {
 
   .catalog-preview__wrap {
     gap: 1.875rem;
+  }
+
+  .history__wrap .swiper-slide__years-img {
+    aspect-ratio: 8/7;
+  }
+
+  .history__wrap .swiper-slide__years-img p {
+    padding-left: 25%;
+  }
+
+  .history__wrap .history-swiper {
+    left: 50px;
   }
 
   .maintenance__wrap .maintenance__list .maintenance__item {
@@ -4008,6 +4041,47 @@ p {
     max-width: 230px;
   }
 
+  .history__wrap .history-btn-next,
+  .history__wrap .history-btn-prev {
+    display: block;
+  }
+
+  .history__wrap .swiper-slide__years-img {
+    aspect-ratio: 8/5;
+    height: 100%;
+  }
+
+  .history__wrap .swiper-slide__years-img p {
+    padding: 20% 50px 5% 50px;
+  }
+
+  .history__wrap .history-swiper {
+    top: 0;
+    padding: 40px 0;
+    left: 0;
+    right: 0;
+  }
+
+  .history__wrap .history-swiper .years__text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
+  }
+
+  .history__wrap .history-swiper .years__text .swiper-slide.swiper-slide-thumb-active {
+    left: 0;
+  }
+
+  .history__wrap .swiper.history-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+
   .guarantee__wrap .guarantee-preview__wrap {
     grid-template-columns: repeat(auto-fit, minmax(220px, -webkit-max-content));
     grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
@@ -4445,6 +4519,21 @@ p {
     height: 580px;
   }
 
+  .history__wrap .swiper-slide__years-img {
+    aspect-ratio: 8/5;
+    height: 100%;
+  }
+
+  .history__wrap .swiper-slide__years-img p {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 100px;
+  }
+
+  .history__wrap .history-swiper .years__text .swiper-slide.swiper-slide-thumb-active .swiper-slide__years-text {
+    font-size: 20px;
+  }
+
   .support__wrap .support__list .support__item {
     display: grid;
     grid-template-columns: 1fr 25px;
@@ -4665,6 +4754,10 @@ p {
 
   .service-main__wrap .service-desc__wrap .service-desc__image {
     aspect-ratio: auto 1/1;
+  }
+
+  .history__wrap .swiper-slide__years-img p {
+    font-size: 14px;
   }
 
   .training-gallery__block {

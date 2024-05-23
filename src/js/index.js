@@ -89,18 +89,28 @@ $(document).ready(function () {
 //слайдер
 
 var swiperHistory = new Swiper(".history-swiper", {
+  slidesPerView: 4,
   spaceBetween: 10,
-  slidesPerView: 18,
-  freeMode: true,
-  watchSlidesProgress: true,
-
+  centeredSlides: true,
+  breakpoints: {
+    991: {
+      slidesPerView: 18,
+      spaceBetween: "auto",
+      // slideToClickedSlide: true,
+    },
+  }
 
 });
+// слайдер с картинками
 var swiperHistory2 = new Swiper(".history-swiper2", {
-  // effect: "fade",
+  slidesPerView: 1,
+  speed: 1000,
+  effect: "fade",
   fadeEffect: {
     crossFade: true
   },
+  centeredSlides: true,
+  clickable: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -109,6 +119,9 @@ var swiperHistory2 = new Swiper(".history-swiper2", {
     swiper: swiperHistory,
   },
 });
+
+
+
 
 
 

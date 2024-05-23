@@ -1,10 +1,16 @@
 /*--------------История start-------------*/
 .history__wrap {
   position: relative;
+  overflow-x: hidden;
+  width: 100%;
 
-  .history-swiper__container.swiper-slide {
-    height: auto;
+  .history-btn-next,
+  .history-btn-prev {
+    display: none;
 
+    @include tablet_991 {
+      display: block;
+    }
   }
 
   .history-swiper-wrapper {
@@ -18,8 +24,28 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 6px;
-    aspect-ratio: 16/9;
+
+    aspect-ratio: 20/12;
     width: 100%;
+
+    @include desktop1400 {
+      aspect-ratio: 8/6;
+    }
+
+    @include desktop1200 {
+      aspect-ratio: 8/7;
+    }
+
+    @include tablet_991 {
+      aspect-ratio: 8/5;
+      height: 100%;
+    }
+
+    @include mobile_768 {
+      aspect-ratio: 8/5;
+      height: 100%;
+    }
+
 
     &::before {
       content: "";
@@ -39,28 +65,73 @@
       color: $color-white;
       padding-left: 30%;
       padding-top: 100px;
+      padding-right: 10%;
       font-size: 18px;
       line-height: 32px;
 
       position: relative;
       z-index: 2;
 
+      @include desktop1200 {
+        padding-left: 25%;
+      }
+
+      @include tablet_991 {
+        padding: 20% 50px 5% 50px;
+      }
+
+      @include mobile_768 {
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 100px
+      }
+
+      @include mobile_450 {
+        font-size: 14px;
+      }
+
     }
   }
 
   .history-swiper2 {
-    position: relative;
+    z-index: 0;
+
+    .swiper-wrapper {
+      overflow: visible;
+
+      .swiper-slide {
+        height: auto;
+      }
+    }
   }
 
   .history-swiper {
     position: absolute;
     top: 50px;
     left: 200px;
+    z-index: 20;
+
+    @include desktop1200 {
+      left: 50px;
+    }
+
+    @include tablet_991 {
+      top: 0;
+      padding: 40px 0;
+      left: 0;
+      right: 0;
+    }
 
     .years__text {
       @include flex-column;
       gap: 10px;
-      width: 100px;
+
+
+      @include tablet_991 {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+      }
 
 
 
@@ -75,24 +146,39 @@
           z-index: 10;
           font-size: 18px;
           width: 100px;
+          cursor: pointer;
         }
 
         &.swiper-slide-thumb-active {
           left: 20px;
+
+          @include tablet_991 {
+            left: 0;
+          }
 
           .swiper-slide__years-text {
             font-family: $Gilroy-600;
             font-weight: 600;
             font-size: 26px;
 
-          }
+            @include mobile_768 {
+              font-size: 20px;
 
+            }
+          }
         }
       }
     }
   }
 
+  .swiper.history-swiper {
+    overflow: visible;
 
+    @include tablet_991 {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
 }
 
 
