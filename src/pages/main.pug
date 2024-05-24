@@ -3,8 +3,24 @@ extends ../templates/template.pug
 
 block content
   main.wrapper
-    .banner__item(style="background-image:url('./img/main_banner.jpg')")
+    //- .banner__item(style="background-image:url('./img/main_banner.jpg')")
     .container
+      .banner-main__wrap
+        .swiper.banner-slider
+          .swiper-wrapper
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main.jpg')")
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main2.jpg')")
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main3.jpg')")
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main4.jpg')")
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main5.jpg')")
+            .swiper-slide
+              .banner-slider__item(style="background-image:url('./img/b_main6.jpg')")
+          .swiper-pagination
       .about-main__wrap
         .about-main__text
           h1.h1 ГРУЗОВАЯ ТЕХНИКА SITRAK

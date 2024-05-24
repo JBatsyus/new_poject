@@ -86,8 +86,29 @@ $(document).ready(function () {
     }
   });
 });
-//слайдер
+//слайдерs
+// слайдер на главной странице
+var swiper = new Swiper(".banner-slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
+  autoHeight: true,
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
+// слайдер страницы История
 var swiperHistory = new Swiper(".history-swiper", {
   slidesPerView: 4,
   spaceBetween: 10,
@@ -100,7 +121,7 @@ var swiperHistory = new Swiper(".history-swiper", {
   }
 
 });
-// слайдер с картинками
+// с картинками
 var swiperHistory2 = new Swiper(".history-swiper2", {
   slidesPerView: 1,
   speed: 1000,
@@ -119,6 +140,7 @@ var swiperHistory2 = new Swiper(".history-swiper2", {
   },
 });
 
+// слайдер на детальной странице каталога
 var galleryThumbs = new Swiper('.gallery-thumbs', {
   spaceBetween: 7,
   slidesPerView: 4,

@@ -1291,16 +1291,37 @@ p {
 
 /*--------------Главная страница start-------------*/
 
-.banner__item {
-  aspect-ratio: 3/1.2;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+.h2 {
   margin-bottom: 60px;
 }
 
-.h2 {
+.banner-main__wrap {
   margin-bottom: 60px;
+}
+
+.banner-main__wrap .banner-slider__item {
+  aspect-ratio: 3/1.2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-main__wrap .banner-slider .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  width: 0.625rem;
+  height: 0.625rem;
+  opacity: 1;
+}
+
+.banner-main__wrap .banner-slider .swiper-pagination-bullet:hover {
+  background: rgb(21, 80, 139);
+}
+
+.banner-main__wrap .banner-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  background: rgb(21, 80, 139);
 }
 
 .about-main__wrap {
@@ -3875,10 +3896,6 @@ p {
         flex-wrap: wrap;
   }
 
-  .banner__item {
-    margin-bottom: 30px;
-  }
-
   .h2 {
     margin-bottom: 30px;
   }
@@ -4203,10 +4220,6 @@ p {
     font-size: 25px;
   }
 
-  .banner__item {
-    aspect-ratio: auto 8/5;
-  }
-
   .about-main__wrap {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -4336,6 +4349,14 @@ p {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+
+  .banner-main__wrap {
+    margin-bottom: 40px;
+  }
+
+  .banner-main__wrap .banner-slider__item {
+    aspect-ratio: 4/3;
   }
 
   .service-main__wrap .service-list {
@@ -4744,10 +4765,6 @@ p {
 }
 
 @media (max-width: 450px) {
-  .banner__item {
-    aspect-ratio: auto 1/1;
-  }
-
   .about-main__wrap .about-main__img {
     aspect-ratio: auto 1/1;
   }

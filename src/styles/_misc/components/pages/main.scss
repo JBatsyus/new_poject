@@ -1,25 +1,5 @@
 /*--------------Главная страница start-------------*/
-.banner__item {
-  aspect-ratio: 3 / 1.2;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 60px;
 
-  @include tablet_991 {
-    margin-bottom: 30px;
-  }
-
-  @include tablet_850 {
-    aspect-ratio: auto 8/5;
-
-  }
-
-  @include mobile_450 {
-    aspect-ratio: auto 1/1
-  }
-
-}
 
 .h2 {
   margin-bottom: 60px;
@@ -27,6 +7,48 @@
   @include tablet_991 {
     margin-bottom: 30px;
   }
+}
+
+.banner-main__wrap {
+  margin-bottom: 60px;
+
+  @include mobile_768 {
+    margin-bottom: 40px;
+  }
+
+  .banner-slider__item {
+    aspect-ratio: 3 / 1.2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mobile_768 {
+      aspect-ratio: 4/3;
+    }
+
+  }
+
+  .banner-slider .swiper-pagination-bullet {
+
+    background: rgba(255, 255, 255, 0.5);
+    width: rem(10px);
+    height: rem(10px);
+    opacity: 1;
+  }
+
+  .banner-slider .swiper-pagination-bullet:hover {
+    background: rgb(21, 80, 139);
+    ;
+  }
+
+  .banner-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    transform: scale(1.1);
+    background: rgb(21, 80, 139);
+    ;
+  }
+
+
+
 }
 
 .about-main__wrap {
