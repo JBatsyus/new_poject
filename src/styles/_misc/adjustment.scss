@@ -62,16 +62,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  
-
 }
-main{
+
+main {
   background-image: url(../img/bgi.svg);
   background-position: 100% 200px;
   background-repeat: no-repeat;
   background-size: 60%;
-  @include tablet_991{
-    background-image:none;
+
+  @include tablet_991 {
+    background-image: none;
   }
 
 }
@@ -135,8 +135,8 @@ a:focus,
 a:visited,
 input:focus,
 input:visited {
-    text-decoration: none;
-    outline: none;
+  text-decoration: none;
+  outline: none;
 }
 
 input[type="text"] {

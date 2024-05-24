@@ -4134,6 +4134,14 @@ p {
     gap: 24px;
   }
 
+  .card-truck__wrap .card-truck__wrap-block-title {
+    font-size: 20px;
+  }
+
+  .card-truck__wrap .card-truck__wrap-characteristics {
+    font-size: 18px;
+  }
+
   .training-table__title {
     display: none;
   }
@@ -4825,6 +4833,14 @@ p {
 
   .service-preview__wrap {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-truck__wrap .card-truck__wrap-characteristics__block-text {
+    font-size: 14px;
+  }
+
+  .card-truck__wrap .card-truck__wrap-characteristics__block-text-second {
+    font-size: 14px;
   }
 }
 
