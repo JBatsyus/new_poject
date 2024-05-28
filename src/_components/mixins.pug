@@ -1,6 +1,10 @@
 
+//- mixin section-item(title)
+//-   a(href="javascript:void(0);").catalog_section__item(style="background-image:url('./img/ppp.png')")
+//-     .section-item__title !{title}
 mixin section-item(title)
-  a(href="javascript:void(0);").catalog_section__item(style="background-image:url('./img/ppp.png')")
+  a(href="javascript:void(0);").catalog_section__item
+    img(src="./img/av.webp", alt="").section-item__image
     .section-item__title !{title}
 
 mixin service-preview-item(title)
