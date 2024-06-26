@@ -8,6 +8,8 @@ block content
         .swiper-wrapper
           .swiper-slide
             .banner-slider__item(style="background-image:url('./img/b_main.jpg')")
+              .text-container
+                .banner-title Добро пожаловать в мир SITRAK
           .swiper-slide
             .banner-slider__item(style="background-image:url('./img/b_main2.jpg')")
           .swiper-slide
@@ -22,104 +24,82 @@ block content
 
     .container
       .about-main__wrap
-        .about-main__text
           h1.h1 ГРУЗОВАЯ ТЕХНИКА SITRAK
           p SITRAK - это марка грузовой техники, которая разрабатывается и производится в сотрудничестве между китайской компанией
             | Sinotruk Group и немецкой маркой MAN Truck & Bus AG. Компания SITRAK создана с целью сочетания немецкого инжиниринга и
             | китайского производства для производства высококачественных грузовиков и коммерческой техники.
           p Кроме того, следует отметить, что сотрудничество между китайской Sinotruk Group и немецкой MAN Truck & Bus AG позволяет SITRAK объединить лучшие практики и технологии обеих компаний. Немецкое наследие в инжиниринге и технической экспертизе дополняется китайским опытом в производстве и масштабировании производства.
           p Благодаря этому симбиозу SITRAK предлагает не только технически продвинутые грузовики, но и учитывает местные и мировые требования к экологии, безопасности и эффективности транспортных средств.
-        .about-main__img(style="background-image:url('./img/main6.png')")
+        
       .categories-main__wrap
-        h2.h2 Категории
+        h2.h2 Каталог
         .catalog_section__wrap
-          +section-item("Седельные тягачи")
-          +section-item("Самосвалы")
-          +section-item("Автобетоносмесители")
-          +section-item("Бортовые")
+          +section-item({
+            img:'1_c.png',
+            title:'Седельные тягачи',
+          })
+          +section-item({
+            img:'2_c.png',
+            title:'Самосвалы',
+          })
+          +section-item({
+            img:'3_c.png',
+            title:'Автобетоносмесители',
+          })
+          +section-item({
+            img:'4_c.png',
+            title:'Бортовые',
+          })
+
       .service-main__wrap
         h2.h2 Сервис
         .service-list 
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/guarantee.svg", alt="")
-            .service-item__title Гарантийная политика
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/support.svg", alt="")
-            .service-item__title Техническая поддержка
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/education.svg", alt="")
-            .service-item__title Обучение
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/certification.svg", alt="")
-            .service-item__title Техническое обслуживание и сертификация
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/spares.svg", alt="")
-            .service-item__title Запчасти
-          a(href="javascript:void(0);").service-item
-            .service-item__img
-              img(src="./img/newspaper.svg", alt="")
-            .service-item__title Новости о политике по сервису
+          +service-main-item({
+            img:'1_s.png',
+            title:'Гарантийная политика',
+          })
+          +service-main-item({
+            img:'2_s.png',
+            title:'Техническая поддержка',
+          })
+          +service-main-item({
+            img:'3_s.png',
+            title:'Обучение',
+          })
+          +service-main-item({
+            img:'4_s.png',
+            title:'Техническое обслуживание и сертификация',
+          })
+          +service-main-item({
+            img:'5_s.png',
+            title:'Запчасти',
+          })
+          +service-main-item({
+            img:'6_s.png',
+            title:'Новости о политике по сервису',
+          })
+   
         .service-desc__wrap
+          .service-bgi(style="background-image:url('./img/company1.jpg')")
+            .text-container
+              h2.h2 О нас
           .service-desc
             p Чтобы обеспечить эффективную и бесперебойную работу транспортных средств, компания Ситрак предоставляет клиентам необходимую подготовку к техническому обслуживанию и ремонту транспортных средств, а также сводит к минимуму время простоя, вызванное неисправностями транспортных средств. Мы стремимся создать для вас большую ценность и лучший опыт. Наша цель — удовлетворение потребностей клиентов.
-            .service-desc__image(style="background-image:url('./img/company.jpg')").mobil
             .service-desc__list
               .service-desc__item
                 .desc-item__img
-                  img(src="./img/case.svg", alt="")
+                  img(src="./img/1_p.svg", alt="")
                 .desc-item__text Отличные СТО всегда готовы оказать услуги по техническому обслуживанию и ремонту вашего автомобиля;
               .service-desc__item
                 .desc-item__img
-                  img(src="./img/gears.svg", alt="")
+                  img(src="./img/3_p.svg", alt="")
                 .desc-item__text Превосходное качество и более длительный срок службы, оригинальные  запасные части, которые вы ожидаете. Вы можете приобрести и использовать их на всех наших сервисных станциях;
               .service-desc__item
                 .desc-item__img
-                  img(src="./img/sitrak_lg.svg", alt="")
+                  img(src="./img/2_p.svg", alt="")
                 .desc-item__text Компания Ситрак создала в России учебную академию для постоянного повышения уровня технического обслуживания обслуживающего персонала и предоставления вам услуг самого высокого качества.
-          .service-desc__image(style="background-image:url('./img/company.jpg')").desc
-      .warranty_periods__wrap
-        .warranty_periods__list
-          .warranty_periods__item
-            .periods-item__title ОБЩАЯ ГАРАНТИЯ
-            .periods-item__image(style="background-image:url('./img/speedometer.png')")
-              .number-top
-                  span 1
-                  span 8
-                  span 0
-                  span 0
-                  span 0
-                  span 0
-              .number-bottom 
-                .txt-bottom до <span>18</span> <span>месяцев</span>
-          .warranty_periods__item
-            .periods-item__title Гарантия на <br> коробку передач
-            .periods-item__image(style="background-image:url('./img/speedometer.png')")
-              .number-top
-                  span 1
-                  span 2
-                  span 0
-                  span 0
-                  span 0
-                  span 0
-              .number-bottom 
-                .txt-bottom до <span>12</span> <span>месяцев</span>
-          .warranty_periods__item
-            .periods-item__title Гарантия <br>на двигатель
-            .periods-item__image(style="background-image:url('./img/speedometer.png')")
-              .number-top
-                  span 1
-                  span 8
-                  span 0
-                  span 0
-                  span 0
-                  span 0
-              .number-bottom 
-                .txt-bottom до <span>18</span><span>месяцев<span>                                 
+          
+     
 
 
       .advantage-main__wrap

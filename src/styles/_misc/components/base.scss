@@ -84,25 +84,33 @@
 
 
 .h1 {
-  font-family: $Gilroy-600;
-  font-size: 24px;
+  font-family: $Unbounded-700;
+  font-size: 80px;
   text-transform: uppercase;
   color: $color-black;
   margin-bottom: 40px;
-
+  @include tablet_991 {
+    font-size: 40px;
+  }
+  @include mobile_768 {
+    font-size: 36px;
+  }
 
 }
 
 h2,
 .h2 {
-  font-family: $Gilroy-600;
-  font-size: 24px;
+  font-family: $Unbounded-700;
+  font-size: 54px;
   text-transform: uppercase;
   color: $color-black;
 
   @include tablet_991 {
-    font-size: 20px;
+    font-size: 36px;
     margin-bottom: 30px !important;
+  }
+  @include mobile_768 {
+    font-size: 30px;
   }
 }
 
@@ -125,8 +133,7 @@ h2,
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
-
-}
+ }
 
 
 

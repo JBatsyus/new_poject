@@ -2,10 +2,10 @@
 //- mixin section-item(title)
 //-   a(href="javascript:void(0);").catalog_section__item(style="background-image:url('./img/ppp.png')")
 //-     .section-item__title !{title}
-mixin section-item(title)
+mixin section-item(data)
   a(href="javascript:void(0);").catalog_section__item
-    img(src="./img/av.webp", alt="").section-item__image
-    .section-item__title !{title}
+    img(src=`img/${data.img}`, alt="").section-item__image
+    .section-item__title !{data.title}
 
 mixin service-preview-item(title)
   a(href="javascript:void(0);").service-preview__item
@@ -13,6 +13,10 @@ mixin service-preview-item(title)
     .service-preview__desc
       .service-preview__title !{title}
       .btn Подробнее
+mixin service-main-item(data)
+  a(href="javascript:void(0);").service-item
+    img(src=`img/${data.img}`, alt="").service-item__img
+    .service-item__title !{data.title}
 
 mixin catalog-preview-item
   a(href="javascript:void(0);").catalog-preview__item

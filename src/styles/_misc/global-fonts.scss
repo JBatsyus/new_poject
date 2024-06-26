@@ -295,3 +295,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Unbounded-700';
+  src: url('../fonts/Unbounded-Bold.eot');
+  src: url('../fonts/Unbounded-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Unbounded-Bold.woff2') format('woff2'),
+      url('../fonts/Unbounded-Bold.woff') format('woff'),
+      url('../fonts/Unbounded-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

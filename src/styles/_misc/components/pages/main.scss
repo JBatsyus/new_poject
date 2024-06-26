@@ -12,6 +12,7 @@
 .banner-main__wrap {
   margin-bottom: 60px;
 
+
   @include mobile_768 {
     margin-bottom: 40px;
   }
@@ -21,6 +22,28 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .text-container {
+      width: 100%;
+      max-width: rem(1490px);
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .banner-title {
+        margin: 0;
+        padding-bottom: 60px;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: $Unbounded-700;
+        font-weight: 700;
+        font-size: 64px;
+        max-width: 920px;
+      }
+    }
 
     @include mobile_768 {
       aspect-ratio: 4/3;
@@ -49,11 +72,14 @@
 }
 
 .about-main__wrap {
-  display: grid;
-  grid-template-columns: 48% 49%;
-  gap: 40px;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 60px;
+
+  .h1 {
+    margin-bottom: 60px;
+    max-width: 1075px;
+  }
 
   @include tablet_991 {
     margin-bottom: 30px;
@@ -64,30 +90,7 @@
     gap: 30px;
   }
 
-  .about-main__text {
-    width: 100%;
 
-    .h1 {
-      margin-bottom: 30px;
-    }
-  }
-
-  .about-main__img {
-    border-radius: 6px;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    aspect-ratio: auto;
-
-    @include tablet_850 {
-      aspect-ratio: auto 8/5
-    }
-
-    @include mobile_450 {
-      aspect-ratio: auto 1/1
-    }
-
-  }
 }
 
 .categories-main__wrap {
@@ -98,7 +101,7 @@
   }
 
   .h2 {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
 }
 
@@ -113,38 +116,84 @@
 
   .service-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(40px);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    gap: 24px;
     margin-bottom: 60px;
 
-    @include tablet_991 {
-      margin-bottom: 30px;
+    // @include tablet_991 {
+    //   margin-bottom: 30px;
+    // }
+
+    // @include mobile_768 {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+
+    // @include mobile_576 {
+    //   grid-template-columns: 1fr;
+    // }
+
+    .service-item:nth-child(1) {
+      grid-column: span 6;
     }
 
-    @include mobile_768 {
-      grid-template-columns: repeat(2, 1fr);
+    .service-item:nth-child(2) {
+      grid-column: span 4;
     }
 
-    @include mobile_576 {
-      grid-template-columns: 1fr;
+    .service-item:nth-child(3) {
+      grid-column: span 4;
+    }
+
+    .service-item:nth-child(4) {
+      grid-column: span 6;
+    }
+
+    .service-item:nth-child(5) {
+      grid-column: span 6;
+    }
+
+    .service-item:nth-child(6) {
+      grid-column: span 4;
     }
 
     .service-item {
       @include flex-column;
       align-items: center;
+      position: relative;
+      overflow: hidden;
 
       .service-item__img {
-        max-height: 84px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(21, 80, 139, 0.35);
+        width: 100%;
         height: 100%;
-        margin-bottom: 25px;
+        max-height: 257px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       .service-item__title {
-        font-family: $Gilroy-600;
-        font-weight: 600;
-        font-size: 20px;
-        color: $color-deep-black;
+        font-family: $Unbounded-700;
+        font-weight: 700;
+        font-size: 26px;
+        color: $color-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // центрируем текст по горизонтали и вертикали
+        padding: 20px;
         text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 517px;
+
 
         @include mobile_576 {
           max-width: 270px;
@@ -154,9 +203,8 @@
   }
 
   .service-desc__wrap {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: rem(20px);
+    display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
 
     @include tablet_991 {
@@ -168,8 +216,37 @@
 
     }
 
+    .service-bgi {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      height: 550px;
+      max-height: 550px;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-bottom: 60px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      .text-container {
+        width: 100%;
+        max-width: rem(1490px);
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .h2 {
+          margin: 0;
+          padding-bottom: 40px;
+          color: $color-white;
+        }
+      }
+    }
+
     .service-desc {
       p {
+        text-align: center;
         color: $color-deep-black;
         margin-bottom: 40px;
 
@@ -179,63 +256,37 @@
       }
 
       .service-desc__list {
-        @include flex-column;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
 
         .service-desc__item {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          margin-bottom: 25px;
-
+          min-height: 220px;
+          height: auto;
+          max-height: max-content;
+          padding: 44px 20px 20px 20px;
+          background: rgba(21, 80, 139, 0.15);
+          flex-basis: calc(33.333% - 20px);
+          box-sizing: border-box;
 
           .desc-item__img {
-            max-height: 44px;
+            max-height: 60px;
             height: 100%;
-            margin-right: 15px;
+            margin-bottom: 25px;
           }
 
           .desc-item__text {
             color: $color-deep-black;
-          }
-
-          &:last-child {
-            margin-bottom: 0;
+            max-width: 440px;
+            text-align: center;
           }
         }
       }
     }
-
-    .service-desc__image {
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-size: cover;
-      aspect-ratio: auto;
-      border-radius: 6px;
-
-      @include tablet_850 {
-        aspect-ratio: auto 8/5;
-        margin-bottom: 20px;
-      }
-
-      @include mobile_450 {
-        aspect-ratio: auto 1/1
-      }
-    }
   }
-
-  .service-desc__image .mobil {
-    display: none;
-
-    @include tablet_850 {
-      display: block;
-    }
-  }
-
-  .service-desc__image.desc {
-    @include tablet_850 {
-      display: none;
-    }
-  }
-
 }
 
 .advantage-main__wrap {
