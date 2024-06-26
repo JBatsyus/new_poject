@@ -9,10 +9,24 @@ block content
             li
               a(href="javascript:void(0);")= name
       .catalog_section__wrap
-        +section-item("Седельные тягачи")
-        +section-item("Самосвалы")
-        +section-item("Автобетоносмесители")
-        +section-item("Фургоны рефрижераторы")
+        .catalog_section__wrap
+          +section-item({
+            img:'1_c.png',
+            title:'Седельные тягачи',
+          })
+          +section-item({
+            img:'2_c.png',
+            title:'Самосвалы',
+          })
+          +section-item({
+            img:'3_c.png',
+            title:'Автобетоносмесители',
+          })
+          +section-item({
+            img:'4_c.png',
+            title:'Бортовые',
+          })
+
       h1.h1 Вся техника
       .catalog-preview__wrap
         +catalog-preview-item

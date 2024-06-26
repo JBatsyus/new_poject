@@ -10,29 +10,28 @@ block content
             a(href="javascript:void(0);")= name
       h1.h1 Сервис
       .service__wrap
-        .service__list-wrap
-          .structure-items
-            +structure-item({
-              img:'gp.png',
-              title:'Гарантийная политика',
-            })
-            +structure-item({
-              img:'tp.png',
-              title:'Техническая поддержка',
-            })
-            +structure-item({
-              img:'ob.png',
-              title:'Обучение',
-            })
-            +structure-item({
-              img:'to.png',
-              title:'Техническое обслуживание и сертификация',
-            })
-            +structure-item({
-              img:'zp.png',
-              title:'Запчасти',
-            })
-            +structure-item({
-              img:'n.png',
-              title:'Новости о политике по сервису',
-            })
+        .service-list 
+                +service-main-item({
+                  img:'1_s.png',
+                  title:'Гарантийная политика',
+                })
+                +service-main-item({
+                  img:'2_s.png',
+                  title:'Техническая поддержка',
+                })
+                +service-main-item({
+                  img:'3_s.png',
+                  title:'Обучение',
+                })
+                +service-main-item({
+                  img:'4_s.png',
+                  title:'Техническое обслуживание и сертификация',
+                })
+                +service-main-item({
+                  img:'5_s.png',
+                  title:'Запчасти',
+                })
+                +service-main-item({
+                  img:'6_s.png',
+                  title:'Новости о политике по сервису',
+                })

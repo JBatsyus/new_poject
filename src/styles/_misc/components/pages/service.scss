@@ -1,12 +1,126 @@
-/*--------------Сервис start-------------*/
-.service__wrap {
-  .service__list-wrap .structure-items {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
+/*--------------Сервис (страница, компонент) start-------------*/
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+
+  @include tablet_991 {
+    gap: 16px;
+  }
+
+  @include mobile_768 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-item:nth-child(1) {
+    grid-column: span 6;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item:nth-child(2) {
+    grid-column: span 4;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item:nth-child(3) {
+    grid-column: span 4;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item:nth-child(4) {
+    grid-column: span 6;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item:nth-child(5) {
+    grid-column: span 6;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item:nth-child(6) {
+    grid-column: span 4;
+
+    @include mobile_768 {
+      grid-column: span 1;
+    }
+  }
+
+  .service-item {
+    @include flex-column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(21, 80, 139, 0.35);
+      z-index: 1;
+    }
+
+    .service-item__img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-height: 257px;
+      position: relative;
+      z-index: 0;
+
+      @include mobile_768 {
+        object-fit: cover;
+        aspect-ratio: 8 / 4.5;
+      }
+    }
+
+    .service-item__title {
+      font-family: $Unbounded-700;
+      font-weight: 700;
+      font-size: rem(26px);
+      color: $color-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // центрируем текст по горизонтали и вертикали
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 517px;
+      z-index: 2;
+
+      @include tablet_991 {
+        font-size: 16px;
+        max-width: 350px;
+      }
+
+      @include mobile_576 {
+        max-width: 270px;
+      }
+    }
+  }
 }
-}
+
 /*--------------Сервис end-------------*/

@@ -85,15 +85,15 @@
 
 .h1 {
   font-family: $Unbounded-700;
-  font-size: 80px;
+  font-size: rem(80px);
   text-transform: uppercase;
   color: $color-black;
   margin-bottom: 40px;
   @include tablet_991 {
-    font-size: 40px;
+    font-size: rem(40px);
   }
   @include mobile_768 {
-    font-size: 36px;
+    font-size: rem(36px);
   }
 
 }
@@ -101,16 +101,16 @@
 h2,
 .h2 {
   font-family: $Unbounded-700;
-  font-size: 54px;
+  font-size: rem(54px);
   text-transform: uppercase;
   color: $color-black;
 
   @include tablet_991 {
-    font-size: 36px;
+    font-size: rem(36px);
     margin-bottom: 30px !important;
   }
   @include mobile_768 {
-    font-size: 30px;
+    font-size: rem(30px);
   }
 }
 
